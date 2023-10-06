@@ -1,0 +1,2211 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en-US" class="section-3737 subsection-3953 " dir="ltr">
+<head id="hdInteract"><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+	Development Process - sundog.ucar.edu
+</title>
+	<script type="text/javascript">
+        // Used in PageHitScriptLoader script to workout the total page load time.
+        // This has be placed first before another scripts get loaded
+        // Moving the PageHitScriptLoader here breaks the master page and page hit is not saved so will leave it here
+        var beforeLoad = (new Date()).getTime();
+	</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no" />
+        <link rel="stylesheet" href="/theme/36d10833-0ad6-4d41-b545-1062d62e0210/2g/bootstrap.less?v=7.9.98.0&tv=94">
+        <link rel="stylesheet" href="/theme/36d10833-0ad6-4d41-b545-1062d62e0210/2g/widgets.less?v=7.9.98.0&tv=94">
+        <link rel="stylesheet" type="text/css" href="/theme/36d10833-0ad6-4d41-b545-1062d62e0210/2g/responsive.less?v=7.9.98.0&tv=94" />
+        
+            <link rel="stylesheet" href="/theme/36d10833-0ad6-4d41-b545-1062d62e0210/2g/intact.less?v=7.9.98.0&tv=94">
+        
+        <!--[if IE 8]>
+            <link rel="stylesheet" type="text/css" href="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/css/conditional/ie8.css">
+        <![endif]-->
+        <!--[if IE 9]>
+            <link rel="stylesheet" type="text/css" href="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/css/conditional/ie9.css">
+        <![endif]-->
+        <link rel="shortcut icon" href="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/favicon.png" />
+        <link rel="apple-touch-icon" href="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/touch-icon-iphone.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/touch-icon-ipad.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/touch-icon-iphone-retina.png" />
+        <link rel="apple-touch-icon" sizes="167x167" href="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/touch-icon-ipad-retina.png" />
+        <link rel="stylesheet" type="text/css" href="/styles/Application?v=h-KcaFaeLY8Q1a7zfroB2Hq-q2zsrMqOGzfFNzcuYTw1?v=7.9.98.0" />
+
+        <link rel="stylesheet" type="text/css" href="/styles/Administration?v=lQ5UjGYt599biJq28_PvyIExB8NFoTErPKtI2Cr6usA1?v=7.9.98.0" />
+
+        <link rel="stylesheet" type="text/css" href="/styles/Video?v=9iC07gGj5H5zu5TLqGsfQ-xM9A0HelrYwOKasVu9e-I1?v=7.9.98.0" />
+
+
+        
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<link href="../../../Content/default/css/dataTables/jquery.dataTables.css" rel="stylesheet" />
+	<link href="../../../Content/default/css/foundry-content.css" rel="stylesheet" />
+	<script src="../../../Content/default/js/foundry.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="/theme/36d10833-0ad6-4d41-b545-1062d62e0210/2g/foundry-content.less?v=7.9.98.0&amp;tv=94">
+
+
+        
+            <link rel="stylesheet" href="/Content/default/css/interface/ii-custom-font-icons.css" />
+        
+		<script> 
+			window.intranetName = ''; 
+		</script>
+
+        <script type="text/javascript" src="/scripts/modernizr?v=hwD4dGW4blReOoGXS29CCKP0N2kVvRjPZOBmxfD8K401?v=7.9.98.0"></script>
+
+        <script type="text/javascript" src="/scripts/respond?v=6Y2Vdkc99RdwVeMNETBr5fv96Qes8ImBv0QglDgjMik1?v=7.9.98.0"></script>
+
+        <script type="text/javascript" src="/scripts/application?v=C6S6ZmD-LZ25uZAoaIygQs6mlMM8NKb3WM2QiNaM_5c1?v=7.9.98.0"></script>
+
+        <script type="text/javascript" src="/systemtext/injectscript/globalModals%2cevents%2cprofileBioEditor%2ctimeago%2cselectmultiple%2cdatatable%2calerts?version=7.9.98.0"></script>
+        <script type="text/javascript" src="/scripts/administration?v=UWsX6rclI74Ch60raPbPGtcGY0CTYCaAKN2Hcm7aeS81?v=7.9.98.0"></script>
+
+        <script type="text/javascript" src="/scripts/masterpage?v=g9oe1GgsYuHc2gEav0DjBLWbZ4Su2eh16oJCUwicuVE1?v=7.9.98.0"></script>
+
+        <script type="text/javascript" src="/scripts/Video?v=KUFAycT-jOA6Pj5I1pU1rbBw3Mt8-8IiH6tmTL953F01?v=7.9.98.0"></script>
+
+	    <script type="text/javascript" src="/scripts/videobox?v=6keIcU-E4goKrfGLE7kuDae5KFKcPDxI1VWOIIUwVo01?v=7.9.98.0"></script>
+
+        <script type="text/javascript" src="/js/chunk-common.js?c=7.9.98.0"></script>
+		<script type="text/javascript" src="/js/chunk-admin.js?c=7.9.98.0"></script>
+        <script type="text/javascript" src="/js/systext.js?c=7.9.98.0"></script>
+        <script type="text/javascript">
+	        SystemTextService.setConfig({ languageId: '1' })
+	        SystemTextService.preCache()
+        </script>
+        <script type="text/javascript" src="/js/modules/polyfill.min.js?c=7.9.98.0"></script>
+
+			<script type="text/javascript" src="/Utilities/Uploads/Handler/Uploader.ashx?lastUpdated=02102023213036000&area=developer&filename=masterpage_custom.js&fileguid=masterpage_custom.js"></script><LINK type="text/css" rel="stylesheet" href="/Utilities/Uploads/Handler/Uploader.ashx?lastUpdated=16082023193109000&area=developer&filename=css_custom.css&fileguid=css_custom.css" />
+    
+	<script type="text/javascript" src="/systemtext/injectscript/composer?version=7.9.98.0"></script>
+	<script type="text/javascript" src="/scripts/Timeline?v=yQxMT13DHGxZGgnCP2D1DUIR404bdmuUd83lS8bVBKU1?v=7.9.98.0"></script>
+
+	<script type="text/javascript" src="/scripts/translation?v=RKbyyRllSOgK6wAhaZg5bsYLAY1XRmV0qnlzbb682kA1?v=7.9.98.0"></script>
+
+	<script type="text/javascript">
+		var fileUploadSizeLimit = '104856600';
+		var fileUploadSizeLimitError = "File is too large to upload";
+	</script>
+	<script src="Document.js" type="text/javascript" charset="utf-8"></script>
+	<script src="Document_Proxy.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/scripts/fancybox/jquery.fancybox.js"></script>
+	<script type="text/javascript" src="/Scripts/Controls/Interface/FollowToggle/FollowToggle.js?v=7.9.98.0"></script>
+
+	<script type="text/javascript" src="/Scripts/HighChartsHelper.js?v=7.9.98.0"></script>
+
+	<script type="text/javascript" src="/Scripts/DataTablesHelper.js?v=7.9.98.0"></script>
+
+	<script src="../../../Scripts/Controls/MandatoryRead/MandatoryRead.js?v=7.9.98.0"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			window.documentModel = new Document();
+			window.documentModel.Init({
+				DocumentId: 3256,
+				DocumentFullWidth: 'True' === "True",
+				Resources: {
+					ShowPageHint: 'Show page details',
+					HidePageHint: 'Hide page details'
+				}
+			});
+			if(window.location.href.indexOf("ocument.aspx") > -1) {
+			if($("iframe").length > 0) {
+				$("iframe").load(function(){
+					$("iframe").hide().show(0);
+					});
+				}
+			}
+
+			handleFlexpaperFullScreenModeChrome();
+			function handleFlexpaperFullScreenModeChrome() {
+				var isChromium = window.chrome;
+				var winNav = window.navigator;
+				var vendorName = winNav.vendor;
+				var isOpera = typeof window.opr !== "undefined";
+				var isIEedge = winNav.userAgent.indexOf("Edge") > -1;
+
+				if (isChromium !== null &&
+					typeof isChromium !== "undefined" && vendorName === "Google Inc." && isOpera === false && isIEedge === false) {
+						var checkExist = setInterval(function() {
+							var fullScreenBtn = $(".flexpaper_bttnFullscreen");
+							if (fullScreenBtn !== null && fullScreenBtn.length === 1) {
+								fullScreenBtn.on("click",
+									function() {
+										var documentToView = $(".flexpaper_viewer_container")[0];
+										documentToView.webkitRequestFullscreen();
+									});
+								clearInterval(checkExist)
+							}
+						},
+						500)
+				}
+			}
+
+			function updateLanguageIdForPdfExport(languageId) {
+				var pdfElement = $("#body_btnPDF")[0];
+
+				if (pdfElement) {
+					var url = new URL(pdfElement.href);
+
+					url.searchParams.set("languageId", languageId);
+					pdfElement.href = url.href;
+				}
+			}
+
+			
+		});
+	</script>
+	<style type="text/css">
+		#document .container-title h1 { display: block; }
+		#document #doc-content .doc-inner { display: block; }
+		#document .loading-skeleton { display: none; }
+
+		#document.is-loading .container-title h1 { display: none; }
+		#document.is-loading #doc-content .doc-inner { display: none; }
+		#document.is-loading .loading-skeleton { display: block; }
+	</style>
+<meta name="google-translate-customization" content="f200df3ef955dffc-751801eb3b084d4d-gc93b1215353bbd1a-13"></meta></head>
+<body id="masterBody" class="GoogleTranslate-closed">
+    
+    <input type="hidden" id="hidden-isImpersonating" value=False />
+    <input type="hidden" id="hidden-time-servertime" value="2023-10-05T22:54:53Z" />
+	<input type="hidden" id="hidden-user-tz-offset-mins" value="-360" />
+    <input type="hidden" id="hidden-ckeditor-language" value="en" />
+	<input type="hidden" id="hidden-ckeditor-direction" value="ltr" />
+    <input type="hidden" id="hidden-intltelinput-language" value="us" />
+
+    
+    <input type="hidden" id="hidden-latitude" value=0 />
+    <input type="hidden" id="hidden-longitude" value=0 />
+    <input type="hidden" id="hidden-locationAccuracy" value=0 />
+
+    <input type="hidden" id="hidden-allowGeoLocationCapture" value=False />
+    
+      <a class="sr-only kb-skip" href="#site-navigation">Skip to main navigation</a>
+      <a class="sr-only kb-skip" href="#main-content">Skip to content</a>
+      <a class="sr-only kb-skip" href="#colophon">Skip to footer</a>
+    
+    <script type="text/javascript">
+	    var LegacyTenantGuid = "";
+	    var PageSectionID = "3737";
+	    var SubSectionID = "3953";
+	    var SharePointIntegration = false;
+    	window.TopBar = (window.TopBar) ? window.TopBar : {};
+	    var UseSealSync = "False";
+	    $("body").data( "userTimezoneOffset", "-360" );
+    </script>
+	
+
+
+
+<script>
+	window.__interact = {};
+
+	window.foundry = {
+		user_id: '2115',
+		is_power_user: ('False' == 'True'),
+		user_timezone_offset: '-360',
+		user_language_id: '1',
+		social_advocacy_licensed: ('False' == 'True'),
+		social_advocacy_teaser: ('False' == 'True')
+	};
+</script>
+
+
+
+
+<div id="social-advocacy-panel-root"></div>
+
+<script type="text/javascript">
+	$(document).ready(function () {
+		// Trigger social advocacy if requested
+		var queryString = window.location.search;
+		var urlParams = new URLSearchParams(queryString);
+
+		if (urlParams.has('socialadvocacy') && window.__interact?.renderSocialAdvocacyShare) {
+			var contentId = urlParams.get('socialadvocacy');
+			window.__interact.renderSocialAdvocacyShare(
+				document.getElementById('social-advocacy-panel-root'),
+				{
+					visible: true,
+					onRequestClose: () => {
+						return true
+					},
+					contentId: contentId
+				}
+			);
+		}
+	})
+</script>
+
+<script type="text/javascript">
+	var cssTypeRoot = '/theme/36d10833-0ad6-4d41-b545-1062d62e0210/2g/typography.less?v=7.9.98.0&tv=94';
+	var tenantGUID = 'db4489d3-a252-4f1a-a185-c6b82f620048';
+	var powerUser = 'False';
+
+	var CustomerId = '';
+	var SiteType = '';
+	var NeutrinoVersion = '7.9.98.0';
+
+	var promoteSuggestionID = '2054';
+	var AllowVideoDownloads = true;
+	var AtMentionFiringValue = '3';
+	var privateMessaging = 'True';
+	var BaseUrl = 'sundog.ucar.edu';
+	var LoggedInUserID = '2115';
+	var HideShowEndorsements = false;
+	window.MasterPage = (window.MasterPage) ? window.MasterPage : {};
+	MasterPage.DebugMode = Utilities.getBool("False");
+	MasterPage.Select2AndSearchFiringLength = '3';
+	var widgetPlaceholdersDisabled = 'false';
+	var widgetPlaceholderAnimationDisabled = 'false';
+	var SystemLanguage = 'en-US';
+
+	var TimeagoStrings = Object.assign({}, {
+		userCulture: 'en-US'
+	}, window.globalSysText.timeago);
+
+	$.extend($.timeago.settings.strings, TimeagoStrings);
+
+	$.extend($.fn.mentionsInput, {
+		settings: {
+			strings: {
+				tooltips: globalSysText.profileBioEditor.tooltips
+			}
+		}
+	});
+
+	var selectDropDownSettings = {
+		formatInputTooShort: function (input, min) { return globalSysText.selectmultiple.formatInputTooShortPleaseEnter + (min - input.length) + globalSysText.selectmultiple.formatInputTooShortMoreCharacters },
+		formatSearching: function () { return globalSysText.selectmultiple.formatSearching },
+		formatNoMatches: function () { return globalSysText.selectmultiple.formatNoMatches },
+		formatLoadMore: function (pageNumber) { return globalSysText.selectmultiple.formatLoadMore }
+	};
+	$.extend($.fn.select2.defaults, selectDropDownSettings);
+
+	if ($.fn.dataTable !== undefined) {
+		$.fn.dataTable.defaults.iDisplayLength = 20;
+		$.fn.dataTable.defaults.bLengthChange = false;
+		$.fn.dataTable.defaults.bFilter = false;
+		$.fn.dataTable.defaults.sPaginationType = "full_numbers",
+		$.fn.dataTable.defaults.oLanguage = globalSysText.datatable;
+
+	}
+</script>
+    
+    <script>
+         // Expose variables to Tracker.js
+        var TenantGuid = tenantGUID;
+         var PersonID = LoggedInUserID;
+         var SessionID = '5pesj50avmwnpkd5rfjiisa4';
+         var FirstName = '';
+         var Surname = '';
+         var PageTitle = "tempTitle";
+         $(document).ready(function () {
+            if (typeof sectionTitle !== 'undefined' && sectionTitle !== '') {
+                 PageTitle = sectionTitle;
+            } else {
+                if (typeof tourName !== 'undefined' && tourName !== '') {
+                     PageTitle = tourName;
+                } else {
+                     PageTitle = document.title;
+                     }
+                }
+            });
+         </script>
+        <script async src="https://analytics-cdn.interactgo.com/june/us/june.js?v=1.02"></script>
+    <script type="text/javascript" src="/scripts/BroadcastClient?v=UfzgA-Ztmj3YteCw-b_tTmHjwLLBb9Hl9e8_tritDO41?v=7.9.98.0"></script>
+
+<script type="text/javascript">
+	var broadcastClient;
+
+	$(function() {
+		broadcastClient = new BroadcastClient();
+
+		var settings = {
+			selectors: {
+				blockingContainer: '#broadcast-blocking-outer-container',
+				blockingInstance: '.broadcast-blocking-instance',
+				blockingTemplate: '#broadcast-blocking-inner-template',
+				acknowledgeTemplate: '#broadcast-blocking-page-track',
+				bannerTemplate: '#broadcast-banner-template',
+				btnShowPage: '.btn-broadcast-expand',
+				btnDismiss: '.btn-broadcast-dismiss',
+				btnDismissBanner: '.dismiss-broadcast-banner',
+				btnAcknowledge: '.btn-acknowledge',
+				btnClosePage: '.close-page-btn',
+				blockingMessage: '.broadcast-blocking-message',
+				blockingPage: '.broadcast-blocking-page',
+				blockingPageAcknowledgeContainer: '.broadcast-blocking-page-acknowledge-container',
+				broadcastBanner: '.broadcast-banner',
+				expandedModalClass: 'expanded',
+				pageTrackingModalClass: 'page-tracking',
+				acknowledgeBox: '#broadcast-blocking-outer-container .alert-acknowledge',
+				acknowledgedBox: '#broadcast-blocking-outer-container .alert-acknowledged',
+				bannerContainer: '#broadcast-banner-container'
+			},
+			blockingDismissCookieName: 'AcknowledgedBroadcastBlockingIds',
+			bannerDismissCookieName: 'AcknowledgedBroadcastBannerIds',
+			broadcastsEndpoint: '/api/broadcasts/me',
+			pollDurationSeconds: 120,
+			personId: 2115,
+			tenantGuid: 'db4489d3-a252-4f1a-a185-c6b82f620048'
+		};
+
+		broadcastClient.init(settings);
+	});
+</script>
+
+<div id="broadcast-blocking-outer-container"></div>
+
+<script id="broadcast-blocking-inner-template" type="text/x-handlebars-template">
+	<div class="broadcast-blocking-backdrop"></div>
+
+	{{#each this}}
+	<div class="broadcast-blocking-instance" data-broadcast-id="{{Id}}">
+		<i class="fa fa-ban" aria-hidden="true"></i>
+		<div class="broadcast-container">
+			<div class="broadcast-blocking-header">
+				<h4>{{Title}}</h4>
+			</div>
+
+			<div class="broadcast-blocking-body">
+				<div class="broadcast-blocking-message">
+					{{{ Message }}}
+				</div>
+				<div class="broadcast-blocking-page">
+				</div>
+			</div>
+
+			<div class="broadcast-blocking-footer">
+				{{#if LinksToPage}}
+				<input type="button" class="btn btn-primary is-solid btn-broadcast-expand" value="View page" />
+				{{/if}}
+				<input type="button" {{#if LinksToPage}} style="display: none;" {{/if}} class="btn btn-danger is-solid btn-broadcast-dismiss" value="Dismiss" />
+				<div class="broadcast-blocking-page-acknowledge-container"></div>
+			</div>
+		</div>
+	</div>
+	{{/each}}
+</script>
+
+<script id="broadcast-blocking-page-track" type="text/x-handlebars-template">
+	{{#if CurrentUserHasAcknowledged}}{{else}}
+	<div class="alert alert-danger alert-acknowledge">
+		<h4>Thank you for reading.</h4>
+		<p>Please confirm you have read this broadcast. Readership data collected will help inform strategies for future broadcasts.</p>
+		<button data-acknowledge-url="{{AcknowledgeUrl}}" class="btn-acknowledge btn btn-primary is-solid">
+			I have read this broadcast.
+		</button>
+	</div>
+	{{/if}}
+
+	<div class="alert alert-success alert-acknowledged" {{#if CurrentUserHasAcknowledged}} {{else}} style="display: none;" {{/if}}>
+		<h4>Broadcast Acknowledged</h4>
+		<p>Thank you for confirming that you have read this broadcast.</p>
+		<button class="close-page-btn btn btn-danger is-solid">Close</button>
+	</div>
+</script>
+	<form method="post" action="./Document.aspx?id=3256&amp;SearchId=0" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'DoNothing')" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="AjaxPlaceholder_RadScriptManager1_TSM" id="AjaxPlaceholder_RadScriptManager1_TSM" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZNmt4SEMUwJ14fDeZlYJzcvv30Q-cZZAvWxHTnJCNCs8cvKWGG55hnxrYOaly-yXew2&amp;t=638259362771233176" type="text/javascript"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-694RST6S49"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-694RST6S49');
+</script>
+
+<!-- CrazyEgg Tracking Code for https://sundog.ucar.edu -->
+<script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0078/5653.js" async="async" ></script>
+
+<!-- Hotjar Tracking Code for https://sundog.ucar.edu -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2863962,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script type="text/javascript">
+//<![CDATA[
+function clickCheckboxControl(obj, link){    var chk = document.getElementById(obj)    if (chk.checked)    {        document.getElementById(link).style.display = '';    }    else    {        document.getElementById(link).style.display = 'none';    }}//]]>
+</script>
+
+<script src="/Telerik.Web.UI.WebResource.axd?_TSM_HiddenField_=AjaxPlaceholder_RadScriptManager1_TSM&amp;compress=1&amp;_TSM_CombinedScripts_=%3b%3bSystem.Web.Extensions%2c+Version%3d4.0.0.0%2c+Culture%3dneutral%2c+PublicKeyToken%3d31bf3856ad364e35%3aen-US%3a74e2d6b4-8086-4964-ae5a-39250647f25e%3aea597d4b%3ab25378d2" type="text/javascript"></script>
+<script src="../../../Scripts/telerik-scheduler.js" type="text/javascript"></script>
+<script src="/WebResource.axd?d=JoBkLzP19aTuxbWOhHobYp81ac3iTd_SG8y4IPpLgJ9gkRJlWG-b-gNeQ6s_BpriJnGgyXc5av-IMjE19ryhaw2&amp;t=638259362771233176" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="EF35AA19" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="RL+sShu9Mla1xpvGSgbOCQiW8ox4TTj7A68gHT1WgiGg2zYlOEkkKmANkyAZDoKgmG6jg/yGnC6U4uyNsfhwmpT+1fDreAdNbSOiXbgHORJKP2OknJ34mU9gP2cVwIoBxFh4nU77g4oqR4Qk3/N7Qg==" />
+</div>
+		<input type="button" name="ctl00$DoNothing" value="DoNothing" id="DoNothing" disabled="disabled" class="aspNetDisabled" hidden="hidden" style="display: none;" />
+        
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$AjaxPlaceholder$RadScriptManager1', 'form1', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+        
+		
+        
+<div id="ii-analytics" data-config="{&quot;personID&quot;:2115,&quot;loginID&quot;:&quot;647220b5-910b-415d-9e2f-e9078a90f5f1&quot;,&quot;sectionID&quot;:3737,&quot;subSectionID&quot;:3953,&quot;contentID&quot;:3256,&quot;blogID&quot;:-1,&quot;postID&quot;:-1,&quot;url&quot;:null,&quot;referrerURL&quot;:null,&quot;ipAddress&quot;:&quot;128.117.85.64&quot;,&quot;pageLoadDuration&quot;:0,&quot;timestamp&quot;:&quot;0001-01-01T00:00:00&quot;,&quot;browser&quot;:&quot;Chrome&quot;,&quot;browserVersion&quot;:&quot;117.0&quot;,&quot;userAgent&quot;:&quot;Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36&quot;,&quot;browserLanguage&quot;:&quot;en-US&quot;,&quot;browserTouchEnabled&quot;:false,&quot;browserGeolocationEnabled&quot;:false,&quot;browserCanvasEnabled&quot;:false,&quot;browserHTML5VideoEnabled&quot;:false,&quot;browserSVGEnabled&quot;:false,&quot;browserOrientationEnabled&quot;:false,&quot;threadID&quot;:0,&quot;forumID&quot;:-1,&quot;eventID&quot;:0,&quot;personHitID&quot;:0,&quot;trackingTypeID&quot;:6,&quot;activityToken&quot;:&quot;61686d24-22db-4b68-a621-b8edbafa5aa0&quot;,&quot;activityCount&quot;:&quot;1&quot;,&quot;localTimeZoneOffset&quot;:0,&quot;isTriggeredFromMasterPage&quot;:true,&quot;impersonatedBy&quot;:0,&quot;utmSource&quot;:&quot;&quot;,&quot;utmMedium&quot;:&quot;&quot;,&quot;utmTerm&quot;:&quot;&quot;,&quot;utmContent&quot;:&quot;&quot;,&quot;utmCampaign&quot;:&quot;&quot;,&quot;promotionID&quot;:0,&quot;latitude&quot;:0.0,&quot;longitude&quot;:0.0,&quot;locationAccuracy&quot;:0.0}"></div>
+
+<script type="text/javascript">
+	$(window).load(function () {
+		// Check if analytics has been disabled
+		if (bypassPageHit() === false) {
+			getPageLoadTime();
+			var localConfig = {
+				browserTouchEnabled: Modernizr.touchevents,
+				browserGeolocationEnabled: Modernizr.geolocation,
+				browserCanvasEnabled: Modernizr.canvas,
+				browserHTML5VideoEnabled: Modernizr.video,
+				browserSVGEnabled: Modernizr.inlinesvg,
+				browserOrientationEnabled: Modernizr.deviceorientation
+			};
+			logPageHit(localConfig);
+			$("#ii-analytics").attr("data-local-config", JSON.stringify(localConfig));
+		}
+	});
+
+	function logPageHit(localConfig) {
+		var headers = {};
+		headers["__RequestVerificationToken"] = document.getElementsByName('__RequestVerificationToken')[0].value;
+		$.ajax({
+			type: 'POST',
+			url: '/api/analytics/log-page-hit',
+			headers: headers,
+			// We have encoded strings to make sure they are safe to render.
+			// So, we therefore need to decode them when setting the data model properties at function run time
+			data: JSON.stringify({
+				personID: 2115,
+				loginID: '647220b5-910b-415d-9e2f-e9078a90f5f1',
+				sectionID: 3737,
+				subSectionID: 3953,
+				contentID: 3256,
+				blogID: -1,
+				postID: -1,
+				url: decodeHtml('http://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3256&amp;amp;SearchId=0'),
+				referrerURL: document.referrer,
+				threadid: 0,
+				forumid: -1,
+				eventid: 0,
+				personhitid: 0,
+				ipAddress: '128.117.85.64',
+				pageLoadDuration: pageLoadDuration,
+				trackingtypeID: 6,
+				browser: 'Chrome',
+				browserVersion: '117.0',
+				browserLanguage: 'en-US',
+				userAgent: decodeHtml('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36'),
+				browserTouchEnabled: localConfig.browserTouchEnabled,
+				browserGeolocationEnabled: localConfig.browserGeolocationEnabled,
+				browserCanvasEnabled: localConfig.browserCanvasEnabled,
+				browserHTML5VideoEnabled: localConfig.browserHTML5VideoEnabled,
+				browserSVGEnabled: localConfig.browserSVGEnabled,
+				browserOrientationEnabled: localConfig.browserOrientationEnabled,
+				localTimeZoneOffset: new Date().getTimezoneOffset(),
+				activityToken: '61686d24-22db-4b68-a621-b8edbafa5aa0',
+				activityCount: 1,
+				utmSource: decodeHtml(''),
+				utmMedium: decodeHtml(''),
+				utmTerm: decodeHtml(''),
+				utmContent: decodeHtml(''),
+				utmCampaign: decodeHtml(''),
+				promotionID: 0,
+				impersonatedBy: 0 > 0 ? 0 : null,
+				latitude: 0 != 0 ? 0 : null,
+				longitude: 0 != 0 ? 0 : null,
+				locationAccuracy: 0 > 0 ? 0 : null
+			}),
+			contentType: 'application/json; charset=utf-8',
+			dataType: 'json'
+		});
+
+		// Now that the utm parameters have been logged, we can remove them from the url (am not pushing the url change to the history stack)
+		var urlSearchParams = new URLSearchParams(window.location.search);
+		urlSearchParams.delete('utm_source');
+		urlSearchParams.delete('utm_medium');
+		urlSearchParams.delete('utm_term');
+		urlSearchParams.delete('utm_content');
+		urlSearchParams.delete('utm_campaign');
+
+		var newRelativePathQuery = window.location.pathname;
+
+		// Append querystring params if any remain
+		// Note: urlSearchParams.size is undefined in safari, so have to check
+		// if there are any entries by checking the length of the toString() result.
+		var amendedParams = urlSearchParams.toString();
+
+		if (amendedParams.length > 0)
+			newRelativePathQuery += "?" + amendedParams;
+		
+		// Append #fragements of the URL - window.location.hash includes #
+		newRelativePathQuery += window.location.hash;
+
+		history.replaceState(null, "", newRelativePathQuery);
+	}
+
+	function decodeHtml(encodedHtml) {
+		return $("<textarea/>").html(encodedHtml).text();
+	}
+
+	function getPageLoadTime() {
+		var afterLoad = (new Date()).getTime();
+		pageLoadDuration = (afterLoad - beforeLoad);
+	}
+
+	function bypassPageHit() {
+		var query = window.location.search.substring(1);
+		var vars = query.split('&');
+		for (var i = 0; i < vars.length; i++) {
+			var pair = vars[i].split('=');
+			if (decodeURIComponent(pair[0]) === 'bypassPageHit') {
+				return decodeURIComponent(pair[1]);
+			}
+		}
+		return false
+	}
+</script>
+
+ 
+        <div class="wrapper">
+           <input type="hidden" id="hidden-master-person-id" value="2115" />
+           <input type="hidden" id="hidden-master-person-cultureInfo" value="en-US" />
+            <style type="text/css">
+	.general-announcement {
+		background-color: #d9edf7;
+		border-color: #bce8f1;
+		color: #3a87ad;
+	}
+	.important-announcement {
+		background-color: #F7D9D9;
+		border-color: #F1BCC5;
+		color: #AD3A3A;
+	}
+	.warning-announcement {
+		background-color: #F7F2D9;
+		border-color: #F1DFBC;
+		color: #AD9A3A;
+	}
+	.success-announcement {
+		background-color: #DAF7D9;
+		border-color: #C7F1BC;
+		color: #3ead3a;
+	}
+</style>
+
+<div id="announcementsBanner">
+</div>
+           <div id="broadcast-banner-container">
+</div>
+
+<script id="broadcast-banner-template" type="text/x-handlebars-template">
+	<div class="container">
+		<div class="alert alert-info broadcast-banner" data-broadcast-id="{{Id}}">
+			<strong>{{Title}}</strong>
+			{{{Message}}}
+			{{#if LinksToPage}}<a href="{{PageUrl}}">View more</a>{{/if}}
+
+			{{#if AllowDismiss}}
+			{{#if RequiresAcknowledgement}}
+			{{else}}
+			<button type="button" class="close dismiss-broadcast-banner">×</button>
+			{{/if}}
+			{{/if}}
+		</div>
+	</div>
+</script>
+           
+
+
+          
+
+
+
+<!-- style overrides for main theme -->
+<style type="text/css" rel="stylesheet">
+	.notifications-container {
+		width: 460px !important;
+	}
+
+	#status-banner .header-content .brand .logo img {
+		max-height: 52px;
+	}
+
+	.site-footer .footer-container {
+		border-top: none !important;
+	}
+
+	#breadcrumb_bg {
+		background-color: transparent !important;
+		border-bottom: none !important;
+		border-top: none !important;
+	}
+</style>
+
+
+
+	<div id="ii-layout"
+		 data-intranet-name="sundog.ucar.edu"
+		 data-company-logo-path="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/logo.png"
+		 data-rewards-image-path="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/rewards-img.png"
+		 data-tenant-applications="false"
+		 data-award-title="Award"
+		 data-sharepoint-outlook-visible="False"
+		 data-person-language-id="1"
+		 data-person-language-code="en-US"
+		 data-google-drive-visible="True"
+		 data-box-search-visible="False"
+		 data-show-person-influence-score="False"
+		 data-show-follow-unfollow="False"
+		 data-show-quick-search="True"
+		 data-has-concur="True"
+		 data-has-workday="True">
+	</div>
+	<div id="vue-personal-recommendations"></div>
+<!--[if IE]>
+<script src="/Scripts/polyfill/polyfillio.min.js" type="text/javascript"></script>
+<![endif]-->
+<script type="text/javascript" src="/js/gen2/neutrino.js?c=7.9.98.0&t=1" async ></script><script type="text/javascript" src="/js/gen2/recommendations.js?c=7.9.98.0&t=1" async ></script>
+            
+                    <div class="breadcrumbs-container breadcrumb-header">
+						<div class="container">
+                      <nav class="breadcrumbs" aria-label="Breadcrumbs navigation">
+                            
+
+<script type="text/javascript">
+    function RefreshPageOnClose() {
+        location.reload(true);
+    }
+
+</script>
+
+
+  <ul>
+
+    <li>
+          <img src="/resourceFiles/db4489d3-a252-4f1a-a185-c6b82f620048/themes/36d10833-0ad6-4d41-b545-1062d62e0210/images/breadcrumb-img.png" alt="logo" />
+        
+        <span class="breadcrumbs-title">You are here</span></li>
+    
+            <li>
+              <span class="icon is-medium"><i class="ii ii-chevron-right"></i></span>
+            </li>
+            <li>
+                <a id="crumbTrail3_repCrumb_hypCrumb_0" href="../../../Home.aspx?Section=-1">Home</a></li>
+            <li>
+                </li>
+        
+            <li>
+              <span class="icon is-medium"><i class="ii ii-chevron-right"></i></span>
+            </li>
+            <li>
+                <a id="crumbTrail3_repCrumb_hypCrumb_1" href="../Modules/Directory/InteractTeams.aspx">Communities Directory</a></li>
+            <li>
+                </li>
+        
+            <li>
+              <span class="icon is-medium"><i class="ii ii-chevron-right"></i></span>
+            </li>
+            <li>
+                <a id="crumbTrail3_repCrumb_hypCrumb_2" href="../Section/Default.aspx?Section=3737">Earth Observing Laboratory - EOL</a></li>
+            <li>
+                </li>
+        
+            <li>
+              <span class="icon is-medium"><i class="ii ii-chevron-right"></i></span>
+            </li>
+            <li>
+                <a id="crumbTrail3_repCrumb_hypCrumb_3" href="../Section/ContentListing.aspx?subsection=3953">Software Development Guidelines</a></li>
+            <li>
+                </li>
+        
+            <li>
+              <span class="icon is-medium"><i class="ii ii-chevron-right"></i></span>
+            </li>
+            <li>
+                </li>
+            <li>
+                <span id="crumbTrail3_repCrumb_lblCrumb_4">Development Process</span></li>
+        
+</ul>
+
+<div id="crumbHelpcrumbTrail3" class="modal hide fade in" style="display: none;">
+    <div class="modal-inner">
+        <div class="modal-header">
+            <button aria-hidden="true" data-dismiss="modal" class="close" type="button">Ã—</button>
+            <h3>Modal header</h3>
+        </div>
+        <div class="modal-body defaultModalPadding">
+            <p>
+                <h2><b>Other Tasks Menu</b></h2><br /><br /> Note that the options that appear within this drop-down menu are dependent on what permission you have.<br /><br />Edit document<br />Email document<br />View Statistics<br />Add to Favorites<br />Delete this document<br /><br /><h2><b>Document Options</b></h2><br /><br />The additional options that appear on the right hand side of the document will depend on how the Content Area and Document have been set up.These can include;<br /><br />Required Read - If you are required to read and acknowledge that you have read an document it will show.	Once you have acknowledged the document the Required Read box won't show.<br /><br />Document Quiz - your score if you have taken it, or a reminder to take it.<br /><br />Intranet Recommends - other documents that might be of interest to you.<br /><br />Keyword Cloud - which words have lead other Users to this document as well as the option for you to suggest a keyword.<br /><br />Rating - either what rating you have given, or the ability to rate the document.<br /><br />Statistics - information on the documents popularity; recent hits and update details.<br /><br />Is this Up to Date? - your chance to alert the author to any errors or omissions.<br /><br />Related Content - documents on the same or similar topic.<br /><br /><h2><b>Latest Comments</b></h2><br /><br />You are also able to view the comments of other Users and add your own using the link at the foot of the document.<br /><br />Comments can be added by clicking on the Add Comment link, you can Report Comments by clicking on the link.	A system administrator will then be informed of your views.</p>
+        </div>
+        <div class="modal-footer">
+            <a class="btn" href="#">Close</a>
+        </div>
+    </div>
+</div>
+
+                  </nav>
+							</div>
+              </div>
+            
+            <!-- Masthead search -->
+          
+
+          <div id="section-html-header" class="row-fluid"></div>
+
+	        
+            <main id="main-content" 
+                
+                tabindex="-1">
+              <div class="container">
+          
+            <div class="row">
+				
+<div id="side-menu-toggle-button" class="navbar hidden-desktop hidden-tablet" style="margin:0;">
+    <a id="open" class="btn btn-navbar collapsed" href="#CollNavID" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </a>
+    <div id="pageslide-modal" class="modal-screen" role="button"></div>
+</div>
+
+
+<div class="span3 hidden-phone">
+    <aside>
+        <!-- Navigation Starts here -->
+        <div class="inner-menu well well-small" id="CollNavID">
+          <div id="sideMenu_MenuArea_3738_NavTop">
+</div>
+<div id="sideMenu_MenuArea_3738_NavTitle" class="SideNavTitle">
+    <div id="sideMenu_MenuArea_3738_NavTxt">
+        <ul class="nav nav-list">
+            <li class="nav-header">
+                <a id="sideMenu_MenuArea_3738_hypTitle" data-toggle="collapse" data-parent="#CollNavID" href="#MenusideMenu_MenuArea_3738"><span>(Under Construction) Earth Observing Laboratory</span><i class="icon-chevron-down ii-chevron-right"></i></a>
+            </li>
+        </ul>
+        
+    </div>
+    <script language="javascript" type="text/javascript">
+        function toggleFormsDisplay(sDiv, sImg, divID) {
+            var oDiv = document.getElementById(sDiv);
+            var oImg = document.getElementById(sImg);
+            if (oDiv.style.display == 'none') {
+                oDiv.style.display = '';
+                oImg.src = oImg.src.replace('Plus', 'Minus');
+                setSession(divID, true);
+            }
+            else {
+                oDiv.style.display = 'none';
+                oImg.src = oImg.src.replace('Minus', 'Plus');
+                setSession(divID, false);
+            }
+        }
+
+        function setMenuState(sectionId, state) {
+            $.ajax({
+                type: "POST",
+                datatype: 'json',
+                async: false,
+                url: "/WebServices/GlobalWebService.asmx/SetMenuState",
+                data: JSON.stringify({ sectionId: sectionId, state: state }),
+                contentType: "application/json; charset=utf-8"
+            });
+        }
+    </script>
+    
+</div>
+<div id="sideMenu_MenuArea_3738_NavTitleBottom">
+</div>
+<div id="sideMenu_MenuArea_3738_DIV_MenuContainer">
+    <!--CHANGE DEPENDING ON SIDEMENU ELEMENT-->
+    <!--END CHANGE-->
+<ul id="MenusideMenu_MenuArea_3738" class="nav nav-list collapse" style="list-style-type: none;"><li class=""><i class="icon-home" title="Home"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/Default.aspx?section=3737" id="sideMenu_MenuArea_3738_LINK_SIDEMENU_TEXT_3739" title="EOL Home (Intranet)" target="_self" class="">EOL Home (Intranet)</a><div id="sideMenu_MenuArea_3738_DIV_SIDEMENU_3739" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3959" id="sideMenu_MenuArea_3738_LINK_SIDEMENU_TEXT_3959" title="NCAR|UCAR Links" class="">NCAR|UCAR Links</a><div id="sideMenu_MenuArea_3738_DIV_SIDEMENU_3959" class="collapse"></div></li><li class=""><i class="iconextra-forum" title="Forum"></i><a href="/Interact/Pages/Modules/Forum/Forum.aspx?id=3743" id="sideMenu_MenuArea_3738_LINK_SIDEMENU_TEXT_3743" title="EOL Team Forum - TBD" class="">EOL Team Forum - TBD</a><div id="sideMenu_MenuArea_3738_DIV_SIDEMENU_3743" class="collapse"></div></li><li class=""><i class="iconextra-blog" title="Blog"></i><a href="https://sundog.ucar.edu/Interact/Pages/Modules/Blog/teamBlog.aspx?sectionid=3742" id="sideMenu_MenuArea_3738_LINK_SIDEMENU_TEXT_3742" title="EOL Team Blog - TBD" class="">EOL Team Blog - TBD</a><div id="sideMenu_MenuArea_3738_DIV_SIDEMENU_3742" class="collapse"></div></li><li class=""><i class="icon-picture" title="Gallery"></i><a href="/Interact/Pages/Modules/Gallery/Gallery.aspx?sectionid=5622" id="sideMenu_MenuArea_3738_LINK_SIDEMENU_TEXT_5622" title="EOL Gallery" class="">EOL Gallery</a><div id="sideMenu_MenuArea_3738_DIV_SIDEMENU_5622" class="collapse"></div></li></ul><div class="SideNavSeperator"></div></div>
+
+<div id="sideMenu_MenuArea_5563_NavTop">
+</div>
+<div id="sideMenu_MenuArea_5563_NavTitle" class="SideNavTitle">
+    <div id="sideMenu_MenuArea_5563_NavTxt">
+        <ul class="nav nav-list">
+            <li class="nav-header">
+                <a id="sideMenu_MenuArea_5563_hypTitle" data-toggle="collapse" data-parent="#CollNavID" href="#MenusideMenu_MenuArea_5563"><span>EOL Employee Resources</span><i class="icon-chevron-up ii-chevron-down"></i></a>
+            </li>
+        </ul>
+        
+    </div>
+    <script language="javascript" type="text/javascript">
+        function toggleFormsDisplay(sDiv, sImg, divID) {
+            var oDiv = document.getElementById(sDiv);
+            var oImg = document.getElementById(sImg);
+            if (oDiv.style.display == 'none') {
+                oDiv.style.display = '';
+                oImg.src = oImg.src.replace('Plus', 'Minus');
+                setSession(divID, true);
+            }
+            else {
+                oDiv.style.display = 'none';
+                oImg.src = oImg.src.replace('Minus', 'Plus');
+                setSession(divID, false);
+            }
+        }
+
+        function setMenuState(sectionId, state) {
+            $.ajax({
+                type: "POST",
+                datatype: 'json',
+                async: false,
+                url: "/WebServices/GlobalWebService.asmx/SetMenuState",
+                data: JSON.stringify({ sectionId: sectionId, state: state }),
+                contentType: "application/json; charset=utf-8"
+            });
+        }
+    </script>
+    
+</div>
+<div id="sideMenu_MenuArea_5563_NavTitleBottom">
+</div>
+<div id="sideMenu_MenuArea_5563_DIV_MenuContainer">
+    <!--CHANGE DEPENDING ON SIDEMENU ELEMENT-->
+    <!--END CHANGE-->
+<ul id="MenusideMenu_MenuArea_5563" class="nav nav-list collapse in" style="list-style-type: none;"><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3741" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3741" title="Policies, Procedures, and Forms" class="">Policies, Procedures, and Forms</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3741" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3975" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3975" title="Newsletters" class="">Newsletters</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3975" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3753" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3753" title="Diversity Committee" class="">Diversity Committee</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3753" class="collapse"></div></li><li class=""><a id="sideMenu_MenuArea_5563_IMG_SIDEMENU_3754" Data-toggle="collapse" Data-target="#sideMenu_MenuArea_5563_DIV_SIDEMENU_3754" class="SideMenuTopItemToggle collapsed" title="Expand CREW - Council Rep, Engagement and Well-Being" onclick="if ($(this).hasClass(&#39;collapsed&#39;)) { $(this).attr(&#39;title&#39;,&#39;Expand CREW - Council Rep, Engagement and Well-Being&#39;).find(&#39;i&#39;).removeClass().addClass(&#39;icon-minus ii-chevron-down&#39;); setMenuState(3754, true); } else { $(this).attr(&#39;title&#39;,&#39;Collapse CREW - Council Rep, Engagement and Well-Being&#39;).find(&#39;i&#39;).removeClass().addClass(&#39;icon-plus ii-chevron-right&#39;); setMenuState(3754, false); }"><i class='icon-plus ii-chevron-right'></i></a><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3754" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3754" title="CREW - Council Rep, Engagement and Well-Being" class="">CREW - Council Rep, Engagement and Well-Being</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3754" class="collapse"><ul id="MenusideMenu_MenuArea_5563" style="list-style-type: none;"><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3876" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3876" title="EOL-Related Delphi Questions and Answers" class="SideMenuSubItemLink">EOL-Related Delphi Questions and Answers</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3876" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3877" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3877" title="EOL IAC Meetings &amp; Emails" class="SideMenuSubItemLink">EOL IAC Meetings & Emails</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3877" class="collapse"></div></li></ul></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3756" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3756" title="EOL Administration" class="">EOL Administration</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3756" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3958" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_3958" title="Visitors &amp; Interns" class="">Visitors & Interns</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_3958" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=5624" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_5624" title="Current Events &amp; Announcements" class="">Current Events & Announcements</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_5624" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=5625" id="sideMenu_MenuArea_5563_LINK_SIDEMENU_TEXT_5625" title="New Employees &amp; Onboarding" class="">New Employees & Onboarding</a><div id="sideMenu_MenuArea_5563_DIV_SIDEMENU_5625" class="collapse"></div></li></ul><div class="SideNavSeperator"></div></div>
+
+<div id="sideMenu_MenuArea_5562_NavTop">
+</div>
+<div id="sideMenu_MenuArea_5562_NavTitle" class="SideNavTitle">
+    <div id="sideMenu_MenuArea_5562_NavTxt">
+        <ul class="nav nav-list">
+            <li class="nav-header">
+                <a id="sideMenu_MenuArea_5562_hypTitle" data-toggle="collapse" data-parent="#CollNavID" href="#MenusideMenu_MenuArea_5562"><span>(Under Construction) Technology Help Center</span><i class="icon-chevron-down ii-chevron-right"></i></a>
+            </li>
+        </ul>
+        
+    </div>
+    <script language="javascript" type="text/javascript">
+        function toggleFormsDisplay(sDiv, sImg, divID) {
+            var oDiv = document.getElementById(sDiv);
+            var oImg = document.getElementById(sImg);
+            if (oDiv.style.display == 'none') {
+                oDiv.style.display = '';
+                oImg.src = oImg.src.replace('Plus', 'Minus');
+                setSession(divID, true);
+            }
+            else {
+                oDiv.style.display = 'none';
+                oImg.src = oImg.src.replace('Minus', 'Plus');
+                setSession(divID, false);
+            }
+        }
+
+        function setMenuState(sectionId, state) {
+            $.ajax({
+                type: "POST",
+                datatype: 'json',
+                async: false,
+                url: "/WebServices/GlobalWebService.asmx/SetMenuState",
+                data: JSON.stringify({ sectionId: sectionId, state: state }),
+                contentType: "application/json; charset=utf-8"
+            });
+        }
+    </script>
+    
+</div>
+<div id="sideMenu_MenuArea_5562_NavTitleBottom">
+</div>
+<div id="sideMenu_MenuArea_5562_DIV_MenuContainer">
+    <!--CHANGE DEPENDING ON SIDEMENU ELEMENT-->
+    <!--END CHANGE-->
+<ul id="MenusideMenu_MenuArea_5562" class="nav nav-list collapse" style="list-style-type: none;"><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3862" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3862" title="Accounts &amp; Passwords" class="">Accounts & Passwords</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3862" class="collapse"></div></li><li class=""><a id="sideMenu_MenuArea_5562_IMG_SIDEMENU_3752" Data-toggle="collapse" Data-target="#sideMenu_MenuArea_5562_DIV_SIDEMENU_3752" class="SideMenuTopItemToggle collapsed" title="Expand System Administration &amp; Computing Help" onclick="if ($(this).hasClass(&#39;collapsed&#39;)) { $(this).attr(&#39;title&#39;,&#39;Expand System Administration &amp; Computing Help&#39;).find(&#39;i&#39;).removeClass().addClass(&#39;icon-minus ii-chevron-down&#39;); setMenuState(3752, true); } else { $(this).attr(&#39;title&#39;,&#39;Collapse System Administration &amp; Computing Help&#39;).find(&#39;i&#39;).removeClass().addClass(&#39;icon-plus ii-chevron-right&#39;); setMenuState(3752, false); }"><i class='icon-plus ii-chevron-right'></i></a><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3752" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3752" title="System Administration &amp; Computing Help" class="">System Administration & Computing Help</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3752" class="collapse"><ul id="MenusideMenu_MenuArea_5562" style="list-style-type: none;"><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3872" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3872" title="Getting Help" class="SideMenuSubItemLink">Getting Help</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3872" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3875" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3875" title="G Suite (Googe Apps) &amp; Email" class="SideMenuSubItemLink">G Suite (Googe Apps) & Email</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3875" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3863" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3863" title="Computer Security" class="SideMenuSubItemLink">Computer Security</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3863" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3864" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3864" title="Network &amp; Connectivity" class="SideMenuSubItemLink">Network & Connectivity</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3864" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3865" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3865" title="Backup &amp; Storage" class="SideMenuSubItemLink">Backup & Storage</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3865" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3866" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3866" title="Create and use public ssh keys" class="SideMenuSubItemLink">Create and use public ssh keys</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3866" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3867" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3867" title="EOL Conference Rooms" class="SideMenuSubItemLink">EOL Conference Rooms</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3867" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3868" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3868" title="Printing" class="SideMenuSubItemLink">Printing</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3868" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3870" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3870" title="Ordering &amp; Procurement" class="SideMenuSubItemLink">Ordering & Procurement</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3870" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3871" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3871" title="Hardware" class="SideMenuSubItemLink">Hardware</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3871" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3873" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3873" title="Operating Systems" class="SideMenuSubItemLink">Operating Systems</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3873" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3874" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3874" title="For CWIG - Computer Excess/Salvage Form" class="SideMenuSubItemLink">For CWIG - Computer Excess/Salvage Form</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3874" class="collapse"></div></li></ul></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3757" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3757" title="EOL Design Center" class="">EOL Design Center</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3757" class="collapse"></div></li><li class=""><a id="sideMenu_MenuArea_5562_IMG_SIDEMENU_3755" Data-toggle="collapse" Data-target="#sideMenu_MenuArea_5562_DIV_SIDEMENU_3755" class="SideMenuTopItemToggle collapsed" title="Expand Drupal Guidance" onclick="if ($(this).hasClass(&#39;collapsed&#39;)) { $(this).attr(&#39;title&#39;,&#39;Expand Drupal Guidance&#39;).find(&#39;i&#39;).removeClass().addClass(&#39;icon-minus ii-chevron-down&#39;); setMenuState(3755, true); } else { $(this).attr(&#39;title&#39;,&#39;Collapse Drupal Guidance&#39;).find(&#39;i&#39;).removeClass().addClass(&#39;icon-plus ii-chevron-right&#39;); setMenuState(3755, false); }"><i class='icon-plus ii-chevron-right'></i></a><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3755" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3755" title="Drupal Guidance" class="">Drupal Guidance</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3755" class="collapse"><ul id="MenusideMenu_MenuArea_5562" style="list-style-type: none;"><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3878" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3878" title="Ordering and Organizing Content" class="SideMenuSubItemLink">Ordering and Organizing Content</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3878" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3879" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3879" title="Rectifying Naming Clashes" class="SideMenuSubItemLink">Rectifying Naming Clashes</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3879" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3880" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3880" title="Widescreen Panaoramic Viewing with Colorbox" class="SideMenuSubItemLink">Widescreen Panaoramic Viewing with Colorbox</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3880" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3881" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3881" title="Adding Image Descriptions to Thumbnails" class="SideMenuSubItemLink">Adding Image Descriptions to Thumbnails</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3881" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3882" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3882" title="Creating a DOI for a Webpage" class="SideMenuSubItemLink">Creating a DOI for a Webpage</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3882" class="collapse"></div></li><li class="SideMenuSubItems"><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3883" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3883" title="Updating Redirects" class="SideMenuSubItemLink">Updating Redirects</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3883" class="collapse"></div></li></ul></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3957" id="sideMenu_MenuArea_5562_LINK_SIDEMENU_TEXT_3957" title="Planview Guidance" class="">Planview Guidance</a><div id="sideMenu_MenuArea_5562_DIV_SIDEMENU_3957" class="collapse"></div></li></ul><div class="SideNavSeperator"></div></div>
+
+<div id="sideMenu_MenuArea_5621_NavTop">
+</div>
+<div id="sideMenu_MenuArea_5621_NavTitle" class="SideNavTitle">
+    <div id="sideMenu_MenuArea_5621_NavTxt">
+        <ul class="nav nav-list">
+            <li class="nav-header">
+                <a id="sideMenu_MenuArea_5621_hypTitle" data-toggle="collapse" data-parent="#CollNavID" href="#MenusideMenu_MenuArea_5621"><span>(Under Construction) EOL Facilities</span><i class="icon-chevron-up ii-chevron-down"></i></a>
+            </li>
+        </ul>
+        
+    </div>
+    <script language="javascript" type="text/javascript">
+        function toggleFormsDisplay(sDiv, sImg, divID) {
+            var oDiv = document.getElementById(sDiv);
+            var oImg = document.getElementById(sImg);
+            if (oDiv.style.display == 'none') {
+                oDiv.style.display = '';
+                oImg.src = oImg.src.replace('Plus', 'Minus');
+                setSession(divID, true);
+            }
+            else {
+                oDiv.style.display = 'none';
+                oImg.src = oImg.src.replace('Minus', 'Plus');
+                setSession(divID, false);
+            }
+        }
+
+        function setMenuState(sectionId, state) {
+            $.ajax({
+                type: "POST",
+                datatype: 'json',
+                async: false,
+                url: "/WebServices/GlobalWebService.asmx/SetMenuState",
+                data: JSON.stringify({ sectionId: sectionId, state: state }),
+                contentType: "application/json; charset=utf-8"
+            });
+        }
+    </script>
+    
+</div>
+<div id="sideMenu_MenuArea_5621_NavTitleBottom">
+</div>
+<div id="sideMenu_MenuArea_5621_DIV_MenuContainer">
+    <!--CHANGE DEPENDING ON SIDEMENU ELEMENT-->
+    <!--END CHANGE-->
+<ul id="MenusideMenu_MenuArea_5621" class="nav nav-list collapse in" style="list-style-type: none;"><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3956" id="sideMenu_MenuArea_5621_LINK_SIDEMENU_TEXT_3956" title="EOL Aviation Program" class="">EOL Aviation Program</a><div id="sideMenu_MenuArea_5621_DIV_SIDEMENU_3956" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3960" id="sideMenu_MenuArea_5621_LINK_SIDEMENU_TEXT_3960" title="Field Campaigns" class="">Field Campaigns</a><div id="sideMenu_MenuArea_5621_DIV_SIDEMENU_3960" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3936" id="sideMenu_MenuArea_5621_LINK_SIDEMENU_TEXT_3936" title="Science &amp; Engineering Group" class="">Science & Engineering Group</a><div id="sideMenu_MenuArea_5621_DIV_SIDEMENU_3936" class="collapse"></div></li><li class=""><i class="iconextra-category" title="Category"></i><a href="https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3953" id="sideMenu_MenuArea_5621_LINK_SIDEMENU_TEXT_3953" title="Software Development Guidelines" class="SideMenuCurrentCategory current-page-link">Software Development Guidelines</a><div id="sideMenu_MenuArea_5621_DIV_SIDEMENU_3953" class="collapse"></div></li></ul><div class="SideNavSeperator"></div></div>
+
+
+        </div>
+        <!-- Navigation ends here -->
+    </aside>
+</div>
+<script src="/Scripts/jquery.pageslide.js"></script>
+<script>
+	$(document)
+		.ready(function () {
+			// Up down chevron - header nav
+
+			var sideMenuTogglePresent = !!document.getElementById("side-menu-toggle-button");
+
+			if (!sideMenuTogglePresent)
+				return;
+
+			$('#CollNavID .nav-header a').click(function () {
+				var child = $(this).children('i');
+				if ($(child).hasClass('icon-chevron-up')) {
+					$(child).removeClass().addClass('icon-chevron-down ii-chevron-right');
+				} else {
+					$(child).removeClass().addClass('icon-chevron-up ii-chevron-down');
+				}
+			});
+
+			// mobile menu slideout
+			var psButtonElem = document.getElementById('open');
+			var psModalElem = document.getElementById('pageslide-modal');
+
+			// initialise
+			$(psButtonElem).pageslide();
+			var psElem = document.getElementById('pageslide');
+
+			psButtonElem.addEventListener('click', function () {
+				// side panel visible
+				if (this.style.left) {
+					setButtonClosed();
+				}
+				// side panel hidden
+				else {
+					setTimeout(setButtonOpen, 200);
+				}
+				psModalElem.classList.toggle('is-active');
+			})
+
+			psModalElem.addEventListener('click', function () {
+				this.classList.remove('is-active');
+				setButtonClosed();
+			});
+
+			function setButtonOpen() {
+				psButtonElem.style.left = (psElem.getBoundingClientRect().width - 40) + 'px'; // set left position
+				psButtonElem.style.zIndex = window.getComputedStyle(psElem).zIndex; // set z-index the same as the pageslide panel
+				psButtonElem.classList.add('is-open');
+			}
+
+			function setButtonClosed() {
+				psButtonElem.style.left = null;
+				psButtonElem.style.zIndex = null;
+				psButtonElem.classList.remove('is-open');
+			}
+
+			if (typeof displayCalendarCategories == 'function') {
+				displayCalendarCategories();
+			}
+		});
+</script>
+
+
+					<div id="panelFormHolder">
+	
+                
+	<script>
+		var tourName = 'document';
+	</script>
+	<div id="document"  >
+		<div class='span9'>
+			<div class="container-content content-outer">
+				<article>
+					<header class="container-title content">
+						<div class="shimmer-animate title loading-skeleton">
+							<div class="masker bg-masker-1"></div>
+							<div class="masker bg-masker-2"></div>
+						</div>						
+						
+<div class="row clearfix">
+    <div id="body_pageTitle_divLeft" class="span">
+        <h1 
+            >Development Process</h1>
+    </div>
+    
+    
+</div>
+<div class="PageSummary">
+    
+</div>
+
+						<div id="body_likeShare_likeshare" data-TlRecipientID="3256" data-TlParentAction="0" data-TlLikeActionTypeID="10200" data-TlShareActionTypeID="20200" class="likeshare">
+
+</div>
+
+
+					</header>
+
+					<div id="SealFrame" style="display:none">
+						<iframe src="/Interact27/seal.aspx?s=FEEI|VojyypZ0ZtDhoeM=|05/10/2023 22:54:53&t=db4489d3-a252-4f1a-a185-c6b82f620048&to=-360&cssVersion=7.9.98.0&themeVersion=94&themeGen=2&tz=Mountain Standard Time" title="Interact Verification Seal" style="border: none;display:none"></iframe>
+					</div>
+					<div class="content-inner row">
+						<div id="doc-content" class="span9" data-hovercard-container="true">
+							<section class="pub-up pub-buttons">
+								<div class="row-fluid">
+									<div class="span12">
+										<div class="btn-group pull-left">
+											<a href="#na" class="btn btn-small" id="aWatch" data-documentid="3256" data-placement="bottom" rel="tooltip" data-original-title="You can subscribe to a page or category. This will make you aware of any changes made to the page you are subscribed to or new or changed pages within a category you are subscribed to.">
+												<span class="icon is-normal">
+													<i class="fa fa-eye ii ii-watch"></i>
+												</span>
+												<span id="spnWatch" >
+													Subscribe
+												</span>
+												<span id="spnUnWatch"  style="display: none;" >
+													Un-subscribe
+												</span>
+											</a>
+											<a href="#na" id="body_aFavourite" class="btn btn-small aFavourite" data-placement="bottom" rel="tooltip" data-documentid="3256" data-original-title="Mark this page as Favorite. You are most likely to use a Favorite as a shortcut to a page you often visit or is of particular interest, in the same way you might add a web page as a Favorite on the internet.">
+												<span class="icon is-normal">
+													<i class="fa fa-star ii ii-star"></i>
+												</span>
+												<span id="spnFavourite"  >
+													Favorite
+												</span>
+												<span id="spnUnFavourite"  style="display: none;" >
+													Un-Favorite
+												</span>
+											</a>
+										</div>
+										
+										<div class="btn-group pull-right">
+											<button id="btnPrint" type="button" class="btn btn-small hidden-phone" rel="tooltip" data-placement="bottom" data-original-title="Print this page"><span class='icon is-normal'><i class='fa fa-print ii ii-printer'></i></span><span>Print</span></button>
+											<a href="/InteractV7/Document/GeneratePdf/3256?languageId=-1" id="body_btnPDF" class="btn btn-small hidden-phone" data-placement="bottom" data-original-title="Create a PDF of this page"><span class="icon is-normal"><i class="fa fa-file-pdf-o ii ii-pdf"></i></span><span>PDF</span></a>
+											
+
+											
+											<a href="javascript:void(0);" id="body_toggleinfo" class="btn btn-info is-solid btn-small hidden-phone toggle-info" data-placement="bottom" rel="tooltip" aria-controls="doc-info" aria-expanded="false" data-original-title="Show page details">
+												<span id="toggleinfoMsg" class="sr-only">Show Page Details</span>
+												<span id="toggleinfoIcon" class="icon is-normal"><i class="fa fa-chevron-left"></i></span>
+											</a>
+										</div>
+									</div>
+								</div>
+
+							</section>
+							<section class="pub-up docinfo">
+								<div class="row-fluid">
+									<div class="span7">
+										<ul class="unstyled inline published">
+											<li><small><span>Published: </span>8/3/2021</small></li>
+											<li><small><span>Last Updated: </span>Today</small></li>
+										</ul>
+									</div>
+									<div class="span5" style="text-align: right;">
+										<ul class="unstyled pull-right" id="secGraph">
+											
+										</ul>
+										<ul id="ulVerKey" class="unstyled inline published pull-right" style="display: none;">
+											<li id="liVersion" style="display: none;"><small><span>
+												Version:  5</span></small></li>
+											<li id="liKey" style="display: none;"><small><i class="icon-exclamation-sign"></i><span>
+												Key Page</span></small></li>
+										</ul>
+									</div>
+								</div>
+							</section>
+							
+							
+
+							<section class="doc-inner content" id="doc-inner-print">
+								<!-- Alerts (expired etc) -->
+								
+
+								<!-- content start -->
+																
+								<div id="page-content-container" 
+									  >
+									<p class='summary-muted'>This section outlines phases and infrastructure related to the software development lifecycle, but not a sequential timeline.</p>
+									<h3><a name="requirements"></a>Requirements</h3>
+
+<p>Rather than suggest a specific requirements discovery process, here are some issues that should always be considered when identifying the requirements for an EOL software project. These are not necessarily important for all EOL software, but they should not be overlooked. For example, for data-critical applications, the requirements must address data integrity and redundancy. High-bandwidth applications must identify the total throughput needed, so the throughput can be tested and verified.</p>
+
+<p>As part of the requirements process, it is especially important to identify the users, since users must be involved in defining the requirements. In other words, a requirement can be posed as a question, and the users and domain experts should answer it, not the developer. (Unless the developer is a user also, of course.) The intended users also impact the target platforms, implementation language, and dependencies.</p>
+
+<p>As a practical implication, users should be invited to any meeting where requirements will be discussed. [<a href="https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&amp;SearchId=0">HFSD</a>] and [<a href="https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&amp;SearchId=0">FOWLER</a>] have straightforward explanations of the necessity and value of close user involvement for iterative requirements analysis and development.</p>
+
+<p>Some statement of requirements is necessary for any size of development, large or small. Larger developments will have more requirements, but they do not need to be specified all at once. Instead they may be discovered as part of an iterative process. The important thing is that they be defined and documented along the way, so the software can be developed with the correct requirements in mind, ideally to the point of developing tests to verify the requirements.</p>
+
+<p>Writing use cases and user stories is good practice for elucidating requirements. They can be written from the user's point of view, and they only present the behavior expected by users without being biased by design or implementation. It is natural to describe software by telling a story about what it does and how the functionality will be used. Stories also force consideration of error handling from the user's point of view: how should the application and user interact when an error case occurs?</p>
+
+<p>Here is a list of requirements to consider, in no particular order:</p>
+
+<ul>
+	<li>software lifetime: How long will the software be needed? This requirement distinguishes the one-off fixes from longer term software infrastructure.</li>
+	<li>external support: Does the software need to be deployed for users outside of EOL?</li>
+	<li>target platforms: Does the software need to run on multiple platforms, embedded or not, particular operating systems, and so on? Is there a requirement for data portability between architectures?</li>
+	<li>data security: How robust and redundant does the data manipulation and storage need to be? Raw data recording obviously needs stricter data security requirements than reprocessing software, but someone still needs to decide how many backups are enough.</li>
+	<li>access security: Do user authentication and authorization need to be built into the software?</li>
+	<li>monitoring: How will users and operators monitor the status and progress of the software?</li>
+	<li>auditing: When processing data, what metadata will be preserved and augmented and tracked?</li>
+	<li>data formats: What data file formats must be supported for input and output?</li>
+	<li>error recovery: Does the software need to be able to recover quickly from problems, such as during field operations? Perhaps it needs to save checkpoints and be able to resume from the last checkpoint. What errors need to be detected automatically and how will the operator be alerted?</li>
+	<li>data throughput: What is the minimum data throughput requirement? Even post-processing software may have a throughput requirement, if the users want to process field project data in hours instead of days.</li>
+	<li>algorithm flexibility: Some software may need special accommodation to support alternative and evolving algorithms.</li>
+	<li>configuration: How flexible does the software configuration need to be? Will it operate for different field projects, test modes, and instrument modes? Will different users need to run it with their own customizations? Where will it get configuration settings and metadata?</li>
+</ul>
+
+<h3 id="SoftwareDevelopmentGuidelines-Design"><a name="design"></a>Design</h3>
+
+<p>In any software project, there are many alternative designs which all meet the requirements. The challenge for developers is finding a design which meets the requirements but also can be implemented, communicated, maintained, and elaborated as effectively as possible. The software abstraction should map well to the domain, and the language and concepts in the design should facilitate communication about the problem rather than confuse it. Thus documentation of the design is important.</p>
+
+<p>One best practice seems to be a coherent and consistent partition of the problem into logical components, a basic block diagram, following as closely as possible the vocabulary of the problem domain. The partitioning then maps directly to the namespaces and symbol names used in the code. A design document or block diagram describes the components, their responsibilities, and their collaborations [<a href="https://www.eol.ucar.edu/node/9384">CRC</a>], and as such it serves as an overview of the design as well as a guide to the symbols in the source code.</p>
+
+<p>UML diagramming tools can be helpful here, but so far the experience with them in EOL is limited. As more EOL developers become familiar with UML notation, it will be more feasible to share and discuss designs through UML diagrams.</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-design-reviewsDesignreviews"><a name="design-reviews"></a>Design reviews</h3>
+
+<p>Software design reviews have not really been tried in EOL, but they still seem like a good idea. As an action item from this report, we should make an effort to hold design reviews before anything is implemented, even if the review is informal.</p>
+
+<p>Typically, the participants in design reviews will be other developers, as well as perhaps a domain expert to help clarify the requirements. That said, EOL software designs often must compromise between requirements. For example, there may be trade-offs between bandwidth available on the current hardware versus new software that would be needed for new hardware. Also, the priority of each requirement must be decided by the users. (For iterative developments, this relates to selecting which feature to implement in the next iteration.) For these reasons, users often need to be involved in design reviews also.</p>
+
+<p>An iterative development will have multiple reviews, one for each iteration of the design.</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Documentation"><a name="documentation"></a>Documentation</h3>
+
+<p>Documentation is part of both process and infrastructure. There are certain aspects to a software development that should be documented before coding should continue:</p>
+
+<ul>
+	<li>Requirements</li>
+	<li>Design</li>
+	<li>User experts</li>
+	<li>Guidelines checklist</li>
+	<li>Project home page</li>
+</ul>
+
+<p>For smaller projects (or small iterations), the requirements may be just a statement about objective, and the design documentation may not be very involved either. However, even a small project requires decisions about implementation language, data formats, GUI framework (or not), basic classes, and so on. As part of the design documentation, it is helpful to document critical design choices which were rejected rather than only the choices which were selected.</p>
+
+<p>The domain experts are the stakeholders in the software and those who will know the most about whether the software is accurately modeling the application domain. Usually the domain experts are obvious, but it helps to name them explicitly in the documentation, since they are important references for the software developers. As the wisdom goes, software analysis does not happen unless a domain expert is involved. [<a href="https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&amp;SearchId=0">FOWLER</a>]</p>
+
+<p>An example has been created for the checklist, linked below:</p>
+
+<ul>
+	<li><a href="https://wiki.ucar.edu/display/~granger/Software+Project+Template">Software Project Template</a></li>
+</ul>
+
+<p>The purpose of the checklist is to communicate to others, clarify who has a role in the development and what that role is, provide a quick overview for those not directly involved in the project, and provide a single point of reference for project status and all artifacts of the project. Filling in a checklist assures that important infrastructure is planned for and taken care of ahead of time, such as revision control, wiki pages (or wherever the project checklist will reside), issue tracking, and so on.</p>
+
+<p>Note that for an iterative development, where features are implemented in incremental changes to working software, all of the above documentation requirements still hold. Before a new feature can be implemented, requirements should state what the feature will do, there must be a design in mind for the feature, and user experts must have been consulted about the feature.</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Codereviews"><a name="code-reviews"></a>Code reviews</h3>
+
+<p>This is another idea from industry, promoted as beneficial and worth the effort, which EOL has never really tried. Emails on code commits allow for sporadic code review of a sort, and we have the Crucible code review tool available in EOL, but we're not taking full advantage of this. The report&nbsp;<a href="http://ptolemy.eecs.berkeley.edu/publications/papers/99/sftwareprac/" rel="nofollow">Software Practice in the Ptolemy Project</a>&nbsp;is very positive about code reviews, and the experience there should be very relevant to EOL.</p>
+
+<p>As a minimal guideline, since every project should be using revision control, every project should likewise be taking advantage of commit emails. Setting up emails on code changes is convenient, and it greatly boosts communication and awareness between developers as far as notifying everyone exactly what is happening in the source tree.</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Releases"><a name="releases"></a>Releases</h3>
+
+<p>Software releases are very ad hoc at the moment across all the projects. We need to adopt a more consistent process for software release. To avoid confusion, the process should be the same for users both inside and outside EOL, even if some software is only available within EOL. More formal releases make for more consistent software quality and revision tracking "in the wild". It also eases the maintenance burden on users, especially "unintended side effects" when production software is upgraded without warning and at arbitrary times. A release should be tagged, tested, packaged, advertised, available, and supported. Release announcements and release notes should be in a single location on the web. Release notes should include a summary of what has changed in the release.</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Acceptanceorbug-fixphase"><a name="acceptance-phase"></a>Acceptance or bug-fix phase</h3>
+
+<p>All software when first released goes through a phase where users first start using it, learning it, and discovering bugs in it. We may as well identify this phase and work to make it go smoothly. Many open-source projects (GCC, KDE, Linux Kernel) have a bug-fix-only phase, where work on new features stops in favor of fixing all of the high-priority bugs. This phase can be helped by running (and passing!) tests to verify requirements as well as regression tests to prevent bugs from recurring. Perhaps EOL developments don't warrant a formal or even an informal acceptance phase, but all projects should plan to spend time focusing exclusively on fixing bugs. [See the&nbsp;<a href="http://joelonsoftware.com/articles/fog0000000043.html" rel="nofollow">Joel Test</a>, step 5.]</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Maintenance"><a name="maintenance"></a>Maintenance</h3>
+
+<p>In many ways maintenance is its own step in the software development process. Porting to new environments or OS revisions likely does not require analysis or design, but it does require development time. It is difficult to predict the resources needed for maintenance, but some maintenance issues can be seen coming. For example, external dependencies may go away or change (Qt4), formats may change (netcdf 4), hardware may change (64-bit), and new technologies may need to be adopted (web, rpm).</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Pairprogramming"><a name="pair-programming"></a>Pair programming</h3>
+
+<p>Pair programming is a technique from agile software development where two programmers work simultaneously developing code, side-by-side at the console, each with a specific role. It has been used in EOL before, but otherwise there has been little experience with it. Pair programming may be a good way to spread and encourage "good coding habits", besides the potential for producing better code.</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Shareprogramming"><a name="share-programming"></a>Share programming</h3>
+
+<p>This is an idea to increase cooperation, collaboration, and mentoring opportunities among EOL programmers by purposely sharing development projects among multiple developers. Unlike pair programming, programmers can still code separately, but they cooperate on the same project and the same source tree. For example, instead of two developers each working alone on a single project, two developers could share development on two projects.</p>
+
+<p>As a general rule, programmers should not hesitate to seek discussion with other programmers to help solve a problem or share techniques. This practice can guard against the single point of failure problem. When only one programmer works on software, then support and fixes fall on that programmer, and that can be a bottleneck. If instead more than one programmer is familiar with the software, then support can be distributed. This may be an item to address explicitly in the project checklist. A project should decide ahead of time how critical cross-training and distributed support will be for the success of the software. If it is critical, then shared programming or other practices could be employed to spread out the support responsibilities.</p>
+
+<h3 id="SoftwareDevelopmentGuidelines-Codesprints"><a name="code-sprints"></a>Code sprints</h3>
+
+<p>Sprints have proved useful in EOL as a way to focus a group of people for a short period on solving a particular problem.</p>
+
+<p><a href="https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3257&amp;SearchId=0"><strong>Next page:&nbsp;Code Sprints</strong></a></p>
+
+								</div>
+
+								
+								<div class="clearfix"></div>
+							</section>
+
+							<div class="loading-skeleton">
+								<div class="shimmer-animate body">
+									<div class="masker bg-masker-1"></div>
+									<div class="masker bg-masker-2"></div>
+									<div class="masker bg-masker-3"></div>
+									<div class="masker bg-masker-4"></div>
+									<div class="masker bg-masker-5"></div>
+								</div>
+
+								<div class="shimmer-animate body">
+									<div class="masker bg-masker-3"></div>
+									<div class="masker bg-masker-4"></div>
+									<div class="masker bg-masker-5"></div>
+									<div class="masker bg-masker-6"></div>
+								</div>
+							</div>
+
+							<section id="body_secUpToDate">
+								<fieldset id="body_uptoDate_FS_UpToDate">
+    <legend class="offpage">
+        <span id="body_uptoDate_lblTitle">Is This Up To Date?</span></legend>
+<div id="body_uptoDate_DIV_UpToDate" class="ContentExtras">
+    <div class="ContentListImageNoBorder" style="display: none;">
+        <!-- please remove -->
+        <img id="body_uptoDate_imgUpToDate" alt="" width="32x" height="32px" src="/utilities/assets/handler/asset.ashx?asset=1794&amp;size=2" />
+    </div>
+
+    <div class="alert alert-update pull-left">
+        <button class="close closeParent" type="button" aria-label="close">x</button>
+        <span class="message"><span class="icon is-normal">
+            <i class="fa fa-info-circle"></i>
+        </span>
+        <span id="body_uptoDate_lblUpToDate">Does this page require a review? Click the link below to inform the editor.</span></span>
+        
+        <a id="body_uptoDate_hypUpToDate" title="Report Content To Editor" class="altanchor" href="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$body$uptoDate$hypUpToDate&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))">Report Content To Editor</a>
+        
+
+    </div>
+
+</div></fieldset>
+
+
+
+							</section>
+							<section id="body_secComments">
+								<div id="body_divComments">
+									<section id="timeline" data-contentid="3256">
+									</section>
+								</div>
+							</section>
+						</div>
+						<aside id="doc-info" class="span3"  style="display:none">
+							<div id="body_authorContentWrapper" class="well side_bar_top card-inline author">
+								<figure class="vignette overlay inset pull-left">
+									<img src="https://sundog.ucar.edu/utilities/assets/handler/asset.ashx?asset=3838&size=4" id="body_profileImage" alt="" role="presentation" class="img-circle imgflexible" width="70" height="70" />
+								</figure>
+								<fieldset id="body_authorContent_FS_Author">
+    <legend>
+        <span id="body_authorContent_lblLegend">Editor</span></legend>
+<div id="body_authorContent_DIV_Author" class="ContentExtras">
+    <div class="ContentListImageNoBorder">
+        
+    </div>
+    <div class="ContentListDetails">
+        <div class="ContentListTitle">
+            <i class="icon-file"></i><a id="body_authorContent_hypAuthor" data-personid="1399" href="../Modules/Directory/Entry.aspx?person=1399">Edited By Alison Rockwell</a>
+            
+        </div>
+        
+        
+        
+        
+    </div>
+</div></fieldset>
+
+<div class="ClearMain">
+</div>
+
+							</div>
+							
+							
+							
+						</aside>
+					</div>
+				</article>
+			</div>
+		</div>
+	</div>
+
+	<div id="PagesByModal" class="modal hide fade peoplelisting">
+		<div class="modal-inner">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+				<h3>Pages by this author</h3>
+			</div>
+			<div class="modal-body">
+				<div id="pagesBy">
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+	</div>
+	
+    <div id="ManageActivitiesModal" class="modal hide fade peoplelisting">
+		<div class="modal-inner">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+				<h3>Manage Activities</h3>
+			</div>
+			<div class="modal-body">
+			<iframe frameborder="0" style="border: none; width: 100%; height: 500px"></iframe>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+	</div>
+    <div id="ViewCalendarModal" class="modal hide fade peoplelisting">
+		<div class="modal-inner">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="Close">&times;</button>
+				<h3>Calendar</h3>
+			</div>
+			<div class="modal-body">
+			<iframe frameborder="0" style="border: none; width: 100%; height: 500px"></iframe>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+	</div>
+
+
+	<script id="PagesByTemplate" type="text/x-handlebars-template">
+		<ul class="unstyled striped">
+			{{#each pagesBy}}
+			<li class="pagesBy pagesBy-{{iId}}">
+				<ul class="unstyled members pages">
+					<li class="user">
+						<img width="32px" height="32px" alt="{{{sTitle}}}" title="{{{sTitle}}}" src="{{sAsset}}" class="img-circle imgflexible" />
+						<a href="{{sLink}}" target="{{sTarget}}" data-contentid="{{iId}}" title="{{{sTitle}}}"><strong>{{{sTitle}}}</strong></a></li>
+				</ul>
+			</li>
+			{{/each}}
+		</ul>
+	</script>
+
+	
+	<script id="BestBetSearchResultTemplate" type="text/x-handlebars-template">
+		<div style="height: 25px;">
+			<p style="display: inline-block; margin: 0 !important;">
+				{{Word}}
+			{{#when "SearchCount > 0"}}
+				- {{SearchCount}} previously used as Best Bet</span>
+			{{/when}}
+			</p>
+		</div>
+	</script>
+
+              
+</div>
+            </div>
+          
+              </div>
+            </main>
+          
+          <footer id="colophon" class="site-footer" role="contentinfo">
+            <div class="container">
+              <div class="row-fluid">
+                <div class="span12">
+                  <a href="#masterBody" onclick="window.scroll(0,1);" aria-label="Back to top" title="Move to top" id="back-to-top">
+                    <span class="icon is-medium">
+                      <i class="ii ii-chevron-up"></i>
+                    </span>
+                  </a>
+                  <div class="footer-container">
+                  
+                    <div class="footer-social">
+                      <ul class="inline">
+                        
+                        <li>
+                          <a href="https://www.facebook.com/ncar.ucar" target="_blank" aria-label="Open Facebook"><span class="icon is-medium"><i class="fa fa-facebook-square"></i></span></a>
+                        </li>
+                        
+                        <li>
+                          <a href="https://www.linkedin.com/company/university-corporation-for-atmospheric-research" target="_blank" aria-label="Open LinkedIn"><span class="icon is-medium"><i class="fa fa-linkedin"></i></span></a>
+                        </li>
+                        
+                        <li>
+                          <a href="https://twitter.com/NCAR_Science" target="_blank" aria-label="Open Twitter"><span class="icon is-medium"><i class="fa fa-twitter-square"></i></span></a>
+                        </li>
+                        
+                        <li>
+                          <a href="https://instagram.com/ncar_ucar" target="_blank" aria-label="Open Instagram"><span class="icon is-medium"><i class="fa fa-instagram"></i></span></a>
+                        </li>
+                        
+                      </ul>
+                    </div>
+                    <div class="colophon">
+                      <p><small>Powered by <a href="https://www.interactsoftware.com/" target="_blank"><i class="ii-activity ii-interact"></i> Interact</a></small></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <a class="sr-only kb-skip kb-skip-footer" href="#site-navigation">Skip back to main navigation</a>
+            
+          </div>
+            <div id="WatchesModal" class="modal hide fade">
+            <div class="modal-inner">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+                <h3>Subscriptions <a id="whatsthisWatches" href="#na" class="pull-right whatsthis" style="margin: 3px 10px;" data-placement="bottom" rel="tooltip" data-target="#" role="button" data-original-title="Tooltip text goes here" style="position:absolute;right: 40px; top: 12px;">What's this?</a></h3>
+            </div>
+                <div class="modal-body" id="watchesbody" style="max-height: 250px; overflow-y: scroll">
+                <ul class="unstyled" id="watchesholder"></ul>
+            </div>
+                </div>
+             </div>
+
+            <div id="FavouritesModal" class="modal hide fade">
+            <div class="modal-inner">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+                <h3><span id="FavouriteHeading">Favorites</span> <a id="whatsthisFavourites" href="#na" class="pull-right whatsthis" style="margin: 3px 10px;" data-placement="bottom" rel="tooltip" data-target="#" role="button" data-original-title="Tooltip text goes here">What's this?</a></h3>
+            </div>
+                <div class="modal-body">
+                <ul class="unstyled"></ul>
+            </div>
+                </div>
+             </div>
+
+            <div id="InvitesModal" class="modal hide fade">
+                <div class="modal-inner">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+                        <h3>Invite Your colleagues</h3>
+                    </div>
+                    <div class="modal-body" style="max-height: none;">
+                        <iframe id="IframeInvites" clientidmode="static" width="100%" frameborder="0" title="Invite Colleagues"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div id="GettingStartedModal" class="modal hide fade modal-iframe">
+                <div class="modal-inner">
+                    <div class="modal-body">
+                        <iframe id="IframeGettingStarted" clientidmode="static" width="100%" frameborder="0" title="Getting Started"></iframe>
+                    </div>
+                </div>
+            </div>
+         <div id="ammModal" class="modal hide fade modal-iframe modal-incheader" style="display: none;">
+       <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+            <h3>Activity Management</h3>
+        </div>
+
+       <div class="modal-body">
+		   <div id="indicator" style="text-align:center;"></div>
+            <iframe style="width:100%;height:390px;" frameborder="0" title="Activity Management"></iframe>
+        </div>
+    </div>
+        
+        <div id="DivAddeditProfile" class="modal hide fade in" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-inner">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+                    <h3>Edit Profile</h3>
+                </div>
+             <div class="modal-body">
+                    <div id="iframeaddedit">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        
+        <div id="permissionsChangePermission" class="modal hide fade" aria-labelledby="permissionLabel" role="dialog">
+            <div class="modal-inner">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+                    <h3 id="permissionLabel">Change Site Permissions</h3>
+                    <span id="SecurityModalTitle"></span>
+                </div>
+                <div id="InheritPermissionContainer" class="modal-inherit-controls" style="display: none;">
+                    <p></p>
+                    <button id="InheritPermissionsButton" class="btn btn-small">Inherit Permissions</button>
+                </div>
+                <div id="PermissionsFilterContainer" class="modal-controls">
+                    <p id="PermissionsContainerHeader">Who has permission</p>
+                    <div class="input-append">
+                        <label for="PermissionsFilter" class="sr-only">Who has permission</label>
+                        <input id="PermissionsFilter" type="text" placeholder="Type to filter..." autocomplete="off">
+                        <button class="btn add-on" aria-label="Search">
+                            <i class="icon-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div id="PermissionsItemsContainer">
+                    </div>
+                    <div id="PermissionsAddContainer" style="display: none;">
+                        <label for="inputBox"><span id="lblAddPeople">Add people, companies, departments, locations, communities, groups, personas or geofences</span></label>
+                        <input id="PermissionsAddSelect" type="hidden" class="select2-overwidth" data-placeholder-text="Type names of people, companies, departments, locations, communities, groups, personas or geofences..." />
+                        <button id="PermissionAddButton" class="btn btn-primary is-solid btn-small">Add</button>
+                    </div>
+                    <div id="ReadOnlyPermissions" class="overlay"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-block btn-success is-solid">Save</button>
+                </div>
+            </div>
+        </div>
+
+       <div id="PeopleDetailsModal" class="modal hide fade peoplelisting">
+        <div class="modal-inner">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+                <h3 id="SupplyTitle" data-original-content="">Change Site Permissions</h3>
+            </div>
+            <div class="modal-body">
+                <ul class="unstyled striped person"></ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+        
+        <div id="MentioningSearchBox" class="modal hide mentions-input-box" style="width:462px">
+            <div id="mentions-list" class="mentions-autocomplete-list" style="display: block;">
+            </div>
+        </div>
+
+        <!-- Expired Trial -->
+        
+    
+
+<script type="text/javascript">
+//<![CDATA[
+window.__TsmHiddenField = $get('AjaxPlaceholder_RadScriptManager1_TSM');WebForm_AutoFocus('DoNothing');//]]>
+</script>
+</form>
+    
+    
+    <div class="frame" id="container" style="visibility:hidden"></div>
+
+    <div id="ModInviteAlert" class="modal hide fade modal-iframe modal-incheader" style="display: none">
+        <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" aria-label="close">&times;</button>
+            <iframe id="IframeInviteAlert" clientidmode="static" width="100%" height="450" frameborder="0" title="Community invite"></iframe>
+        </div>
+    </div>
+
+    <div id="TranslationOptionsModal" class="modal hide fade">
+        <div class="modal-inner">
+            <div class="modal-header">
+                <button aria-hidden="true" data-dismiss="modal" class="close" type="button">Ã—</button>
+                <h3>Translation Options</h3>
+            </div>
+            <div class="modal-body" id="translationoptionsmodalbody">
+                <div style="padding: 19px">
+                    
+                        <div>Translate editable text.</div>
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                
+                    <button type="button" id="toggleTranslationsButton" data-enable="true" class="btn btn-primary is-solid">Start</button>
+                
+                <button type="button" data-dismiss="modal" class="btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+	$(document).ready(function () {
+
+		function searchLanguages() {
+			$("#translateModalResults").css("opacity", 0.5);
+
+			$.ajax({
+				cache: false,
+				type: "GET",
+				url: "/InteractV7/SystemText/TranslationSearchResults?searchTerm=" + $("#translationSearchTermInput").val() + "&languageId=" + $("#hiddenTranslationLanguageId").val(),
+				contentType: "application/json; charset=utf-8",
+				success: function (data) {
+					$("#translateModalResults").replaceWith(data);
+				}
+			});
+		}
+
+		$("#searchButton").click(function () {
+			searchLanguages();
+		});
+
+		$("#translationSearchTermInput").keypress(function (e) {
+			if (e.which === $.ui.keyCode.ENTER) {
+				searchLanguages();
+			}
+		});
+
+		$("#languageDropdown").change(function () {
+			$("#hiddenTranslationLanguageId").val(this.value);
+			searchLanguages();
+		});
+
+		$("#closeTranslationsModal").click(function () {
+			location.reload();
+		});
+
+		function convertToEdit(label) {
+			label.replaceWith('<textarea class="text-box systemTextEdit" type="text" data-xmlpath="' + label.data("xmlpath") + '" data-attributeid="' + label.data("attributeid") + '">' + label.text() + '</textarea>');
+			$("#saveTranslationEdits").prop("disabled", false);
+			$('.tooltip').remove();
+		}
+
+		function clearInteractSystemTextLocalStorage() {
+			if (localStorage.getItem('IiSystemTextExpire')) localStorage.removeItem('IiSystemTextExpire');
+			var lsKeys = Object.keys(localStorage);
+			lsKeys.forEach(function( key ) {
+				if (key.match(/^[0-9]::systext\..*/g) ) {
+					localStorage.removeItem(key);
+				}
+			});
+		}
+
+		$(document).on("click", ".systemTextValue", function () {
+			convertToEdit($(this));
+		});
+
+		$(document).on("click", "#saveTranslationEdits", function () {
+			var editModels = [];
+			var headers = {};
+			headers["__RequestVerificationToken"] = getXsrfToken();
+
+			$(".systemTextEdit").each(function () {
+				var editModel = {};
+
+				var element = $(this);
+				editModel["NodePath"] = element.data("xmlpath");
+				editModel["AttributeId"] = element.data("attributeid");
+				editModel["AttributeValue"] = element.val();
+				editModel["LanguageId"] = $("#hiddenTranslationLanguageId").val();
+
+				editModels.push(editModel);
+
+				$(this).replaceWith('<span class="systemTextValue colored" style="cursor: pointer;" data-xmlpath="' + $(this).data("xmlpath") + '" data-attributeid="' + $(this).data("attributeid") + '" data-original-title="Click to edit system text" rel="tooltip" data-placement="top">' + $(this).val() + '</span>');
+			});
+
+			$.ajax({
+				type: "POST",
+				datatype: "json",
+				headers: headers,
+				url: '/InteractV7/SystemText/EditLanguageText',
+				data: JSON.stringify({ models: editModels }),
+				contentType: "application/json; charset=utf-8",
+				success: function () {
+					$("#saveTranslationNotification").css("visibility", "visible");
+					$("#saveTranslationNotification").css("opacity", "1");
+					$("#saveTranslationNotification").fadeTo(2000, 0, function () {
+						$("#saveTranslationNotification").css("visibility", "hidden");
+					});
+
+					clearInteractSystemTextLocalStorage();
+				}
+			});
+		});
+		function getXsrfToken() {
+			var xsrfTokens = document.getElementsByName('__RequestVerificationToken');
+			// if we have multiple on the page (due to View construction) get the last one
+			// otherwise null
+			return (xsrfTokens.length > 0) ? (xsrfTokens[xsrfTokens.length - 1]).value : null;
+		}
+	});
+</script>
+
+<input data-val="true" data-val-number="The field CurrentLanguageId must be a number." id="hiddenTranslationLanguageId" name="CurrentLanguageId" type="hidden" value="0" />
+<div id="translationModal" class="modal hide fade in" style="display: none;">
+	<div class="modal-inner">
+		<div class="modal-header">
+			<button aria-hidden="true" id="closeTranslationsModal" data-dismiss="modal" class="close" type="button">×</button>
+			<h3>Translate editable text</h3>
+		</div>
+		<div id="info-msgs" class="alert alert-info">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<i class="icon-info-sign"></i><span>Please be aware you won't be able to see these changes for up to 5 minutes.</span>
+		</div>
+		<div id="info-msgs" class="alert alert-info">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<i class="icon-info-sign"></i><span>Care should be taken to ensure that any text customisations still include existing placeholders such as <strong>[PageId]</strong> or <strong>{PersonFullName}</strong>, which may be required to make the product function correctly.</span>
+		</div>
+		<div class="modal-body">
+			<div style="padding: 19px">
+				<div class="well well-small">
+					<div class="input-append" style="margin:0;">
+						<label class="sr-only" for="translationSearchTermInput">Search for text to translate</label>
+						<input placeholder='Search editable text' class="text-box single-line" id="translationSearchTermInput" name="SearchInput" type="text" value="">
+						<button type="button" id="searchButton" class="btn">search</button>
+					</div>
+					<div class="pull-right">
+						<span rel="tooltip" data-original-title="Choose language" style="display: block;">
+							<label class="sr-only" for="languageDropdown">Select which language to translate:</label>
+							<select class="form-control span2" id="languageDropdown" name="CurrentLanguageId"></select>
+						</span>
+					</div>
+				</div>
+				
+
+<div id="translateModalResults">
+	<div style="clear:both;"></div>
+	<div class="peoplelisting translator" id="translationSearchResults">
+			<ul class="unstyled striped" style="max-height: 260px; overflow-x: hidden; overflow-y: auto;">
+			</ul>
+				<div id="noTranslationNotification">
+					<span class="text-error">No system text found</span>
+				</div>
+
+	</div>
+	<div id="saveTranslationNotification" style="visibility: hidden">
+		<span class="text-success">Translations Saved</span>
+	</div>
+</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="button" id="saveTranslationEdits" class="btn btn-primary is-solid" disabled="disabled">Save</button>
+			<button type="button" data-dismiss="modal" class="btn" onclick="location.reload();">Back</button>
+		</div>
+	</div>
+</div>
+    <input name="__RequestVerificationToken" type="hidden" value="BEfNrx4G2qvsHF5dKVewdJT8Xiv9-zeRclPNagjTlQ95MkiTMWtoC3wWta4GakF2LBAQq54T2-FnJ8NHa9pI8yMn2oDO1Ut4-xf-c4Zn-9-GEK7kBYVaTBDrojZpV8L2mcWpbJmveiqsi0jIkD--JA2" />
+
+    <!-- Some additional script to send Timeago the server time to do comparisons from -->
+    <script type="text/javascript">
+
+	    $(document).ready(function () {
+
+		    // DP: this assumes timeago already loaded in BundleConfig.js
+		    // send server time to the library to compare from
+		    // eliminating variance due to user's Windows time settings
+		    // VB VERSION - uses double quotes becuase single quotes are comment syntax
+		    // time string format
+		    // 2020-10-30T12:05:03Z
+		    $.timeago.settings.comparisonDate = "2023-10-05T22:54:53Z";
+
+			// [JIRA] NEU-14195
+			// DP: In addition to above, we send the timezone offset for adjusting the date / time
+			// from the user's profile settings in the intranet - additionally, we send the culture
+			// for the date format
+			$.timeago.settings.strings.userTimezone = -360;
+			$.timeago.settings.dstSupportEnabled = true;
+			$.timeago.settings.strings.userCulture = "en-US";
+
+			// alternative implementation depending on Product / QA expectations
+		    // this uses instead the Local OS System Time - uncomment to use
+		    /*$.timeago.settings.strings.userTimezone = -(new Date().getTimezoneOffset());*/
+
+		    // multiple ways of getting the culture string hence the ternary with multiple options
+		    // essentially we want something like en-GB, en-US and so on - uncomment to use
+		    /*$.timeago.settings.strings.userCulture = window.navigator.languages ? window.navigator.languages[0] :
+												    window.navigator.userLanguage || window.navigator.language;*/
+
+			// refresh the timeago elements on the page
+			// (using the refresh method still adds the interval seconds! so just Init again)
+			$("time.timeago").timeago();
+
+	    });
+    </script>
+</body>
+
+</html>
+
+<script id="TaskMessageTemplate" type="text/x-handlebars-template">
+    {{#each Tasks}}
+       <li id="taskalert{{TaskId}}" class="taskalert">
+          <ul class="unstyled">
+              <li>
+              <ul class="unstyled">
+                  <li class="task-content pull-left">{{#if SectionId}}
+                <a href="/Interact/Pages/Modules/Tasks/Tasks.aspx">
+              {{else}}
+                <a href="/Interact/Pages/Modules/Tasks/Tasks.aspx">
+                      {{/if}}{{{Details}}}</a></li>
+                    <li class="task-date pull-left muted"><small>{{DueDate}}</small></li>
+                    <li class="priority task-priority{{Priority}}"><span>Priority: {{Priority}}</span></li>
+                  <li class="task-complete">
+                      <ul class="unstyled">
+                        <li><a class="mascom" type="button" id="btnTaskComplete" href="#macom" rel="tooltip" data-placement="bottom" data-taskId="{{TaskId}}" title="Mark as completed"><i class="iconextra-checkbox"></i> <span>Mark as completed</span></a></li>
+                          <li class="type"><i class="task-type {{TaskType}}"></i><span>Type: {{TaskType}}</span></li>
+                      </ul></li>
+              </ul>
+              </li>
+          </ul>
+      </li>
+    {{/each}}
+</script>
+
+<script type='text/javascript'>
+	window.onload = function () {
+		var iframe = document.createElement('iframe');
+		iframe.style.display = "none";
+		iframe.src = "/Interact27/seal.aspx?s=FEEI|khc58S3mgyrBK5M=|05/10/2023 22:54:53&t=db4489d3-a252-4f1a-a185-c6b82f620048&to=-360&cssVersion=7.9.98.0&themeVersion=94&themeGen=2&tz=Mountain Standard Time";
+		iframe.title = "Interact Verification Seal";
+		document.body.appendChild(iframe);
+	}
+</script>
+
+<script id="FavouritesMessageTemplate" type="text/x-handlebars-template">
+    {{#each notifications}}
+        <li id="top-favourite-{{Id}}" class="top-favourite-item">
+            <ul class="unstyled">
+                <li>
+                    <img src="{{PersonImage}}" class="border" alt="User Image" style="width:25px;" />
+                </li>
+                <li>
+                     <ul class="unstyled" style="margin:0;">
+                        <li style="width: auto;">
+                            <a href="/Interact/Pages/Content/Document.aspx?id={{Id}}" title="{{{Name}}}">{{{Name}}}</a>
+                            {{#if ../showDelete}}
+                                <a href="#" style="position: absolute;right: 10px;" title="Remove" onclick="javascript:TopBar.DeleteFavourite({{Id}});return false;"><strong>X</strong></a>
+                            {{/if}}
+                        </li>
+                        {{#if ../showDelete}}
+                            <li>{{{Summary}}}</li>
+                        {{/if}}
+                        <li><time class="timeago" datetime="{{DateAddedUTC}}">{{DateAdded}}</time></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    {{/each}}
+</script>
+<script id="WatchesMessageTemplate" type="text/x-handlebars-template">
+    {{#each WatchesModel}}
+         <li id="top-watch-{{ContentID}}" class="top-watch-item">
+             <ul class="unstyled">
+                <li>
+                    <img src="{{PersonImage}}" class="border" alt="User Image" style="width:25px;" />
+                </li>
+                <li>
+                     <ul class="unstyled">
+                         {{#if DocumentWatch}}
+                         <li>{{#if Deleted}}
+                               {{{ContentTitle}}}
+                             {{else}}
+                                <a href="/Interact/Pages/Content/Document.aspx?id={{ContentID}}" title="{{ContentTitle}}">{{ContentTitle}}</a>
+                             {{/if}}
+                         </li>
+                         <li>
+                             <time class="timeago" datetime="{{LastUpdatedUTC}}">{{LastUpdated}}</time>
+                             {{#if Added}}<span class="label label-success">&nbsp;Created&nbsp;</span>{{/if}}
+                             {{#if Updated}}<span class="label label-warning">&nbsp;Edited&nbsp;</span>{{/if}}
+                             {{#if Deleted}}<span class="label label-important">&nbsp;Deleted&nbsp;</span>{{/if}}
+                            {{#if ../../showDelete}}<a href="#" style="position: absolute;right: 10px;top:0;" title="Remove" onclick="javascript:Watches.DeleteWatchAlert({{ContentID}});return false;"><strong>X</strong></a>{{/if}}
+                             </li>
+                         {{else}}
+                                {{#if Updated}}
+                                    <li>The following page has been edited within the category {{CategoryTitle}}
+                                    </li>
+                         <li>
+                             <a href="/Interact/Pages/Content/Document.aspx?id={{ContentID}}" title="{{{ContentTitle}}}">{{{ContentTitle}}}</a>
+                         </li>
+                         <li><time class="timeago" datetime="{{LastUpdatedUTC}}">{{LastUpdated}}</time>
+                            {{#if ../../showDelete}}<a href="#" style="position: absolute;right: 10px;top:0;" title="Remove" onclick="javascript:Watches.DeleteWatchAlert({{ContentID}});return false;"><strong>X</strong></a>{{/if}}
+                             </li>
+                         {{else}}
+                                    {{#if Added}}
+                                         <li>The following page has been added to {{CategoryTitle}}
+                                         </li>
+                         <li>
+                             <a href="/Interact/Pages/Content/Document.aspx?id={{ContentID}}" title="{{{ContentTitle}}}">{{{ContentTitle}}}</a>
+                         </li>
+                         <li>
+                             <time class="timeago" datetime="{{LastUpdatedUTC}}">{{LastUpdated}}</time>
+                            {{#if ../../showDelete}}<a href="#" style="position: absolute;right: 10px;top:0;" title="Remove" onclick="javascript:Watches.DeleteWatchAlert({{ContentID}});return false;"><strong>X</strong></a>{{/if}}
+                             </li>
+                         {{else}}
+                                   {{#if Deleted}}
+                                        <li>The following page has been deleted from category {{CategoryTitle}}
+                                        </li>
+                         <li>
+                             <strong>{{{ContentTitle}}}</strong>
+                         </li>
+                         <li>
+                             <time class="timeago" datetime="{{LastUpdatedUTC}}">{{LastUpdated}}</time>
+                            {{#if ../../showDelete}}<a href="#" style="position: absolute;right: 10px;top:0;" title="Remove" onclick="javascript:Watches.DeleteWatchAlert({{ContentID}});return false;"><strong>Remove</strong></a>{{/if}}
+                             </li>
+                         {{/if}}
+                                {{/if}}
+                          {{/if}}
+                    {{/if}}
+                     </ul>
+                 </li>
+             </ul>
+         </li>
+    {{/each}}
+</script>
+<script id="AutoCompleteTemplate" type="text/x-handlebars-template">
+    {{#each SearchResults}}
+        <li>
+            {{#if Url}}
+                <a href="{{Url}}" title="{{Title}}" target="{{Target}}" class="ellipsis is-ellipsis">
+                    <i class="{{#if Icon}}{{Icon}}{{else}}icon-flag{{/if}}"></i>
+                    {{#equals Type "ExternalContact||Person"}}
+                        {{#when "Entity.WorkPhone != '' || Entity.Mobile != ''"}}
+                        {{{ Title }}}
+                        {{#equals ../../../../ShowExtendedInformation "true"}}
+                            {{#when "Entity.WorkPhone != ''"}}
+                                <span class="pull-right"><i class="iconextra-phone"></i> {{Entity.WorkPhone}}</span>
+                            {{else}}
+                            {{#when "Entity.Mobile != ''"}}
+                                <span class="pull-right"><i class="iconextra-mobile"></i> {{Entity.Mobile}}</span>
+                            {{/when}}
+                            {{/when}}
+                        {{/equals}}
+                        {{else}}
+                        {{{ Title }}}
+			{{/when}}
+                    {{else}}
+                        {{{ Title }}}{{#equals Type "ProfilePost"}}'s Profile{{/equals}}
+                    {{/equals}}
+                </a>
+            {{else}}
+                <i class="{{#if Icon}}{{Icon}}{{else}}icon-flag{{/if}}"></i>{{{ Title }}}
+            {{/if}}
+        </li>
+    {{/each}}
+</script>
+
+<script id="PermissionsItemsTemplate" type="text/x-handlebars-template">
+
+    {{#unless IsTeam}}
+        <div id="PermissionsEveryone">
+            <div class="permission-item permission-item-everyone" data-id="{{Everyone.ID}}" data-type="{{Everyone.Type}}">
+                <div class="permission-inner">
+                    <div class="permission-item-details">
+                        <i class="icon-home"></i>
+                        <span>Everyone</span>
+                    </div>
+                    <div class="permission-item-controls">
+                        {{#unless Inherited }}
+                            <div class="dropdown">
+                                <a href="#" data-toggle="dropdown" data-level="{{Everyone.Level}}">{{Everyone.LevelDesc}}</a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                    {{#each Levels}}
+                                    <li>
+                                        <a tabindex="-1" href="#" data-level="{{Level}}">{{LevelDesc}}<p>{{Text}}</p></a>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        {{else}}
+                            <p>{{Everyone.LevelDesc}}
+                        {{/unless}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/unless}}
+
+
+    {{#unless IsTeam}}
+        {{#if Administrators}}
+        <div id="PermissionsAdministrators">
+            <div class="permission-item permission-item-administrator">
+                <div class="permission-inner">
+                    <div class="permission-item-details">
+                        <i class="icon-star"></i>
+                        <span>Power Users</span>
+                    </div>
+                </div>
+                <button type="button" class="close" aria-hidden="true" aria-label="close">&#062;</button>
+            </div>
+            <div class="permission-admin-container">
+                {{#each Administrators}}
+                <div class="permission-item" style="display: none;" data-id="{{ID}}" data-type="{{Type}}">
+                    <div class="permission-inner">
+                        <div class="permission-item-details">
+                            <img src="{{#if Avatar}}{{Avatar}}{{else}}{{avatar Type}}{{/if}}" />
+                            <span>{{Title}}</span>
+                        </div>
+                        <div class="permission-item-controls hidden">
+                            <p>{{LevelDesc}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+        {{/if}}
+    {{/unless}}
+
+    <div id="PermissionsOthers">
+        {{#each Others}}
+        <div class="permission-item" data-id="{{ID}}" data-type="{{Type}}">
+            <div class="permission-inner">
+                <div class="permission-item-details">
+                    <img src="{{#if Avatar}}{{Avatar}}{{else}}{{avatar Type}}{{/if}}" />
+                    <span>{{Title}}</span>
+                </div>
+                <div class="permission-item-controls">
+                    {{#unless ../Inherited}}
+                    <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" data-level="{{Level}}">{{LevelDesc}}</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                            {{#each ../../Levels}}
+                            <li>
+                                <a tabindex="-1" href="#" data-level="{{Level}}">{{LevelDesc}}<p>{{Text}}</p></a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                    {{else}}
+                    <p>{{LevelDesc}}</p>
+                    {{/unless}}
+                </div>
+            </div>
+
+            {{#unless ../IsTeam}}
+                {{#unless Inherited}}
+                        <button type="button" class="close" aria-hidden="true" aria-label="close">&times;</button>
+                {{/unless}}
+            {{/unless}}
+        </div>
+        {{/each}}
+    </div>
+    {{#if IsTeam}}
+        <div style="margin:10px;text-align:center;" class="alert alert-info"><span>Add and remove community members from the 'Manage Community Members' menu item</span></div>
+    {{/if}}
+</script>
+<script id="PermissionsSearchResultTemplate" type="text/x-handlebars-template">
+    <div style="padding: 0 0 0 35px;position: relative;min-height:25px;">
+        <img style="height: 25px;left: 0;position: absolute;width: 25px;" src="{{#if Avatar}}{{{asset Avatar 4}}}{{else}}{{avatar Type}}{{/if}}" />
+        <p style="display: inline-block; margin: 3px 0 0 0 !important;">{{Name}}{{#if JobTitle}} ({{JobTitle}}){{/if}}{{#if OrgLabel}} ({{OrgLabel}}){{/if}}</p>
+    </div>
+</script>
+<script id="PermissionsItemsAddedTemplate" type="text/x-handlebars-template">
+    {{#each Added}}
+    <div class="permission-item" data-id="{{ID}}" data-type="{{Type}}" data-changed="1">
+        <div class="permission-inner">
+            <div class="permission-item-details">
+                <img src="{{#if Avatar}}{{{asset Avatar 4}}}{{else}}{{avatar Type}}{{/if}}" />
+                <span>{{Name}}</span>
+            </div>
+            <div class="permission-item-controls">
+                <div class="dropdown">
+                    <a href="#" data-toggle="dropdown" data-level="{{../DefaultControl.Level}}">{{../DefaultControl.Name}}</a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                        {{{../Controls}}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="close" aria-hidden="true" aria-label="close">&times;</button>
+    </div>
+    {{/each}}
+
+</script>
+<script id="RecommendedContentResultsTemplate" type="text/x-handlebars-template">
+    {{#each Results}}
+    <li class="{{Type}}">
+        <ul class="RecListItem unstyled">
+            <li class="RecImgAll">
+                <img src="{{asset Avatar 4}}" class="RecImage img-circle pull-left" alt="{{Title}}"/>
+            </li>
+
+            <li class="RecDetailsMain">
+                {{#equals Type "Team"}}
+                     {{#contains Entity.MemberList "MasterPage.PersonID"}}
+                      <h4><a class="RecTitle" href="{{Entity.AdditionalEntities.TeamUrl}}">{{Title}}</a></h4>
+                         {{else}}
+                             {{#contains Entity.ApprovalList "MasterPage.PersonID"}}
+                              {{{Title}}} (Pending Approval)
+                             {{else}}
+                                <h4><a class="RecTitle RecTeam" href="{{URL}}">{{Title}}</a></h4>
+                            {{/contains}}
+                    {{/contains}}
+                {{else}}
+                {{#if URL}}
+                        <h4><a class="RecTitle" href="{{URL}}">{{Title}}</a></h4>
+                {{/if}}
+                {{/equals}}
+
+                {{#if Summary}}
+                <div id="showMore{{index}}" class="in  collapse">
+                {{{Summary}}}
+                </div>
+
+                    
+                {{/if}}
+                  <div class="addedby muted">
+                        {{#if Author}}
+                                <span>
+                                   {{#if AuthorID}}by <a href="{{link 'Person' AuthorID}}" data-personid="{{AuthorID}}">{{/if}}{{Author}}</a>
+                                </span>
+                            {{#if Date}}
+                                <time class="timeago" datetime="{{Date}}"></time>
+                            {{/if}}
+                        {{/if}}
+                </div>
+            </li>
+    </ul>
+    </li>
+    {{/each}}
+    </script>

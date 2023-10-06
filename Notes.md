@@ -31,6 +31,10 @@ use?  md or rst?
 
 ## Todo
 
+"Practice Priming" in the "Updating the Guidelines" should be in a skills
+development section, maybe next to all the other resources for skills
+development.
+
 Other updates to make:
 
 - add something about versioning: semantic versioning reference page,
@@ -146,8 +150,39 @@ Add something about licenses?  At least some references to past practice, like
 the BSD recommendation, and some way to find out more information when
 selecting a license.
 
+Style formatting
+
+It seems like a growing trend and a good idea to enforce consistent coding
+style with a tool, at least within the same code base.  There are many capable
+formatters for most languages, and they can get close to current practice.
+The headache of embedding editor hints in every source file is just not worth
+it anymore.
+
+- clang-format for C++
+- black and others for python
+
+Use linters for interpreted languages
+
+A good linter is invaluable for python code and probably most interpreted
+code, since the interpreter only needs to parse code and does not need to
+validate it or typecheck it until it is run.
+
+Likewise for testing for python.  Without good code coverage for tests, there
+could be code in an application that will cause a crash the first time it runs
+because of a simple typo.
+
+References
+
+C++ references to add:
+
+- [cppreference.com](https://cppreference.com/)
+- [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines): also a C++ reference
+- [C++ Super FAQ](https://isocpp.org/faq)
+
+Add `eol-prog` email list as a resource also.
+
 ## Examples
 
 Examples of github doc repos that could be worth following:
 
-- [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines)
+- [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines): also a C++ reference
