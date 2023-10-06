@@ -1,5 +1,3 @@
-Agile software development is a family of development processes based on a set
-of principles which align well with existing practice and culture in EOL.
 
 [Agile software
 development](http://en.wikipedia.org/wiki/Agile_software_development) is a
@@ -28,6 +26,4 @@ Agile Software Development process ideas are based on the Agile Manifesto and
 its associated basic principles
 ([www.agilemanifesto.org](http://www.agilemanifesto.org/)).
 
-**[Next page: Development
-Process](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3256&SearchId=0)**
-
+[Next page: Development Process](Development-Process.md)

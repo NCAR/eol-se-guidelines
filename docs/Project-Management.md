@@ -1,3 +1,4 @@
+
 Some aspects of software development naturally relate to project management,
 especially when the software is only one part of a larger project.
 
@@ -21,15 +22,13 @@ Alliance](http://www.scrumalliance.org/).
 Agile software development processes facilitate a cooperative and interactive
 software development.
 
-  - [Agile Software Development](https://www.eol.ucar.edu/content/agile-software-development)
+- [Agile Software Development](Agile-Software-Development.md)
 
 ### Hold project reviews
 
-For some projects, it may make sense to expand the design review concept
-([mentioned
-here](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3256&SearchId=0#design-
-reviews)) into a more general project review. The purpose would be to **review
-and collaborate on all aspects of the project** , such as the requirements,
+For some projects, it may make sense to expand the design review concept into
+a more general project review. The purpose would be to **review and
+collaborate on all aspects of the project** , such as the requirements,
 design, implementation, milestones, priorities, risks, technology selections,
 and other initial decisions. This would be the opportunity for other experts
 (like project management experts) and other developers to learn about and help
@@ -40,8 +39,7 @@ Even without an actual project review meeting, **developers should actively
 seek input from other developers and other experts**. This seems to be
 accepted as a good practice in EOL, and it is consistent with the principle of
 cooperation, but the practice must actively be encouraged. It would be a
-natural extension to the project checklist ([see the Software Project
-Template](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3263&SearchId=0))
+natural extension to the project checklist ([see the Software Project Template](Software-Project-Template.md))
 to include which developers have consulted on the design and implementation of
 the software. Project reviews also give less experienced software engineers a
 chance to question and learn about good development practices.
@@ -62,12 +60,12 @@ whether more tracking is needed and what are the best practices for tracking
 and reporting progress. Project tracking would benefit users, developers, and
 managers. Here are some notable pieces to the progress tracking picture:
 
-  - Participation in regular project meetings
-  - Milestones on a web or wiki page, with the current status of each milestone
-  - Issue tracking, possibly with time tracking also
-  - Emails on commits
-  - Project overview page, with a field for current status and latest progress
-  - Blogs, by developers and by project leads
+- Participation in regular project meetings
+- Milestones on a web or wiki page, with the current status of each milestone
+- Issue tracking, possibly with time tracking also
+- Emails on commits
+- Project overview page, with a field for current status and latest progress
+- Blogs, by developers and by project leads
 
 All of these have been used in some form or other in EOL. As a minimum, every
 software development should have a web site which hosts the project checklist,
@@ -80,6 +78,4 @@ Even if a long range schedule and formal milestones are not possible, a
 software development can still report on the current efforts and impending
 tasks using the same mechanisms.
 
-[**Next page: Development
-Process**](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3256&SearchId=0)
-
+[Next page: Development Process](Development-Process.md)

@@ -1,3 +1,4 @@
+
 The coding guidelines relate to source code, implementation, and to the
 artifacts and infrastructure which should be part of development. Of course
 there is much overlap between process and coding.
@@ -8,8 +9,7 @@ Every project should be easy to build from checkout with an automated, batch
 build process. For C++ applications, SCons is recommended for its existing
 support of EOL tools, libraries, and common third-party components. Java
 projects might use ant or Eclipse. Whatever the tool, building and testing
-should be turnkey. [See the [Joel
-Test](http://joelonsoftware.com/articles/fog0000000043.html), step 2.]
+should be turnkey. [See the [Joel Test](Resources-and-References.md#joel-test), step 2.]
 
 ### Use automated testing.
 
@@ -41,7 +41,7 @@ suspicious code has been added. When there is a warning, change the code. That
 way another developer later does not need to wonder whether the warning or the
 code is correct. GCC has the recommended _-Wall_ and _-Wextra_ options, but it
 also has the _-Weffc+_ option, which warns about violations of the style rules
-in _Effective C++_ [[Meyers](https://www.eol.ucar.edu/node/9384#meyers)].
+in _Effective C++_ [[Meyers](Resources-and-References.md#scott-meyers)].
 
 Very often code quality improves when it must be compiled on different
 platforms and with different compilers. On Linux, there are compilers
@@ -54,15 +54,21 @@ and report different problems in the source code.
 There are subversion and git servers already available to use. If any of the
 guidelines in this document should be an absolute requirement, this is one of
 them. Beyond just using revision control, there are also good guidelines for
-commits and commit messages, such as this article [On commit
-messages](http://who-t.blogspot.com/2009/12/on-commit-messages.html). [See the
-[Joel Test](http://joelonsoftware.com/articles/fog0000000043.html), step 1.]
+commits and commit messages, such as this article [On commit messages](Resources-and-References.md#commit-messages).
+[See the [Joel Test](http://joelonsoftware.com/articles/fog0000000043.html), step 1.]
 Here are a couple highlights:
 
-  - Do not mix cosmetic changes with functional changes. It is hard to see from a source code diff what behavior changed if many more source lines differ just because of reformatting or reindenting or renaming.
-  - Commit unrelated fixes separately when feasible. That allows individual fixes to be understood separately and also backed out separately.
-  - Do not "break the build". The trunk revision should always build without errors so no one has to fix compile problems just to keep working on their own changes. Commit intermediate, build-breaking changes onto a branch.
-  - Write a descriptive log message. On many projects the log message will be emailed automatically to other interested persons, so the log message is an easy way to send out a simple notice and explanation of a change.
+- Do not mix cosmetic changes with functional changes. It is hard to see from
+  a source code diff what behavior changed if many more source lines differ
+  just because of reformatting or reindenting or renaming.
+- Commit unrelated fixes separately when feasible. That allows individual
+  fixes to be understood separately and also backed out separately.
+- Do not "break the build". The trunk revision should always build without
+  errors so no one has to fix compile problems just to keep working on their
+  own changes. Commit intermediate, build-breaking changes onto a branch.
+- Write a descriptive log message. On many projects the log message will be
+  emailed automatically to other interested persons, so the log message is an
+  easy way to send out a simple notice and explanation of a change.
 
 ### Use a logging framework
 
@@ -76,27 +82,49 @@ invaluable because they can be retrieved by logging into the system or by
 email from the field operator. A good log can give important diagnostics more
 completely and more accurately than can be relayed over a phone call.
 
-See [Logging Frameworks](https://www.eol.ucar.edu/node/9397).
+See [Logging Frameworks](Logging-Frameworks.md).
 
 ### Use a consistent style
 
 There are many coding styles out there, and we will never settle upon just
 one, but there are some good conventions to follow. The important thing is to
 pick a style and be consistent. See
-[[RAL](https://www.eol.ucar.edu/node/9384#RAL)], the [Google style
-guide,](http://code.google.com/p/google-styleguide/) and
-[[KDE](https://www.eol.ucar.edu/node/9384#KDE)] for other ideas about style.
+[[RAL](Resources-and-References.md#ral-wiki)],
+the [Google style guide,](Resources-and-References.md#google-style-guide) and
+[[KDE](Resources-and-References.md#kde-policies)] for other ideas about style.
 For the record, here is a basic list of good practices in EOL:
 
-  - Differentiate class members from local variables with a naming convention.
-  - Use a naming convention for class methods and functions, such as camel case (doThat) or underscores (do_that), and then use the convention consistently.
-  - Use descriptive names. Do not abbreviate too much or leave out arbitrary letters just to have a shorter name.
-  - Avoid long function definitions.
-  - Separate interface and implementation. In C++, the header file often can use forward declarations rather than including other header files, which simplifies dependencies and speeds compilation. When implementations are defined in source modules rather than header files, then implementations can change without forcing clients of the interface to recompile. Consider using the pimpl idiom. For languages like Python and Java which force implementation to be defined with interface, use the language to make public interface explicit. The Python convention is to use leading underscores for private methods.
-  - Favor spaces over tabs. Indenting by 8 spaces is excessive, 2 or 4 is adequate.
-  - Avoid overcrowding source code. Use spaces around operators.
-  - Keep source code lines within 80 columns.
-  - Avoid complicating the flow of an algorithm just to optimize it, unless the performance has been measured. The compiler optimizes better than programmers. Premature optimization is the root of all evil, and often it is also the root of all obfuscation.
+- Differentiate class members from local variables with a naming convention.
+
+- Use a naming convention for class methods and functions, such as camel case
+  (doThat) or underscores (do_that), and then use the convention consistently.
+
+- Use descriptive names. Do not abbreviate too much or leave out arbitrary
+  letters just to have a shorter name.
+
+- Avoid long function definitions.
+
+- Separate interface and implementation. In C++, the header file often can use
+  forward declarations rather than including other header files, which
+  simplifies dependencies and speeds compilation. When implementations are
+  defined in source modules rather than header files, then implementations can
+  change without forcing clients of the interface to recompile. Consider using
+  the pimpl idiom. For languages like Python and Java which force
+  implementation to be defined with interface, use the language to make public
+  interface explicit. The Python convention is to use leading underscores for
+  private methods.
+
+- Favor spaces over tabs. Indenting by 8 spaces is excessive, 2 or 4 is
+  adequate.
+
+- Avoid overcrowding source code. Use spaces around operators.
+
+- Keep source code lines within 80 columns.
+
+- Avoid complicating the flow of an algorithm just to optimize it, unless the
+  performance has been measured. The compiler optimizes better than
+  programmers. Premature optimization is the root of all evil, and often it is
+  also the root of all obfuscation.
 
 ### Facilitate code reuse.
 
@@ -104,10 +132,11 @@ There are many existing software implementations that we can use in EOL
 software projects. We should take advantage of them to avoid duplicating
 effort. We should also write our own code to facilitate its reuse in other EOL
 projects. Sometimes tools can help in searching for and identifying existing
-code. [OpenGrok (internal only)](http://svn.eol.ucar.edu/source/) can be used
-to search almost all of the EOL subversion repositories for specific code
-symbols or arbitrary text. And of course there is no substitute for just
-asking around, either in person or on the software engineering mailing lists.
+code. (At one point EOL had an OpenGrok server which could be used to search
+almost all of the EOL software repositories for specific code symbols or
+arbitrary text.  A capability like that would still be useful.) And of course
+there is no substitute for just asking around, either in person or on the
+software engineering mailing lists.
 
 There are many scripts and programs which at first look like one-off tasks,
 such as data processing specific to a single field project. We know from
@@ -119,17 +148,18 @@ projects and similar tasks. Consolidate similar code into functions,
 consolidate functions into libraries and packages, share a single code base
 instead of duplicating it.
 
-This is similar to the coding maxim [Don't Repeat Yourself
-(DRY)](https://en.wikipedia.org/wiki/Don't_repeat_yourself).
+This is similar to the coding maxim
+[Don't Repeat Yourself (DRY)](https://en.wikipedia.org/wiki/Don't_repeat_yourself).
+Avoid copy-n-paste of more than a few lines of code.
 
-### Deploy tests and logging as part of production software
+### Deploy tests and logging as part of production software.
 
 It should be possible to test software in its production environment, using
 the same automated tests used in the development environment. Likewise, the
 built-in logging capabilities should be available in production and not
 disabled or compiled out.
 
-### Document
+### Document.
 
 Short of mandating formal documentation requirements, it would be prudent to
 at least have some documentation goals. There are two types of documentation
@@ -147,7 +177,7 @@ instrument are operating normally. This means the software must support
 diagnosis (see logging) and troubleshooting, and the user guide must document
 the use and meaning of the diagnostics.
 
-### Do not optimize prematurely
+### Do not optimize prematurely.
 
 See all the references on the web about Knuth's quote, the 80/20 rule, and
 other challenges to performance metrics. Basically, there is little point to
@@ -158,5 +188,4 @@ that you think appears slow, so optimizing manually is like fighting the
 compiler. Don't bother unless you can verify where the compiler actually needs
 help.
 
-[**Next page: Tools and Technologies**](https://www.eol.ucar.edu/node/9376)
-
+[Next page: Tools and Technologies](Tools-and-Technologies.md)

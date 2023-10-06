@@ -20,8 +20,7 @@ consistently throughout EOL.
 
 ### Practice priming
 
-New hires should be enculturated into a project on their first day
-[[cheezburger]](https://www.eol.ucar.edu/node/9384#cheezburger). A mentor
+New hires should be enculturated into a project on their first day. A mentor
 should guide them through writing production code following the specific
 project practices chosen from these guidelines (as described in the project
 checklist/overview). Old hands on new projects should do similar - either be
@@ -75,6 +74,4 @@ As an interesting side question, Google development is restricted to three
 languages: C++, Java, and Python. Unidata several years ago decided to
 concentrate on Java. Should EOL consolidate on a few languages?
 
-[**Next page: Resources and
-References**](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&SearchId=0)
-
+[Next page: Resources and References](Resources-and-References.md)

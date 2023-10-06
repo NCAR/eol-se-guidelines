@@ -1,7 +1,9 @@
-Editing There are several tools in use in EOL for editing source code. Besides
-emacs and vi, there are Integrated Development Environments (IDE) like
-Eclipse. No particular IDE or tool should be mandated or standardized across
-EOL, since that runs contrary to flexibility, individuality, and the
+## Editing
+
+There are several tools in use in EOL for editing source code. Besides emacs
+and vi, there are Integrated Development Environments (IDE) VS Code, Eclipse,
+and JetBrains. No particular IDE or tool should be mandated or standardized
+across EOL, since that runs contrary to flexibility, individuality, and the
 investigation of new technology. Instead, we can continue to encourage
 communication, share what works, and consolidate tools when prudent.
 
@@ -10,16 +12,17 @@ communication, share what works, and consolidate tools when prudent.
 There are two major revision control tools in use in EOL: subversion and git.
 It makes sense to standardize on these two since the infrastructure is in
 place and there has been plenty of experience with them. There is an [EOL
-account at github](https://github.com/ncareol/) for both private and public
-repositories, see someone in CTM for information and access. There is a
-subversion server in EOL, see [this wiki
-page](http://wiki.eol.ucar.edu/sew/Subversion) (authorized access only) for
-more information.
+organization at github](https://github.com/ncareol/) for both private and
+public repositories. By now most new projects should use the [NCAR
+organization](https://github.com/NCAR) on github.  There is also a subversion
+server in EOL, but most software has migrated away from that to github.  See
+the [EOL wiki](Resources-and-References.md#eol-wiki) for more information on
+git, subversion, and migrating to git.
 
 ### Unit Testing
 
-[Test-driven development](http://en.wikipedia.org/wiki/Test-
-driven_development) is a valuable practice that can be used in projects of any
+[Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development)
+is a valuable practice that can be used in projects of any
 scale. It forces developers to consider requirements and expected behaviour
 from the beginning, and then unit tests verify the behavior and provide some
 assurances that code still works after the changes. Various libraries and
@@ -40,23 +43,23 @@ Test](https://github.com/google/googletest).
 ### Memory Checking
 
 A valuable tool for checking for memory errors in an application is
-[valgrind](http://valgrind.kde.org/). It is a very good practice to run
-compiled applications through valgrind. If the tests can be scripted and
-automated, then valgrind can easily check for memory errors and memory leaks
-each time the tests are run. The more source code exercised by the tests (code
+[valgrind](https://valgrind.org/). It is a very good practice to run compiled
+applications through valgrind. If the tests can be scripted and automated,
+then valgrind can easily check for memory errors and memory leaks each time
+the tests are run. The more source code exercised by the tests (code
 coverage), the more thorough the memory checking.
 
 ### Issue Tracking
 
-The default issue tracking tool in EOL is
-[JIRA](http://www.atlassian.com/software/jira/). However, github has its own
-issue tracking, and sometimes a wiki is used to track issues. Email does not
-make a good issue tracking tool, because the thread is spread across emails,
-it is difficult to catch someone up, and it is difficult to search for past
-similar issues. Note that field deployment issues can be tracked and not just
-software issues. [EOL JIRA](http://jira.eol.ucar.edu/) is used to track the
-tasks and problems related to software and systems deployments for ISS field
-projects.
+The default issue tracking tool in EOL was
+[JIRA](http://www.atlassian.com/software/jira/), and several projects still
+use it. However, github has its own issue tracking, and sometimes a wiki is
+used to track issues. Email does not make a good issue tracking tool, because
+the thread is spread across emails, it is difficult to catch someone up, and
+it is difficult to search for past similar issues. Note that field deployment
+issues can be tracked and not just software issues. [UCAR
+JIRA](http://jira.ucar.edu/) is now used to track the tasks and problems
+related to software and systems deployments for various ISF and RAF platforms.
 
 ### Continuous Integration
 
@@ -68,18 +71,20 @@ the EOL instance.
 ### Builds
 
 EOL software has been known to use make, autoconf, shell scripts, SCons,
-Visual Studio, and qmake to build and install. There are many possibilities,
+Visual Studio, cmake, and qmake to build and install. There are many possibilities,
 but should EOL try to settle on just a few? [SCons](http://www.scons.org/) is
 used by several projects in EOL, and many of them share extensions to SCons
-called [eol_scons](https://github.com/ncareol/eol_scons).
+called [eol_scons](https://github.com/ncar/eol_scons).
 
 ### Code Reviews
 
-EOL has been running Atlassian
-[Crucible](http://www.atlassian.com/software/crucible/), a web-based tool for
-facilitating code reviews, but no one is using it yet. It is available to
-everyone and may be helpful getting started with code reviews, and it is also
-integrated with [FishEye](http://www.atlassian.com/software/fisheye/).
+There seems to be two common approaches to code reviews: emails and github
+comments.  It has been very helpful and effective to send email notifications
+on each code commit, especially if they contain diffs.  Then other developers
+know what is being changed and can reply with comments about the changes.
+Github also provides ways to comment on pull requests and directly on code in
+commits, and that has proved convenient and effective also.  Formal code
+reviews, however, have probably only rarely happened in EOL, if ever.
 
 ### Packaging, Distribution, and Installation
 
@@ -151,9 +156,23 @@ core support for serialization (persistence). Some applications store
 configuration data in XML and use the Apache Xerces-C library to read and
 write XML files. Here are some guidelines despite all this variety:
 
-  - Use a text-based, line-based configuration file format, even if users will never be expected to edit the configuration files. This format can be deciphered by developers when there are problems, and different versions of configuration files can be managed and compared by revision control systems. It is a good practice to store examples of configuration files as well as test and production configurations in revision control.
-  - Related to revision control, when modifying a configuration in software, avoid gratuitous formatting or structure changes (like changing node order) so that differences between revisions will be meaningful. In the XML DOM this is possible by modifying the document model in parallel with the configuration changes. Other formats might require always ordering nodes alphabetically when writing them out.
-  - Provide as many reasonable defaults as possible, so software can work as quickly and as automatically as possible without requiring too much configuration from the user.
+- Use a text-based, line-based configuration file format, even if users will
+  never be expected to edit the configuration files. This format can be
+  deciphered by developers when there are problems, and different versions of
+  configuration files can be managed and compared by revision control systems.
+  It is a good practice to store examples of configuration files as well as
+  test and production configurations in revision control.
+
+- Related to revision control, when modifying a configuration in software,
+  avoid gratuitous formatting or structure changes (like changing node order)
+  so that differences between revisions will be meaningful. In the XML DOM
+  this is possible by modifying the document model in parallel with the
+  configuration changes. Other formats might require always ordering nodes
+  alphabetically when writing them out.
+
+- Provide as many reasonable defaults as possible, so software can work as
+  quickly and as automatically as possible without requiring too much
+  configuration from the user.
 
 ### Commercial Tools
 
@@ -172,27 +191,23 @@ needs.
 
 ### Code Analysis Tools
 
-Memory checking tools have been used in ATD and JOSS in the past, such as
-Purify and Testcenter, and they proved useful. Perhaps it is time to adopt the
-latest generation of such tools. CERN has benefitted from the static code
-analysis tool Coverity
-[[CERN](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&SearchId=0#CERN)],
-the tool known for checking the Linux kernel. Here is a list of "more well-
-known" commercial code analysis tools:
+Memory checking tools have been used in the past, such as Purify and
+Testcenter, and they proved useful. Perhaps it is time to adopt the latest
+generation of such tools. CERN has benefitted from the static code analysis
+tool Coverity, the tool known for checking the Linux kernel. Here is a list of
+"more well- known" commercial code analysis tools:
 
-  - [Coverity](http://coverity.com/)
-  - [Parasoft](http://parasoft.com/)
-  - [LDRA Testbed](http://www.ldra.com/)
+- [Coverity](http://coverity.com/)
+- [Parasoft](http://parasoft.com/)
+- [LDRA Testbed](http://www.ldra.com/)
 
 Likely EOL software would benefit from at least adopting open source and
 research code analysis tools into the development process. A quick search of
 the web yields a few possibilities, at least for Linux and C++. There are also
 many for Java and Python ([pylint](http://www.logilab.org/projects/pylint)).
 
-  - [Splint](http://lclint.cs.virginia.edu/)
-  - [Mozilla Static Analysis Tools](https://wiki.mozilla.org/Static_Analysis)
-  - [CppCheck](http://sourceforge.net/apps/mediawiki/cppcheck)
+- [Splint](http://lclint.cs.virginia.edu/)
+- [Mozilla Static Analysis Tools](https://wiki.mozilla.org/Static_Analysis)
+- [CppCheck](http://sourceforge.net/apps/mediawiki/cppcheck)
 
-[**Next page: Logging
-Frameworks**](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3260&SearchId=0)
-
+[Next page: Logging Frameworks](Logging-Frameworks.md)

@@ -20,11 +20,10 @@ implementation language, and dependencies.
 
 As a practical implication, users should be invited to any meeting where
 requirements will be discussed.
-[[HFSD](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&SearchId=0)]
-and
-[[FOWLER](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&SearchId=0)]
-have straightforward explanations of the necessity and value of close user
-involvement for iterative requirements analysis and development.
+[[HFSD](Resources-and-References.md#head-first)] and
+[[FOWLER](Resources-and-References.md#uml-distilled)] have straightforward
+explanations of the necessity and value of close user involvement for
+iterative requirements analysis and development.
 
 Some statement of requirements is necessary for any size of development, large
 or small. Larger developments will have more requirements, but they do not
@@ -43,18 +42,39 @@ application and user interact when an error case occurs?
 
 Here is a list of requirements to consider, in no particular order:
 
-  - software lifetime: How long will the software be needed? This requirement distinguishes the one-off fixes from longer term software infrastructure.
-  - external support: Does the software need to be deployed for users outside of EOL?
-  - target platforms: Does the software need to run on multiple platforms, embedded or not, particular operating systems, and so on? Is there a requirement for data portability between architectures?
-  - data security: How robust and redundant does the data manipulation and storage need to be? Raw data recording obviously needs stricter data security requirements than reprocessing software, but someone still needs to decide how many backups are enough.
-  - access security: Do user authentication and authorization need to be built into the software?
-  - monitoring: How will users and operators monitor the status and progress of the software?
-  - auditing: When processing data, what metadata will be preserved and augmented and tracked?
-  - data formats: What data file formats must be supported for input and output?
-  - error recovery: Does the software need to be able to recover quickly from problems, such as during field operations? Perhaps it needs to save checkpoints and be able to resume from the last checkpoint. What errors need to be detected automatically and how will the operator be alerted?
-  - data throughput: What is the minimum data throughput requirement? Even post-processing software may have a throughput requirement, if the users want to process field project data in hours instead of days.
-  - algorithm flexibility: Some software may need special accommodation to support alternative and evolving algorithms.
-  - configuration: How flexible does the software configuration need to be? Will it operate for different field projects, test modes, and instrument modes? Will different users need to run it with their own customizations? Where will it get configuration settings and metadata?
+- **software lifetime**: How long will the software be needed? This
+  requirement distinguishes the one-off fixes from longer term software
+  infrastructure.
+- **external support**: Does the software need to be deployed for users
+  outside of EOL?
+- **target platforms**: Does the software need to run on multiple platforms,
+  embedded or not, particular operating systems, and so on? Is there a
+  requirement for data portability between architectures?
+- **data security**: How robust and redundant does the data manipulation and
+  storage need to be? Raw data recording obviously needs stricter data
+  security requirements than reprocessing software, but someone still needs to
+  decide how many backups are enough.
+- **access security**: Do user authentication and authorization need to be built
+  into the software?
+- **monitoring**: How will users and operators monitor the status and progress
+  of the software?
+- **auditing**: When processing data, what metadata will be preserved and
+  augmented and tracked?
+- **data formats**: What data file formats must be supported for input and
+  output?
+- **error recovery**: Does the software need to be able to recover quickly
+  from problems, such as during field operations? Perhaps it needs to save
+  checkpoints and be able to resume from the last checkpoint. What errors need
+  to be detected automatically and how will the operator be alerted?
+- **data throughput**: What is the minimum data throughput requirement? Even
+  post-processing software may have a throughput requirement, if the users
+  want to process field project data in hours instead of days.
+- **algorithm flexibility**: Some software may need special accommodation to
+  support alternative and evolving algorithms.
+- **configuration**: How flexible does the software configuration need to be?
+  Will it operate for different field projects, test modes, and instrument
+  modes?  Will different users need to run it with their own customizations?
+  Where will it get configuration settings and metadata?
 
 ### Design
 
@@ -71,9 +91,8 @@ problem into logical components, a basic block diagram, following as closely
 as possible the vocabulary of the problem domain. The partitioning then maps
 directly to the namespaces and symbol names used in the code. A design
 document or block diagram describes the components, their responsibilities,
-and their collaborations [[CRC](https://www.eol.ucar.edu/node/9384)], and as
-such it serves as an overview of the design as well as a guide to the symbols
-in the source code.
+and their collaborations, and as such it serves as an overview of the design
+as well as a guide to the symbols in the source code.
 
 UML diagramming tools can be helpful here, but so far the experience with them
 in EOL is limited. As more EOL developers become familiar with UML notation,
@@ -104,11 +123,11 @@ Documentation is part of both process and infrastructure. There are certain
 aspects to a software development that should be documented before coding
 should continue:
 
-  - Requirements
-  - Design
-  - User experts
-  - Guidelines checklist
-  - Project home page
+- Requirements
+- Design
+- User experts
+- Guidelines checklist
+- Project home page
 
 For smaller projects (or small iterations), the requirements may be just a
 statement about objective, and the design documentation may not be very
@@ -124,11 +143,11 @@ application domain. Usually the domain experts are obvious, but it helps to
 name them explicitly in the documentation, since they are important references
 for the software developers. As the wisdom goes, software analysis does not
 happen unless a domain expert is involved.
-[[FOWLER](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3262&SearchId=0)]
+[[FOWLER](Resources-and-References.md#uml-distilled)]
 
 An example has been created for the checklist, linked below:
 
-  - [Software Project Template](https://wiki.ucar.edu/display/~granger/Software+Project+Template)
+- [Software Project Template](Software-Project-Template.md)
 
 The purpose of the checklist is to communicate to others, clarify who has a
 role in the development and what that role is, provide a quick overview for
@@ -185,8 +204,8 @@ in favor of fixing all of the high-priority bugs. This phase can be helped by
 running (and passing!) tests to verify requirements as well as regression
 tests to prevent bugs from recurring. Perhaps EOL developments don't warrant a
 formal or even an informal acceptance phase, but all projects should plan to
-spend time focusing exclusively on fixing bugs. [See the [Joel
-Test](http://joelonsoftware.com/articles/fog0000000043.html), step 5.]
+spend time focusing exclusively on fixing bugs. [See the
+[Joel Test](Resources-and-References.md#joel-test), step 5.]
 
 ### Maintenance
 
@@ -232,6 +251,4 @@ practices could be employed to spread out the support responsibilities.
 Sprints have proved useful in EOL as a way to focus a group of people for a
 short period on solving a particular problem.
 
-[**Next page: Code
-Sprints**](https://sundog.ucar.edu/Interact/Pages/Content/Document.aspx?id=3257&SearchId=0)
-
+[Next page: Code Sprints](Code-Sprints.md)

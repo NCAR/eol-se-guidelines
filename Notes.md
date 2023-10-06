@@ -31,6 +31,10 @@ use?  md or rst?
 
 ## Todo
 
+The sections could benefit from some reordering.  The main topics are
+principles, code, process, tools, resources.  Everything else should be rolled
+into those or somehow indented in the index.
+
 "Practice Priming" in the "Updating the Guidelines" should be in a skills
 development section, maybe next to all the other resources for skills
 development.
