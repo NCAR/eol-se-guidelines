@@ -1,3 +1,7 @@
+---
+title: Logging Frameworks
+---
+
 This is a quick survey of logging frameworks either used in EOL or which seem
 like good candidates for use.
 

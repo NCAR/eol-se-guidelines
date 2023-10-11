@@ -1,4 +1,6 @@
-# Resources And References
+---
+title: Resources And References
+---
 
 ## Staying Informed
 

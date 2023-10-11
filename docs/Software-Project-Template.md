@@ -1,3 +1,7 @@
+---
+title: Software Project Template
+---
+
 This is a template for an overview and checklist of a software development
 project. The intention is to provide a quick summary and an index of important
 links.

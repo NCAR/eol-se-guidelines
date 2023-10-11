@@ -1,3 +1,7 @@
+---
+title: Updating the Guidelines
+---
+
 It is important to review and update these guidelines based on latest industry
 "best practices" or "good operating practices", as those practices evolve and
 as EOL learns how to apply them best to EOL projects.

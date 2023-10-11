@@ -1,3 +1,7 @@
+---
+title: Tools and Technologies
+---
+
 ## Editing
 
 There are several tools in use in EOL for editing source code. Besides emacs

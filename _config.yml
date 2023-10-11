@@ -31,7 +31,19 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 theme: minima
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
+
+liquid:
+  error_mode: warn
+  strict_variables: false
+  strict_filters: false
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      sitemap: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -56,3 +68,5 @@ plugins:
 exclude:
   - python/
   - sundog/
+  - _site/
+  - _site/sitemap.xml

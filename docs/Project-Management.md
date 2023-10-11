@@ -1,3 +1,6 @@
+---
+title: Project Management
+---
 
 Some aspects of software development naturally relate to project management,
 especially when the software is only one part of a larger project.

@@ -1,5 +1,7 @@
-
-# Notes
+---
+title: Notes
+layout: default
+---
 
 ## Conversion
 

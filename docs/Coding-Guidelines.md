@@ -1,3 +1,8 @@
+---
+title: Coding Guidelines
+---
+
+[TOC]
 
 The coding guidelines relate to source code, implementation, and to the
 artifacts and infrastructure which should be part of development. Of course
