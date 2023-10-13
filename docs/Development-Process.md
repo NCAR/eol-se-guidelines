@@ -1,11 +1,9 @@
----
-title: Development Process
----
+# Development Process
 
 This section outlines phases and infrastructure related to the software
 development lifecycle, but not a sequential timeline.
 
-### Requirements
+## Requirements
 
 Rather than suggest a specific requirements discovery process, here are some
 issues that should always be considered when identifying the requirements for
@@ -80,7 +78,7 @@ Here is a list of requirements to consider, in no particular order:
   modes?  Will different users need to run it with their own customizations?
   Where will it get configuration settings and metadata?
 
-### Design
+## Design
 
 In any software project, there are many alternative designs which all meet the
 requirements. The challenge for developers is finding a design which meets the
@@ -102,7 +100,7 @@ UML diagramming tools can be helpful here, but so far the experience with them
 in EOL is limited. As more EOL developers become familiar with UML notation,
 it will be more feasible to share and discuss designs through UML diagrams.
 
-### Design reviews
+## Design reviews
 
 Software design reviews have not really been tried in EOL, but they still seem
 like a good idea. As an action item from this report, we should make an effort
@@ -121,7 +119,7 @@ For these reasons, users often need to be involved in design reviews also.
 An iterative development will have multiple reviews, one for each iteration of
 the design.
 
-### Documentation
+## Documentation
 
 Documentation is part of both process and infrastructure. There are certain
 aspects to a software development that should be documented before coding
@@ -167,7 +165,7 @@ requirements still hold. Before a new feature can be implemented, requirements
 should state what the feature will do, there must be a design in mind for the
 feature, and user experts must have been consulted about the feature.
 
-### Code reviews
+## Code reviews
 
 This is another idea from industry, promoted as beneficial and worth the
 effort, which EOL has never really tried. Emails on code commits allow for
@@ -184,7 +182,7 @@ emails on code changes is convenient, and it greatly boosts communication and
 awareness between developers as far as notifying everyone exactly what is
 happening in the source tree.
 
-### Releases
+## Releases
 
 Software releases are very ad hoc at the moment across all the projects. We
 need to adopt a more consistent process for software release. To avoid
@@ -198,7 +196,7 @@ and supported. Release announcements and release notes should be in a single
 location on the web. Release notes should include a summary of what has
 changed in the release.
 
-### Acceptance or bug-fix phase
+## Acceptance or bug-fix phase
 
 All software when first released goes through a phase where users first start
 using it, learning it, and discovering bugs in it. We may as well identify
@@ -211,7 +209,7 @@ formal or even an informal acceptance phase, but all projects should plan to
 spend time focusing exclusively on fixing bugs. [See the
 [Joel Test](Resources-and-References.md#joel-test), step 5.]
 
-### Maintenance
+## Maintenance
 
 In many ways maintenance is its own step in the software development process.
 Porting to new environments or OS revisions likely does not require analysis
@@ -221,7 +219,7 @@ coming. For example, external dependencies may go away or change (Qt4),
 formats may change (netcdf 4), hardware may change (64-bit), and new
 technologies may need to be adopted (web, rpm).
 
-### Pair programming
+## Pair programming
 
 Pair programming is a technique from agile software development where two
 programmers work simultaneously developing code, side-by-side at the console,
@@ -230,7 +228,7 @@ has been little experience with it. Pair programming may be a good way to
 spread and encourage "good coding habits", besides the potential for producing
 better code.
 
-### Share programming
+## Share programming
 
 This is an idea to increase cooperation, collaboration, and mentoring
 opportunities among EOL programmers by purposely sharing development projects
@@ -250,7 +248,7 @@ time how critical cross-training and distributed support will be for the
 success of the software. If it is critical, then shared programming or other
 practices could be employed to spread out the support responsibilities.
 
-### Code sprints
+## Code sprints
 
 Sprints have proved useful in EOL as a way to focus a group of people for a
 short period on solving a particular problem.

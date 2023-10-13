@@ -1,6 +1,4 @@
----
-title: Coding Guidelines
----
+# Coding Guidelines
 
 [TOC]
 
@@ -8,7 +6,7 @@ The coding guidelines relate to source code, implementation, and to the
 artifacts and infrastructure which should be part of development. Of course
 there is much overlap between process and coding.
 
-### Use automated builds.
+## Use automated builds.
 
 Every project should be easy to build from checkout with an automated, batch
 build process. For C++ applications, SCons is recommended for its existing
@@ -16,7 +14,7 @@ support of EOL tools, libraries, and common third-party components. Java
 projects might use ant or Eclipse. Whatever the tool, building and testing
 should be turnkey. [See the [Joel Test](Resources-and-References.md#joel-test), step 2.]
 
-### Use automated testing.
+## Use automated testing.
 
 Use a testing framework like boost.test, cppunit, JUnit, cxxunit, or whatever,
 but integrate the testing into the automated build framework so it is easy to
@@ -29,13 +27,13 @@ of the ideas behind the test-driven development process is that writing tests
 also helps the developer think clearly about the scope and the requirements,
 before writing the code.
 
-### Use continuous integration testing.
+## Use continuous integration testing.
 
 Take advantage of buildbot or other tools to run builds and tests whenever
 code is committed, potentially on multiple platforms, without doing it
 manually.
 
-### Use compilers effectively.
+## Use compilers effectively.
 
 Most compilers can warn about questionable code constructs, such as missing
 return statements, unreached code, missing cases, unsafe type conversions.
@@ -54,7 +52,7 @@ available besides GCC, such as [Clang](http://clang.llvm.org/) from the
 [LLVM](http://llvm.org/) project and the Intel compiler, and these may find
 and report different problems in the source code.
 
-### Use revision control.
+## Use revision control.
 
 There are subversion and git servers already available to use. If any of the
 guidelines in this document should be an absolute requirement, this is one of
@@ -75,7 +73,7 @@ Here are a couple highlights:
   emailed automatically to other interested persons, so the log message is an
   easy way to send out a simple notice and explanation of a change.
 
-### Use a logging framework
+## Use a logging framework
 
 For the original developer, this may not seem useful at first, but it's value
 comes for other developers who later have to learn how the software works. Log
@@ -89,7 +87,7 @@ completely and more accurately than can be relayed over a phone call.
 
 See [Logging Frameworks](Logging-Frameworks.md).
 
-### Use a consistent style
+## Use a consistent style
 
 There are many coding styles out there, and we will never settle upon just
 one, but there are some good conventions to follow. The important thing is to
@@ -131,7 +129,7 @@ For the record, here is a basic list of good practices in EOL:
   programmers. Premature optimization is the root of all evil, and often it is
   also the root of all obfuscation.
 
-### Facilitate code reuse.
+## Facilitate code reuse.
 
 There are many existing software implementations that we can use in EOL
 software projects. We should take advantage of them to avoid duplicating
@@ -157,14 +155,14 @@ This is similar to the coding maxim
 [Don't Repeat Yourself (DRY)](https://en.wikipedia.org/wiki/Don't_repeat_yourself).
 Avoid copy-n-paste of more than a few lines of code.
 
-### Deploy tests and logging as part of production software.
+## Deploy tests and logging as part of production software.
 
 It should be possible to test software in its production environment, using
 the same automated tests used in the development environment. Likewise, the
 built-in logging capabilities should be available in production and not
 disabled or compiled out.
 
-### Document.
+## Document.
 
 Short of mandating formal documentation requirements, it would be prudent to
 at least have some documentation goals. There are two types of documentation
@@ -182,7 +180,7 @@ instrument are operating normally. This means the software must support
 diagnosis (see logging) and troubleshooting, and the user guide must document
 the use and meaning of the diagnostics.
 
-### Do not optimize prematurely.
+## Do not optimize prematurely.
 
 See all the references on the web about Knuth's quote, the 80/20 rule, and
 other challenges to performance metrics. Basically, there is little point to

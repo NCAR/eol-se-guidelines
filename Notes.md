@@ -187,8 +187,25 @@ C++ references to add:
 
 Add `eol-prog` email list as a resource also.
 
-## Examples
+## On selecting a static site generator for technical documentation
 
-Examples of github doc repos that could be worth following:
+In general, these are the desired features for a technical documentation
+system:
 
-- [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines): also a C++ reference
+- easy to learn how to add content, accessible formatting
+- web accessible over the Internet (esp github)
+- portable for offline access, on field machines or personal devices
+- PDF output, partly to enable offline access and portability
+- collaborative editing and versioning
+- can include photographs and diagrams
+- can reference other PDF files or web sites
+  - external vendor documentation
+  - related software documention (eg, NIDAS, ISFS, DSM have separate documentation)
+
+### Examples
+
+Noteworthy examples of github doc repos:
+
+- [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines)
+- [Prometheus Docs](https://github.com/prometheus/docs#contributing-changes)
+- [Google style guide](http://code.google.com/p/google-styleguide/)

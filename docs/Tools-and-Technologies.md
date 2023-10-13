@@ -1,6 +1,4 @@
----
-title: Tools and Technologies
----
+# Tools and Technologies
 
 ## Editing
 
@@ -11,7 +9,7 @@ across EOL, since that runs contrary to flexibility, individuality, and the
 investigation of new technology. Instead, we can continue to encourage
 communication, share what works, and consolidate tools when prudent.
 
-### Revision Control
+## Revision Control
 
 There are two major revision control tools in use in EOL: subversion and git.
 It makes sense to standardize on these two since the infrastructure is in
@@ -23,7 +21,7 @@ server in EOL, but most software has migrated away from that to github.  See
 the [EOL wiki](Resources-and-References.md#eol-wiki) for more information on
 git, subversion, and migrating to git.
 
-### Unit Testing
+## Unit Testing
 
 [Test-driven development](http://en.wikipedia.org/wiki/Test-driven_development)
 is a valuable practice that can be used in projects of any
@@ -44,7 +42,7 @@ C++ projects have used [CppUnit](http://sourceforge.net/projects/cppunit/),
 [CxxTest](http://cxxtest.com/), and [Google
 Test](https://github.com/google/googletest).
 
-### Memory Checking
+## Memory Checking
 
 A valuable tool for checking for memory errors in an application is
 [valgrind](https://valgrind.org/). It is a very good practice to run compiled
@@ -53,7 +51,7 @@ then valgrind can easily check for memory errors and memory leaks each time
 the tests are run. The more source code exercised by the tests (code
 coverage), the more thorough the memory checking.
 
-### Issue Tracking
+## Issue Tracking
 
 The default issue tracking tool in EOL was
 [JIRA](http://www.atlassian.com/software/jira/), and several projects still
@@ -65,14 +63,14 @@ issues can be tracked and not just software issues. [UCAR
 JIRA](http://jira.ucar.edu/) is now used to track the tasks and problems
 related to software and systems deployments for various ISF and RAF platforms.
 
-### Continuous Integration
+## Continuous Integration
 
 EOL migrated from [Buildbot](http://wiki.eol.ucar.edu/sew/Buildbot) to
 [Jenkins](https://wiki.jenkins-ci.org/) for continuous integration and
 testing. See the EOL Software Engineering Wiki for information on how to use
 the EOL instance.
 
-### Builds
+## Builds
 
 EOL software has been known to use make, autoconf, shell scripts, SCons,
 Visual Studio, cmake, and qmake to build and install. There are many possibilities,
@@ -80,7 +78,7 @@ but should EOL try to settle on just a few? [SCons](http://www.scons.org/) is
 used by several projects in EOL, and many of them share extensions to SCons
 called [eol_scons](https://github.com/ncar/eol_scons).
 
-### Code Reviews
+## Code Reviews
 
 There seems to be two common approaches to code reviews: emails and github
 comments.  It has been very helpful and effective to send email notifications
@@ -90,7 +88,7 @@ Github also provides ways to comment on pull requests and directly on code in
 commits, and that has proved convenient and effective also.  Formal code
 reviews, however, have probably only rarely happened in EOL, if ever.
 
-### Packaging, Distribution, and Installation
+## Packaging, Distribution, and Installation
 
 Some projects provide targets to assemble an installation package. The package
 can be an RPM or a tar.gz file. Providing a standard installation package
@@ -126,7 +124,7 @@ paths.
 There is a recommended installer tool for Windows applications, used in
 particular by ASPEN. Ask Charlie about it.
 
-### Graphical User Interface Frameworks
+## Graphical User Interface Frameworks
 
 The majority of current EOL (non-Web-based) applications use Qt. Should that
 become the preferred GUI library for EOL? Other GUI frameworks have been used
@@ -135,7 +133,7 @@ GUI applications is a best practice in EOL. That could include Qt bindings in
 python using either [PyQt](https://wiki.python.org/moin/PyQt) or
 [PySide](http://wiki.qt.io/PySide).
 
-### Web Application Frameworks
+## Web Application Frameworks
 
 There are many web applications developed in EOL using several technologies,
 including Ruby on Rails, Groovy with Grail, Django, HTML, Javascript, Tomcat,
@@ -147,7 +145,7 @@ before adopting yet another web application platform, consider very carefully
 the long-term maintenance of the application. Now there is also a variety of
 JavaScript libraries to choose from.
 
-### Application Configuration
+## Application Configuration
 
 There are many mechanisms and libraries to configure applications at runtime.
 There are Windows INI files, for which there are few different libraries in
@@ -178,7 +176,7 @@ write XML files. Here are some guidelines despite all this variety:
   quickly and as automatically as possible without requiring too much
   configuration from the user.
 
-### Commercial Tools
+## Commercial Tools
 
 It seems we should identify some best practices for selecting and adopting
 commercial tools. There may be IDE's, memory checkers, static analysis and
@@ -193,7 +191,7 @@ UCAR site licenses, such as the MagicDraw UML tool and the Atlassian products.
 Tools like LabVIEW and FPGA compilers are also used in EOL for specialized
 needs.
 
-### Code Analysis Tools
+## Code Analysis Tools
 
 Memory checking tools have been used in the past, such as Purify and
 Testcenter, and they proved useful. Perhaps it is time to adopt the latest

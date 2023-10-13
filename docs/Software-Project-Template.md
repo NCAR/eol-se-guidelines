@@ -1,21 +1,13 @@
----
-title: Software Project Template
----
+# Software Project Template
 
 This is a template for an overview and checklist of a software development
 project. The intention is to provide a quick summary and an index of important
 links.
 
-## SPOT (SOFTWARE PROJECT OVERVIEW TEMPLATE)
+There is a table rendition of this checklist for the CAMS project:
+[CAMS LabVIEW Software Development](https://wiki.ucar.edu/display/camssoftware).
 
-This is a template for an overview and checklist of a software development
-project. The intention is to provide a quick summary and an index of important
-links.
-
-  - [Back to Software Guidelines](https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3953)
-
-There is a table rendition of this checklist for the CAMS project: [CAMS
-LabVIEW Software Development](https://wiki.ucar.edu/display/camssoftware)
+## Software Project Overview Template (SPOT) Fields
 
 ### Name:
 

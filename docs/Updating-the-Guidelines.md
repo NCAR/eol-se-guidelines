@@ -1,12 +1,10 @@
----
-title: Updating the Guidelines
----
+# Updating the Guidelines
 
 It is important to review and update these guidelines based on latest industry
 "best practices" or "good operating practices", as those practices evolve and
 as EOL learns how to apply them best to EOL projects.
 
-### Process review
+## Process review
 
 Should there be a process for updating these guidelines? A periodic review?  
 Should there be a "facilitation team" to help those doing software development
@@ -22,7 +20,7 @@ instrument developments. Perhaps the point needs to be made that these
 guidelines should be kept as universal as possible, so they can be applied
 consistently throughout EOL.
 
-### Practice priming
+## Practice priming
 
 New hires should be enculturated into a project on their first day. A mentor
 should guide them through writing production code following the specific
@@ -32,7 +30,7 @@ mentored through their first day on a project, or pair-program and mutually
 discover/reinforce proper practices. These processes can feed into a project-
 practice iteration.
 
-### Action items
+## Action items
 
 _If there are some specific action items which should follow from these
 guidelines, then list them here._
@@ -50,7 +48,7 @@ interested, including managers and other project team members (not just
 programmers). The blog could be part of a confluence wiki for EOL software
 development, perhaps migrated from the Software Engineering Wiki.
 
-### Open Questions
+## Open Questions
 
 _Issues which were considered outside the scope of this report and
 deliberately were not addressed._

@@ -1,0 +1,82 @@
+site_name: EOL Software Development Guidelines
+docs_dir: docs
+site_dir: _site
+repo_url: https://github.com/NCAR/eol-se-guidelines
+edit_uri: blob/main/docs
+site_author: Gary Granger, Jon Allison, Linda Cully
+
+nav:
+  - index.md
+  - Purpose-and-Principles.md
+  - Project-Management.md
+  - Agile-Software-Development.md
+  - Development-Process.md
+  - Code-Sprints.md
+  - Coding-Guidelines.md
+  - Tools-and-Technologies.md
+  - Logging-Frameworks.md
+  - Updating-the-Guidelines.md
+  - Resources-and-References.md
+  - Software-Project-Template.md
+
+theme:
+  name: material
+
+exclude_docs: |
+  python/
+  sundog/
+  _site/
+
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - smarty
+
+plugins:
+  - with-pdf:
+      author: Gary Granger, John Allison, Linda Cully
+      copyright: NCAR/EOL
+      #
+      # cover: false
+      # back_cover: true
+      cover_title: EOL Software Development Guidelines
+      cover_subtitle: ""
+      # custom_template_path: TEMPLATES PATH
+      #
+      toc_title: Table of Contents
+      heading_shift: false
+      toc_level: 2
+      ordered_chapter_level: 2
+      excludes_children:
+        - './:eol-software-development-guidelines'
+        - '#.:'
+        - 'index/:index'
+      #   - 'release-notes/:changelog'
+      exclude_pages:
+        - 'index.md'
+        - './:eol-software-development-guidelines'
+        - 'eol-software-development-guidelines'
+        - 'EOL Software Development Guidelines'
+        - 'index'
+        - '/'
+      # convert_iframe:
+      #    - src: IFRAME SRC
+      #      img: POSTER IMAGE URL
+      #      text: ALTERNATE TEXT
+      #    - src: ...
+      # two_columns_level: 3
+      #
+      render_js: false
+      # headless_chrome_path: headless-chromium
+      #
+      output_path: eol-se-guidelines.pdf
+      enabled_if_env: ENABLE_PDF_EXPORT
+      #
+      # debug_html: true
+      show_anchors: true
+      # verbose: true

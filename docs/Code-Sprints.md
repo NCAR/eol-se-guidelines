@@ -1,7 +1,3 @@
----
-title: Code Sprints
----
-
 # Code Sprints
 
 Code sprints have been used by many open-source projects and have evolved

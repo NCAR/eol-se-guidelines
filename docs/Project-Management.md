@@ -1,11 +1,9 @@
----
-title: Project Management
----
+# Project Management
 
 Some aspects of software development naturally relate to project management,
 especially when the software is only one part of a larger project.
 
-### Consult on Project Management
+## Consult on Project Management
 
 Software projects can be completed in an efficient and organized manner by
 using a project management framework. Project management professionals can
@@ -20,14 +18,14 @@ certifications are the [Project Management Institute
 (PMI)](http://www.pmi.org/) and the [Scrum
 Alliance](http://www.scrumalliance.org/).
 
-### Use Agile Development Practices
+## Use Agile Development Practices
 
 Agile software development processes facilitate a cooperative and interactive
 software development.
 
 - [Agile Software Development](Agile-Software-Development.md)
 
-### Hold project reviews
+## Hold project reviews
 
 For some projects, it may make sense to expand the design review concept into
 a more general project review. The purpose would be to **review and
@@ -47,7 +45,7 @@ to include which developers have consulted on the design and implementation of
 the software. Project reviews also give less experienced software engineers a
 chance to question and learn about good development practices.
 
-### Track issues
+## Track issues
 
 At present, issue tracking is not something that is used widely or regularly.
 Users would not be expected to use it, but certainly it should be kept open
@@ -55,7 +53,7 @@ and available to everyone. An issue tracking tool also could be an important
 resource for tracking progress, but only if developers use it and keep it
 current.
 
-### Track progress
+## Track progress
 
 Some of the process guidelines relate to tracking the progress of a project,
 such as the project overview page and issue tracking. The questions are

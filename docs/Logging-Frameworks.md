@@ -1,11 +1,9 @@
----
-title: Logging Frameworks
----
+# Logging Frameworks
 
 This is a quick survey of logging frameworks either used in EOL or which seem
 like good candidates for use.
 
-### NIDAS
+## NIDAS
 
 <https://www.eol.ucar.edu/software/nidas/doxygen/html/d0/d58/group__Logging.html>
 
@@ -24,7 +22,7 @@ NIDAS log library would see more development if it were more widely used.
 - multithread only
 - fixed format, but fields can be suppressed
 
-### Boost.Log
+## Boost.Log
 
 As of Boost 1.54, the Boost library has an official logging framework:
 
@@ -39,7 +37,7 @@ As of Boost 1.54, the Boost library has an official logging framework:
 - built-in timers
 - short-circuits message generation without calling a test function
 
-### LOG4CPP
+## LOG4CPP
 
 <http://log4cpp.sourceforge.net/>
 
@@ -56,7 +54,7 @@ category instance with the LOGGING() macro. logx also adds scoped logging: the
 ability to log a message when an object comes into scope and then when it
 leaves scope.
 
-### log4cxx (Apache)
+## log4cxx (Apache)
 
 <http://logging.apache.org/log4cxx/>
 
@@ -69,12 +67,12 @@ portable.
 - Nested Diagnostic Contexts
 - built-in configuration
 
-### Log4J
+## Log4J
 
 I believe the de facto standard for Java, with concepts like Loggers,
 Appenders, Layouts, and Categories.
 
-### For Further Thinking
+## For Further Thinking
 
 Logging should never be compiled out. If you need it during development,
 someone else will need it in development, and they should not have to

@@ -1,6 +1,4 @@
----
-title: Purpose and Principles
----
+# Introduction
 
 ## Purpose
 
