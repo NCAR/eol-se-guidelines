@@ -1,0 +1,906 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Gary Granger, Jon Allison, Linda Cully">
+      
+      
+      
+        <link rel="prev" href="../Agile-Software-Development/">
+      
+      
+        <link rel="next" href="../Code-Sprints/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+    
+    
+      
+        <title>Development Process - EOL Software Development Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6a10b989.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#development-process" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EOL Software Development Guidelines" class="md-header__button md-logo" aria-label="EOL Software Development Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EOL Software Development Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Development Process
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NCAR/eol-se-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EOL Software Development Guidelines" class="md-nav__button md-logo" aria-label="EOL Software Development Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EOL Software Development Guidelines
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NCAR/eol-se-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EOL Software Development Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Purpose-and-Principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project-Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agile-Software-Development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile Software Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Development Process
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Development Process
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-reviews" class="md-nav__link">
+    Design reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviews" class="md-nav__link">
+    Code reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-or-bug-fix-phase" class="md-nav__link">
+    Acceptance or bug-fix phase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    Maintenance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pair-programming" class="md-nav__link">
+    Pair programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#share-programming" class="md-nav__link">
+    Share programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-sprints" class="md-nav__link">
+    Code sprints
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Code-Sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Coding-Guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tools-and-Technologies/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tools and Technologies
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Logging-Frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating-the-Guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating the Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resources-and-References/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources And References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Software-Project-Template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Project Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    Requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design" class="md-nav__link">
+    Design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-reviews" class="md-nav__link">
+    Design reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    Documentation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviews" class="md-nav__link">
+    Code reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#releases" class="md-nav__link">
+    Releases
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acceptance-or-bug-fix-phase" class="md-nav__link">
+    Acceptance or bug-fix phase
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenance" class="md-nav__link">
+    Maintenance
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pair-programming" class="md-nav__link">
+    Pair programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#share-programming" class="md-nav__link">
+    Share programming
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-sprints" class="md-nav__link">
+    Code sprints
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="development-process">Development Process<a class="headerlink" href="#development-process" title="Permanent link">&para;</a></h1>
+<p>This section outlines phases and infrastructure related to the software
+development lifecycle, but not a sequential timeline.</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>Rather than suggest a specific requirements discovery process, here are some
+issues that should always be considered when identifying the requirements for
+an EOL software project. These are not necessarily important for all EOL
+software, but they should not be overlooked. For example, for data-critical
+applications, the requirements must address data integrity and redundancy.
+High-bandwidth applications must identify the total throughput needed, so the
+throughput can be tested and verified.</p>
+<p>As part of the requirements process, it is especially important to identify
+the users, since users must be involved in defining the requirements. In other
+words, a requirement can be posed as a question, and the users and domain
+experts should answer it, not the developer. (Unless the developer is a user
+also, of course.) The intended users also impact the target platforms,
+implementation language, and dependencies.</p>
+<p>As a practical implication, users should be invited to any meeting where
+requirements will be discussed.
+[<a href="../Resources-and-References/#head-first">HFSD</a>] and
+[<a href="../Resources-and-References/#uml-distilled">FOWLER</a>] have straightforward
+explanations of the necessity and value of close user involvement for
+iterative requirements analysis and development.</p>
+<p>Some statement of requirements is necessary for any size of development, large
+or small. Larger developments will have more requirements, but they do not
+need to be specified all at once. Instead they may be discovered as part of an
+iterative process. The important thing is that they be defined and documented
+along the way, so the software can be developed with the correct requirements
+in mind, ideally to the point of developing tests to verify the requirements.</p>
+<p>Writing use cases and user stories is good practice for elucidating
+requirements. They can be written from the user&rsquo;s point of view, and they only
+present the behavior expected by users without being biased by design or
+implementation. It is natural to describe software by telling a story about
+what it does and how the functionality will be used. Stories also force
+consideration of error handling from the user&rsquo;s point of view: how should the
+application and user interact when an error case occurs?</p>
+<p>Here is a list of requirements to consider, in no particular order:</p>
+<ul>
+<li><strong>software lifetime</strong>: How long will the software be needed? This
+  requirement distinguishes the one-off fixes from longer term software
+  infrastructure.</li>
+<li><strong>external support</strong>: Does the software need to be deployed for users
+  outside of EOL?</li>
+<li><strong>target platforms</strong>: Does the software need to run on multiple platforms,
+  embedded or not, particular operating systems, and so on? Is there a
+  requirement for data portability between architectures?</li>
+<li><strong>data security</strong>: How robust and redundant does the data manipulation and
+  storage need to be? Raw data recording obviously needs stricter data
+  security requirements than reprocessing software, but someone still needs to
+  decide how many backups are enough.</li>
+<li><strong>access security</strong>: Do user authentication and authorization need to be built
+  into the software?</li>
+<li><strong>monitoring</strong>: How will users and operators monitor the status and progress
+  of the software?</li>
+<li><strong>auditing</strong>: When processing data, what metadata will be preserved and
+  augmented and tracked?</li>
+<li><strong>data formats</strong>: What data file formats must be supported for input and
+  output?</li>
+<li><strong>error recovery</strong>: Does the software need to be able to recover quickly
+  from problems, such as during field operations? Perhaps it needs to save
+  checkpoints and be able to resume from the last checkpoint. What errors need
+  to be detected automatically and how will the operator be alerted?</li>
+<li><strong>data throughput</strong>: What is the minimum data throughput requirement? Even
+  post-processing software may have a throughput requirement, if the users
+  want to process field project data in hours instead of days.</li>
+<li><strong>algorithm flexibility</strong>: Some software may need special accommodation to
+  support alternative and evolving algorithms.</li>
+<li><strong>configuration</strong>: How flexible does the software configuration need to be?
+  Will it operate for different field projects, test modes, and instrument
+  modes?  Will different users need to run it with their own customizations?
+  Where will it get configuration settings and metadata?</li>
+</ul>
+<h2 id="design">Design<a class="headerlink" href="#design" title="Permanent link">&para;</a></h2>
+<p>In any software project, there are many alternative designs which all meet the
+requirements. The challenge for developers is finding a design which meets the
+requirements but also can be implemented, communicated, maintained, and
+elaborated as effectively as possible. The software abstraction should map
+well to the domain, and the language and concepts in the design should
+facilitate communication about the problem rather than confuse it. Thus
+documentation of the design is important.</p>
+<p>One best practice seems to be a coherent and consistent partition of the
+problem into logical components, a basic block diagram, following as closely
+as possible the vocabulary of the problem domain. The partitioning then maps
+directly to the namespaces and symbol names used in the code. A design
+document or block diagram describes the components, their responsibilities,
+and their collaborations, and as such it serves as an overview of the design
+as well as a guide to the symbols in the source code.</p>
+<p>UML diagramming tools can be helpful here, but so far the experience with them
+in EOL is limited. As more EOL developers become familiar with UML notation,
+it will be more feasible to share and discuss designs through UML diagrams.</p>
+<h2 id="design-reviews">Design reviews<a class="headerlink" href="#design-reviews" title="Permanent link">&para;</a></h2>
+<p>Software design reviews have not really been tried in EOL, but they still seem
+like a good idea. As an action item from this report, we should make an effort
+to hold design reviews before anything is implemented, even if the review is
+informal.</p>
+<p>Typically, the participants in design reviews will be other developers, as
+well as perhaps a domain expert to help clarify the requirements. That said,
+EOL software designs often must compromise between requirements. For example,
+there may be trade-offs between bandwidth available on the current hardware
+versus new software that would be needed for new hardware. Also, the priority
+of each requirement must be decided by the users. (For iterative developments,
+this relates to selecting which feature to implement in the next iteration.)
+For these reasons, users often need to be involved in design reviews also.</p>
+<p>An iterative development will have multiple reviews, one for each iteration of
+the design.</p>
+<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
+<p>Documentation is part of both process and infrastructure. There are certain
+aspects to a software development that should be documented before coding
+should continue:</p>
+<ul>
+<li>Requirements</li>
+<li>Design</li>
+<li>User experts</li>
+<li>Guidelines checklist</li>
+<li>Project home page</li>
+</ul>
+<p>For smaller projects (or small iterations), the requirements may be just a
+statement about objective, and the design documentation may not be very
+involved either. However, even a small project requires decisions about
+implementation language, data formats, GUI framework (or not), basic classes,
+and so on. As part of the design documentation, it is helpful to document
+critical design choices which were rejected rather than only the choices which
+were selected.</p>
+<p>The domain experts are the stakeholders in the software and those who will
+know the most about whether the software is accurately modeling the
+application domain. Usually the domain experts are obvious, but it helps to
+name them explicitly in the documentation, since they are important references
+for the software developers. As the wisdom goes, software analysis does not
+happen unless a domain expert is involved.
+[<a href="../Resources-and-References/#uml-distilled">FOWLER</a>]</p>
+<p>An example has been created for the checklist, linked below:</p>
+<ul>
+<li><a href="../Software-Project-Template/">Software Project Template</a></li>
+</ul>
+<p>The purpose of the checklist is to communicate to others, clarify who has a
+role in the development and what that role is, provide a quick overview for
+those not directly involved in the project, and provide a single point of
+reference for project status and all artifacts of the project. Filling in a
+checklist assures that important infrastructure is planned for and taken care
+of ahead of time, such as revision control, wiki pages (or wherever the
+project checklist will reside), issue tracking, and so on.</p>
+<p>Note that for an iterative development, where features are implemented in
+incremental changes to working software, all of the above documentation
+requirements still hold. Before a new feature can be implemented, requirements
+should state what the feature will do, there must be a design in mind for the
+feature, and user experts must have been consulted about the feature.</p>
+<h2 id="code-reviews">Code reviews<a class="headerlink" href="#code-reviews" title="Permanent link">&para;</a></h2>
+<p>This is another idea from industry, promoted as beneficial and worth the
+effort, which EOL has never really tried. Emails on code commits allow for
+sporadic code review of a sort, and we have the Crucible code review tool
+available in EOL, but we&rsquo;re not taking full advantage of this. The report
+<a href="http://ptolemy.eecs.berkeley.edu/publications/papers/99/sftwareprac/">Software Practice in the Ptolemy
+Project</a>
+is very positive about code reviews, and the experience there should be very
+relevant to EOL.</p>
+<p>As a minimal guideline, since every project should be using revision control,
+every project should likewise be taking advantage of commit emails. Setting up
+emails on code changes is convenient, and it greatly boosts communication and
+awareness between developers as far as notifying everyone exactly what is
+happening in the source tree.</p>
+<h2 id="releases">Releases<a class="headerlink" href="#releases" title="Permanent link">&para;</a></h2>
+<p>Software releases are very ad hoc at the moment across all the projects. We
+need to adopt a more consistent process for software release. To avoid
+confusion, the process should be the same for users both inside and outside
+EOL, even if some software is only available within EOL. More formal releases
+make for more consistent software quality and revision tracking &ldquo;in the wild&rdquo;.
+It also eases the maintenance burden on users, especially &ldquo;unintended side
+effects&rdquo; when production software is upgraded without warning and at arbitrary
+times. A release should be tagged, tested, packaged, advertised, available,
+and supported. Release announcements and release notes should be in a single
+location on the web. Release notes should include a summary of what has
+changed in the release.</p>
+<h2 id="acceptance-or-bug-fix-phase">Acceptance or bug-fix phase<a class="headerlink" href="#acceptance-or-bug-fix-phase" title="Permanent link">&para;</a></h2>
+<p>All software when first released goes through a phase where users first start
+using it, learning it, and discovering bugs in it. We may as well identify
+this phase and work to make it go smoothly. Many open-source projects (GCC,
+KDE, Linux Kernel) have a bug-fix-only phase, where work on new features stops
+in favor of fixing all of the high-priority bugs. This phase can be helped by
+running (and passing!) tests to verify requirements as well as regression
+tests to prevent bugs from recurring. Perhaps EOL developments don&rsquo;t warrant a
+formal or even an informal acceptance phase, but all projects should plan to
+spend time focusing exclusively on fixing bugs. [See the
+<a href="../Resources-and-References/#joel-test">Joel Test</a>, step 5.]</p>
+<h2 id="maintenance">Maintenance<a class="headerlink" href="#maintenance" title="Permanent link">&para;</a></h2>
+<p>In many ways maintenance is its own step in the software development process.
+Porting to new environments or OS revisions likely does not require analysis
+or design, but it does require development time. It is difficult to predict
+the resources needed for maintenance, but some maintenance issues can be seen
+coming. For example, external dependencies may go away or change (Qt4),
+formats may change (netcdf 4), hardware may change (64-bit), and new
+technologies may need to be adopted (web, rpm).</p>
+<h2 id="pair-programming">Pair programming<a class="headerlink" href="#pair-programming" title="Permanent link">&para;</a></h2>
+<p>Pair programming is a technique from agile software development where two
+programmers work simultaneously developing code, side-by-side at the console,
+each with a specific role. It has been used in EOL before, but otherwise there
+has been little experience with it. Pair programming may be a good way to
+spread and encourage &ldquo;good coding habits&rdquo;, besides the potential for producing
+better code.</p>
+<h2 id="share-programming">Share programming<a class="headerlink" href="#share-programming" title="Permanent link">&para;</a></h2>
+<p>This is an idea to increase cooperation, collaboration, and mentoring
+opportunities among EOL programmers by purposely sharing development projects
+among multiple developers. Unlike pair programming, programmers can still code
+separately, but they cooperate on the same project and the same source tree.
+For example, instead of two developers each working alone on a single project,
+two developers could share development on two projects.</p>
+<p>As a general rule, programmers should not hesitate to seek discussion with
+other programmers to help solve a problem or share techniques. This practice
+can guard against the single point of failure problem. When only one
+programmer works on software, then support and fixes fall on that programmer,
+and that can be a bottleneck. If instead more than one programmer is familiar
+with the software, then support can be distributed. This may be an item to
+address explicitly in the project checklist. A project should decide ahead of
+time how critical cross-training and distributed support will be for the
+success of the software. If it is critical, then shared programming or other
+practices could be employed to spread out the support responsibilities.</p>
+<h2 id="code-sprints">Code sprints<a class="headerlink" href="#code-sprints" title="Permanent link">&para;</a></h2>
+<p>Sprints have proved useful in EOL as a way to focus a group of people for a
+short period on solving a particular problem.</p>
+<p><a href="../Code-Sprints/">Next page: Code Sprints</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>

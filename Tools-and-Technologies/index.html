@@ -1,0 +1,913 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Gary Granger, Jon Allison, Linda Cully">
+      
+      
+      
+        <link rel="prev" href="../Coding-Guidelines/">
+      
+      
+        <link rel="next" href="../Logging-Frameworks/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+    
+    
+      
+        <title>Tools and Technologies - EOL Software Development Guidelines</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6a10b989.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tools-and-technologies" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="EOL Software Development Guidelines" class="md-header__button md-logo" aria-label="EOL Software Development Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            EOL Software Development Guidelines
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tools and Technologies
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/NCAR/eol-se-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="EOL Software Development Guidelines" class="md-nav__button md-logo" aria-label="EOL Software Development Guidelines" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    EOL Software Development Guidelines
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/NCAR/eol-se-guidelines" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EOL Software Development Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Purpose-and-Principles/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project-Management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Agile-Software-Development/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agile Software Development
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Development-Process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Process
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Code-Sprints/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code Sprints
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Coding-Guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Coding Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tools and Technologies
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Tools and Technologies
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    Editing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-control" class="md-nav__link">
+    Revision Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-testing" class="md-nav__link">
+    Unit Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-checking" class="md-nav__link">
+    Memory Checking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-tracking" class="md-nav__link">
+    Issue Tracking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-integration" class="md-nav__link">
+    Continuous Integration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#builds" class="md-nav__link">
+    Builds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviews" class="md-nav__link">
+    Code Reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-distribution-and-installation" class="md-nav__link">
+    Packaging, Distribution, and Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphical-user-interface-frameworks" class="md-nav__link">
+    Graphical User Interface Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-application-frameworks" class="md-nav__link">
+    Web Application Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-configuration" class="md-nav__link">
+    Application Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commercial-tools" class="md-nav__link">
+    Commercial Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-analysis-tools" class="md-nav__link">
+    Code Analysis Tools
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Logging-Frameworks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logging Frameworks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Updating-the-Guidelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Updating the Guidelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Resources-and-References/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources And References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Software-Project-Template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Project Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#editing" class="md-nav__link">
+    Editing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-control" class="md-nav__link">
+    Revision Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#unit-testing" class="md-nav__link">
+    Unit Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#memory-checking" class="md-nav__link">
+    Memory Checking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-tracking" class="md-nav__link">
+    Issue Tracking
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#continuous-integration" class="md-nav__link">
+    Continuous Integration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#builds" class="md-nav__link">
+    Builds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-reviews" class="md-nav__link">
+    Code Reviews
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#packaging-distribution-and-installation" class="md-nav__link">
+    Packaging, Distribution, and Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphical-user-interface-frameworks" class="md-nav__link">
+    Graphical User Interface Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#web-application-frameworks" class="md-nav__link">
+    Web Application Frameworks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-configuration" class="md-nav__link">
+    Application Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commercial-tools" class="md-nav__link">
+    Commercial Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-analysis-tools" class="md-nav__link">
+    Code Analysis Tools
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="tools-and-technologies">Tools and Technologies<a class="headerlink" href="#tools-and-technologies" title="Permanent link">&para;</a></h1>
+<h2 id="editing">Editing<a class="headerlink" href="#editing" title="Permanent link">&para;</a></h2>
+<p>There are several tools in use in EOL for editing source code. Besides emacs
+and vi, there are Integrated Development Environments (IDE) VS Code, Eclipse,
+and JetBrains. No particular IDE or tool should be mandated or standardized
+across EOL, since that runs contrary to flexibility, individuality, and the
+investigation of new technology. Instead, we can continue to encourage
+communication, share what works, and consolidate tools when prudent.</p>
+<h2 id="revision-control">Revision Control<a class="headerlink" href="#revision-control" title="Permanent link">&para;</a></h2>
+<p>There are two major revision control tools in use in EOL: subversion and git.
+It makes sense to standardize on these two since the infrastructure is in
+place and there has been plenty of experience with them. There is an <a href="https://github.com/ncareol/">EOL
+organization at github</a> for both private and
+public repositories. By now most new projects should use the <a href="https://github.com/NCAR">NCAR
+organization</a> on github.  There is also a subversion
+server in EOL, but most software has migrated away from that to github.  See
+the <a href="../Resources-and-References/#eol-wiki">EOL wiki</a> for more information on
+git, subversion, and migrating to git.</p>
+<h2 id="unit-testing">Unit Testing<a class="headerlink" href="#unit-testing" title="Permanent link">&para;</a></h2>
+<p><a href="http://en.wikipedia.org/wiki/Test-driven_development">Test-driven development</a>
+is a valuable practice that can be used in projects of any
+scale. It forces developers to consider requirements and expected behaviour
+from the beginning, and then unit tests verify the behavior and provide some
+assurances that code still works after the changes. Various libraries and
+harnesses have been used in EOL to facilitate testing.</p>
+<p>Java in general can use <a href="http://junit.org/">JUnit</a>, for which Eclipse has
+plugins.</p>
+<p>For python, there are <a href="http://www.logilab.org/projects/pylint">pylint</a> and
+<a href="http://docs.python.org/lib/module-unittest.html">unittest</a> and
+<a href="http://pytest.org/">py.test</a>.</p>
+<p>C++ projects have used <a href="http://sourceforge.net/projects/cppunit/">CppUnit</a>,
+<a href="http://www.boost.org/doc/libs/1_37_0/libs/test/index.html">Boost Test</a>,
+<a href="http://cxxtest.com/">CxxTest</a>, and <a href="https://github.com/google/googletest">Google
+Test</a>.</p>
+<h2 id="memory-checking">Memory Checking<a class="headerlink" href="#memory-checking" title="Permanent link">&para;</a></h2>
+<p>A valuable tool for checking for memory errors in an application is
+<a href="https://valgrind.org/">valgrind</a>. It is a very good practice to run compiled
+applications through valgrind. If the tests can be scripted and automated,
+then valgrind can easily check for memory errors and memory leaks each time
+the tests are run. The more source code exercised by the tests (code
+coverage), the more thorough the memory checking.</p>
+<h2 id="issue-tracking">Issue Tracking<a class="headerlink" href="#issue-tracking" title="Permanent link">&para;</a></h2>
+<p>The default issue tracking tool in EOL was
+<a href="http://www.atlassian.com/software/jira/">JIRA</a>, and several projects still
+use it. However, github has its own issue tracking, and sometimes a wiki is
+used to track issues. Email does not make a good issue tracking tool, because
+the thread is spread across emails, it is difficult to catch someone up, and
+it is difficult to search for past similar issues. Note that field deployment
+issues can be tracked and not just software issues. <a href="http://jira.ucar.edu/">UCAR
+JIRA</a> is now used to track the tasks and problems
+related to software and systems deployments for various ISF and RAF platforms.</p>
+<h2 id="continuous-integration">Continuous Integration<a class="headerlink" href="#continuous-integration" title="Permanent link">&para;</a></h2>
+<p>EOL migrated from <a href="http://wiki.eol.ucar.edu/sew/Buildbot">Buildbot</a> to
+<a href="https://wiki.jenkins-ci.org/">Jenkins</a> for continuous integration and
+testing. See the EOL Software Engineering Wiki for information on how to use
+the EOL instance.</p>
+<h2 id="builds">Builds<a class="headerlink" href="#builds" title="Permanent link">&para;</a></h2>
+<p>EOL software has been known to use make, autoconf, shell scripts, SCons,
+Visual Studio, cmake, and qmake to build and install. There are many possibilities,
+but should EOL try to settle on just a few? <a href="http://www.scons.org/">SCons</a> is
+used by several projects in EOL, and many of them share extensions to SCons
+called <a href="https://github.com/ncar/eol_scons">eol_scons</a>.</p>
+<h2 id="code-reviews">Code Reviews<a class="headerlink" href="#code-reviews" title="Permanent link">&para;</a></h2>
+<p>There seems to be two common approaches to code reviews: emails and github
+comments.  It has been very helpful and effective to send email notifications
+on each code commit, especially if they contain diffs.  Then other developers
+know what is being changed and can reply with comments about the changes.
+Github also provides ways to comment on pull requests and directly on code in
+commits, and that has proved convenient and effective also.  Formal code
+reviews, however, have probably only rarely happened in EOL, if ever.</p>
+<h2 id="packaging-distribution-and-installation">Packaging, Distribution, and Installation<a class="headerlink" href="#packaging-distribution-and-installation" title="Permanent link">&para;</a></h2>
+<p>Some projects provide targets to assemble an installation package. The package
+can be an RPM or a tar.gz file. Providing a standard installation package
+facilitates deployment to multiple field systems and to internal EOL servers.
+RPM&rsquo;s can be deployed through the <a href="http://wiki.eol.ucar.edu/sew/EOL_YUM_Repository">EOL YUM
+repository</a>.</p>
+<p>If an application is being installed from the source tree, such as with a
+build target, or it is being packaged in an archive, then certain conventions
+should be followed as to where to install the necessary files. Linux has a
+standard for where files are installed on a system called the Linux Standards
+Base. Likewise, it is good practice to not install unstable software into
+production locations. On EOL servers and desktop systems, these directories
+are for stable, production software: /usr and other system directories,
+/usr/local, and shared network directories like /net/opt_lnx, /opt/local. Do
+not install by default into these locations, lest operational versions get
+overwritten. For Linux installations, follow the standard layout of lib, bin,
+and include subdirectories beneath a configurable prefix directory.</p>
+<p>It is helpful to have a single build target for installing from within a
+source tree. This allows multiple software packages to be installed into a
+single integration test tree and run against each other, without affecting the
+rest of the system. When source code changes in one source tree, the build
+installs the changed files so that other packages will build against the
+latest changes from the integration tree.</p>
+<p>It is not known what is the best practice for installing libraries and source
+needed to build software. Sometimes a common prefix can be used for all
+dependencies, other times packages will have their own separate installation
+tree, and those directories will need to be added explicitly to the build
+paths.</p>
+<p>There is a recommended installer tool for Windows applications, used in
+particular by ASPEN. Ask Charlie about it.</p>
+<h2 id="graphical-user-interface-frameworks">Graphical User Interface Frameworks<a class="headerlink" href="#graphical-user-interface-frameworks" title="Permanent link">&para;</a></h2>
+<p>The majority of current EOL (non-Web-based) applications use Qt. Should that
+become the preferred GUI library for EOL? Other GUI frameworks have been used
+over the years, but experience and current practice suggest that using Qt for
+GUI applications is a best practice in EOL. That could include Qt bindings in
+python using either <a href="https://wiki.python.org/moin/PyQt">PyQt</a> or
+<a href="http://wiki.qt.io/PySide">PySide</a>.</p>
+<h2 id="web-application-frameworks">Web Application Frameworks<a class="headerlink" href="#web-application-frameworks" title="Permanent link">&para;</a></h2>
+<p>There are many web applications developed in EOL using several technologies,
+including Ruby on Rails, Groovy with Grail, Django, HTML, Javascript, Tomcat,
+Python CGI, ION (IDL), PHP, Mapserver, Perl CGI, Java Server Pages, and so on.
+It would be difficult to standardize on a particular web technology since they
+change so quickly and since there is no clear trend in EOL. Nevertheless,
+maybe a few standard web frameworks should be considered. At the very least,
+before adopting yet another web application platform, consider very carefully
+the long-term maintenance of the application. Now there is also a variety of
+JavaScript libraries to choose from.</p>
+<h2 id="application-configuration">Application Configuration<a class="headerlink" href="#application-configuration" title="Permanent link">&para;</a></h2>
+<p>There are many mechanisms and libraries to configure applications at runtime.
+There are Windows INI files, for which there are few different libraries in
+use. Qt provides a cross-platform configuration API that stores configuration
+parameters as INI files. Boost provides an API for command-line and file-
+backed program options, as well as a serialization library. There are the
+standard getopt() and getenv() GNU and POSIX calls. Java now has a standard
+API for application configuration (Java Preferences API), besides also having
+core support for serialization (persistence). Some applications store
+configuration data in XML and use the Apache Xerces-C library to read and
+write XML files. Here are some guidelines despite all this variety:</p>
+<ul>
+<li>
+<p>Use a text-based, line-based configuration file format, even if users will
+  never be expected to edit the configuration files. This format can be
+  deciphered by developers when there are problems, and different versions of
+  configuration files can be managed and compared by revision control systems.
+  It is a good practice to store examples of configuration files as well as
+  test and production configurations in revision control.</p>
+</li>
+<li>
+<p>Related to revision control, when modifying a configuration in software,
+  avoid gratuitous formatting or structure changes (like changing node order)
+  so that differences between revisions will be meaningful. In the XML DOM
+  this is possible by modifying the document model in parallel with the
+  configuration changes. Other formats might require always ordering nodes
+  alphabetically when writing them out.</p>
+</li>
+<li>
+<p>Provide as many reasonable defaults as possible, so software can work as
+  quickly and as automatically as possible without requiring too much
+  configuration from the user.</p>
+</li>
+</ul>
+<h2 id="commercial-tools">Commercial Tools<a class="headerlink" href="#commercial-tools" title="Permanent link">&para;</a></h2>
+<p>It seems we should identify some best practices for selecting and adopting
+commercial tools. There may be IDE&rsquo;s, memory checkers, static analysis and
+code coverage tools, advanced compilers, web and GUI test harnesses, database
+tools, and software diagramming tools which would be worth their cost to EOL,
+but we do not have any methods in place to evaluate them. The best approach
+may be to suggest that developers seek out tools that may be helpful for a
+particular project and then report on whether the tools should be used more
+widely in EOL. EOL has taken advantage of commercial tools for which there are
+UCAR site licenses, such as the MagicDraw UML tool and the Atlassian products.</p>
+<p>Tools like LabVIEW and FPGA compilers are also used in EOL for specialized
+needs.</p>
+<h2 id="code-analysis-tools">Code Analysis Tools<a class="headerlink" href="#code-analysis-tools" title="Permanent link">&para;</a></h2>
+<p>Memory checking tools have been used in the past, such as Purify and
+Testcenter, and they proved useful. Perhaps it is time to adopt the latest
+generation of such tools. CERN has benefitted from the static code analysis
+tool Coverity, the tool known for checking the Linux kernel. Here is a list of
+&ldquo;more well- known&rdquo; commercial code analysis tools:</p>
+<ul>
+<li><a href="http://coverity.com/">Coverity</a></li>
+<li><a href="http://parasoft.com/">Parasoft</a></li>
+<li><a href="http://www.ldra.com/">LDRA Testbed</a></li>
+</ul>
+<p>Likely EOL software would benefit from at least adopting open source and
+research code analysis tools into the development process. A quick search of
+the web yields a few possibilities, at least for Linux and C++. There are also
+many for Java and Python (<a href="http://www.logilab.org/projects/pylint">pylint</a>).</p>
+<ul>
+<li><a href="http://lclint.cs.virginia.edu/">Splint</a></li>
+<li><a href="https://wiki.mozilla.org/Static_Analysis">Mozilla Static Analysis Tools</a></li>
+<li><a href="http://sourceforge.net/apps/mediawiki/cppcheck">CppCheck</a></li>
+</ul>
+<p><a href="../Logging-Frameworks/">Next page: Logging Frameworks</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
+      
+    
+  </body>
+</html>
