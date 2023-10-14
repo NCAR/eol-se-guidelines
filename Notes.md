@@ -1,37 +1,16 @@
----
-title: Notes
-layout: default
----
+# Notes
 
-## Conversion
+These are notes about the background and development of the document and
+static site generator.
 
-The guidelines have never had a reliable home.  They were on the EOL web site
-in Drupal at one point, and somewhere along the way a backup was added to
-Confluence.  Then it was moved to sundog internal before the EOL web site was
-migrated to a new Drupal version.
+See [Conversion](#conversion) for information on how the document was
+converted from the web.
 
-This the outdated copy on Confluence that might be easier to export and
-convert to markdown, then updated with any changes from the eol copy:
-
-https://wiki.ucar.edu/display/~granger/Software+Development+Guidelines
-
-This seems to be the most recent location:
-
-https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3953
-
-Converting from drupal:
-
-Looks like the only feasible way to do it is to copy all the raw html for
-each page into a file in html, then convert those to markdown with html2text
-(from python3-html2text package), then fix all the links either manually or
-with macros or scripts.  Viewing the raw html for the page allows only the
-content to be copied, without the header, footer, sidebar, and other
-navigation links.
-
-Then figure out how to render it nicely in a github repo, what formatting to
-use?  md or rst?
+[TOC]
 
 ## Todo
+
+These are improvements pending or under consideration.
 
 The sections could benefit from some reordering.  The main topics are
 principles, code, process, tools, resources.  Everything else should be rolled
@@ -187,20 +166,135 @@ C++ references to add:
 
 Add `eol-prog` email list as a resource also.
 
-## On selecting a static site generator for technical documentation
+https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
 
-In general, these are the desired features for a technical documentation
-system:
+https://www.altexsoft.com/blog/business/technical-documentation-in-software-development-types-best-practices-and-tools/
 
-- easy to learn how to add content, accessible formatting
+
+## Static site generators
+
+There was significant effort put into selecting a static site generator for
+this document and for technical documentation in general.
+
+These were the desired features for a technical documentation system:
+
+- easy to learn how to add content, with accessible formatting
 - web accessible over the Internet (esp github)
 - portable for offline access, on field machines or personal devices
 - PDF output, partly to enable offline access and portability
 - collaborative editing and versioning
 - can include photographs and diagrams
+- math rendering
 - can reference other PDF files or web sites
   - external vendor documentation
   - related software documention (eg, NIDAS, ISFS, DSM have separate documentation)
+
+An ePub output option might be nice for personal mobile devices, to get the
+benefit of using an e-reader app to read and bookmark documents.  Maybe
+there's a way to get PDF into e-readers?
+
+Note that Confluence is always considered as an option, since it is available
+to all staff, it is meant to be a collaborative space for iterative
+documentation, and it already holds much technical documentation.  It also can
+be made to produce reasonable PDF output, with some work.  However, the pages
+can only be edited when online, the raw formatting syntax is not well known,
+versioning is by page and not by site, and the web form is only available
+online.  In the end, it has the same big problem as the Drupal and Sundog CMS
+systems: the content and version information is difficult to export and
+migrate if the system ever goes away or someone decides it doesn't belong
+there.
+
+Jekyll is a de facto standard for github web sites.  However, jekyll has
+proved complicated to install and configure, and GitHub Markdown is not that
+powerful on its own for actual documentation.  So jekyll with the default
+github-pages action works well for simple sites but is otherwise rather
+limited.
+
+The general practice for nicer (and thus more complicated) documentation sites
+is to generate the static site and push it to the gh-pages branch of a repo,
+either in the same repo or a different one.  Where PDF output is desired, it
+has to be generated also to be available for download on the web site.  (It
+might be nice to provide a page/table to download all the PDFs on a site, both
+the generated one and any other technical or vendor documents, even if it's
+just links to the vendor documents.)
+
+Thus this documentation uses custom tools and configuration to build the
+static web site and the PDF output.  The built documentation is committed to
+the repo and hosted on github.  Therefore the repo does not need a github
+action (although I assume one could be added), but more importantly the repo
+and the static site can be cloned and hosted elsewhere (eg, field servers)
+without having to install the tools, especially jekyll.  It would still be
+nice to be able to edit and regenerate the documentation locally, but it
+wouldn't be strictly necessary.
+
+The current site generator is `mkdocs` with the
+[mkdocs-material](https://squidfunk.github.io/mkdocs-material/)
+theme.  It
+looks nice right out of the box, installs easily (especially when already
+familiar with python packaging), interactive search works well and works
+offline, permalinks and anchors on headers, and table of contents.
+
+By using a static site generator, it will be possible to integrate other
+generated html documentation into the site, such as API docs from
+[doxygen](https://www.doxygen.nl/index.html), [Swagger](https://swagger.io/),
+or [AsyncAPI](https://www.asyncapi.com).
+
+### Survey of static site generators
+
+This page gives a helpful rundown of several static site generators:
+
+- [Docusaurus](https://docusaurus.io/docs)
+
+Docusaurus looks very capable and emphasizes javascript interactivity, but not
+sure about a PDF output option.
+
+Sphinx should be a viable option, especially now that it handles markdown
+files as well as restructured text.
+
+- [Sphinx](https://www.sphinx-doc.org/)
+
+This tool might prove a viable alternative to `sphinx` to extract python
+documentation from docstrings:
+
+- [mkdocstrings](https://github.com/mkdocstrings/mkdocstrings)
+
+[gitbook.com](gitbook.com) looked like a nice option, but apparently it has
+become more of a commercial solution.  Maybe the cost is worth it if it works
+for everything and is not difficult to learn and setup.
+
+This looks nice, but it's based on R and looks harder to setup:
+
+- [bookdown](https://bookdown.org/)
+
+[AspenDocs](https://ncar.github.io/aspendocs/) has been a premier example of
+online and pdf technical documentation for EOL software.  It requires
+[Prince](https://www.princexml.com/doc/installing/) and some extensive jekyll
+configuration,
+[documented here](https://idratherbewriting.com/documentation-theme-jekyll/mydoc_generating_pdfs.html).
+It meets all the requirements above, except for the dependencies on jekyll and
+Prince.
+
+[Hugo](https://gohugo.io/about/features/) might be nice as a single standalone
+app, but it was investigated thoroughly.
+
+Google seems to use [Gitiles](https://gerrit.googlesource.com/gitiles/) for
+sites like the style guide.  It has some nice markdown extensions, like
+anchors and tables of contents and simpler configuration.  It's a Java
+program, but maybe it's still easier to install and run and configure than
+jekyll.
+
+Here is a [table of SSGs on jamstack](https://jamstack.org/generators/).
+
+[DASH](https://kapeli.com/dash) is meant for offline API documentation
+browsing, but it is targeted at MacOS.
+[BookStackApp](https://www.bookstackapp.com/) is more of Confluence
+alternative, where documents are stored in a database and not as plain text in
+a repo.
+
+[Read the Docs](https://software-documentation-template.readthedocs.io/en/latest/readme.html)
+templates could be used to generate the static site even if not used to host
+it, presumably with all the capabilities that Sphinx provides like ePub and
+PDF output.
 
 ### Examples
 
@@ -208,4 +302,28 @@ Noteworthy examples of github doc repos:
 
 - [CppCoreGuidelines](https://github.com/isocpp/CppCoreGuidelines)
 - [Prometheus Docs](https://github.com/prometheus/docs#contributing-changes)
-- [Google style guide](http://code.google.com/p/google-styleguide/)
+- [Google style guide](https://code.google.com/p/google-styleguide/)
+
+## Conversion
+
+The guidelines have never had a reliable home.  They were on the EOL web site
+in Drupal at one point, and somewhere along the way a backup was added to
+Confluence.  Then it was moved to sundog internal before the EOL web site was
+migrated to a new Drupal version.
+
+There was an outdated copy on Confluence, and that will be removed when this
+version is viable.
+
+- [Software Development Guidelines](https://wiki.ucar.edu/display/~granger/Software+Development+Guidelines) on Confluence
+
+The sundog version was here, after being migrated from Drupal:
+
+- [Sundog version](https://sundog.ucar.edu/Interact/Pages/Section/ContentListing.aspx?subsection=3953)
+
+The conversion was done by downloading the raw html for each page on sundog
+into a file in html.  Those files are in the history for this repository in a
+directory called `sundog`.  Those html files were converted to markdown with
+`html2text` (from `python3-html2text` package) using the python script
+[extract-sundog-docs.py](python/extract-sundog-docs.py).  The script just
+adjusts the file names and extracts the appropriate content section from the
+html page.  Any linking problems in the markdown files were fixed manually.
