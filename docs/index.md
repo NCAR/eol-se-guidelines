@@ -1,5 +1,8 @@
 # EOL Software Development Guidelines
 
+This living document is an evolving guide to software development practices in
+the NCAR Earth Observing Laboratory.
+
 This document is also available as a [PDF](eol-se-guidelines.pdf).
 
 Math test:
