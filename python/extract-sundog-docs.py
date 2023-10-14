@@ -5,7 +5,6 @@ Extract documentation content by div from sundog pages.
 import sys
 import subprocess as sp
 import tempfile
-from io import StringIO
 from pathlib import Path
 import logging
 
