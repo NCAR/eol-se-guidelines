@@ -20,9 +20,9 @@ what's been worked on related to netcdf files across all ACS development.
 
 Below are links to other significant ISF resources:
 
-[DSM Platform Guide](https://ncar.github.io/dsm-platform/):
-[Hitchhiker's Guide to ISFS](https://docs.google.com/document/d/1sJYewSxjFaLsLYeUqtSbZ5NMQO8V2pFHTAas0OrEgBg/edit)
-[Git repository for DSM platform support](https://github.com/NCAR/dsm-platform/)
-[Git repository for NIDAS](https://github.com/ncareol/nidas)
-[Git repository for ISFS project configurations](https://github.com/ncareol/public-field-projects/)
-[Top wiki page for ISFS sensors and other infrastructure](https://wiki.ucar.edu/display/SEW/ISFS)
+- [DSM Platform Guide](https://ncar.github.io/dsm-platform/):
+- [Hitchhiker's Guide to ISFS](https://docs.google.com/document/d/1sJYewSxjFaLsLYeUqtSbZ5NMQO8V2pFHTAas0OrEgBg/edit)
+- [Git repository for DSM platform support](https://github.com/NCAR/dsm-platform/)
+- [Git repository for NIDAS](https://github.com/ncareol/nidas)
+- [Git repository for ISFS project configurations](https://github.com/ncareol/public-field-projects/)
+- [Top wiki page for ISFS sensors and other infrastructure](https://wiki.ucar.edu/display/SEW/ISFS)
