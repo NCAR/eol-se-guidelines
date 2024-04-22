@@ -170,6 +170,29 @@ https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/
 
 https://www.altexsoft.com/blog/business/technical-documentation-in-software-development-types-best-practices-and-tools/
 
+### Other potential additions
+
+Best practices for source releases (semantic versions), source release
+archives, and binary packaging and package versions:
+
+https://docs.fedoraproject.org/en-US/packaging-guidelines/Versioning/
+
+Add C++ guidelines somewhere, like to best practices or a wiki page:
+
+https://github.com/isocpp/CppCoreGuidelines
+https://github.com/Microsoft/GSL
+https://github.com/catchorg/Catch2
+https://www.softwarecollections.org/en/
+
+OSCON
+uberconf - no fluff just stuff
+C++ Now
+
+OReilly has online tutorials and sessions: oreilly.com
+
+LinkedIn Learning courses are free through UCAR.  How could we build up a list
+of courses that others have taken and found useful, so we can prioritize
+higher-quality courses?
 
 ## Static site generators
 
@@ -275,7 +298,7 @@ It meets all the requirements above, except for the dependencies on jekyll and
 Prince.
 
 [Hugo](https://gohugo.io/about/features/) might be nice as a single standalone
-app, but it was investigated thoroughly.
+app, but it was not investigated thoroughly.
 
 Google seems to use [Gitiles](https://gerrit.googlesource.com/gitiles/) for
 sites like the style guide.  It has some nice markdown extensions, like
@@ -287,7 +310,7 @@ Here is a [table of SSGs on jamstack](https://jamstack.org/generators/).
 
 [DASH](https://kapeli.com/dash) is meant for offline API documentation
 browsing, but it is targeted at MacOS.
-[BookStackApp](https://www.bookstackapp.com/) is more of Confluence
+[BookStackApp](https://www.bookstackapp.com/) is more of a Confluence
 alternative, where documents are stored in a database and not as plain text in
 a repo.
 
