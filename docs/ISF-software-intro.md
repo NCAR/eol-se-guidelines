@@ -3,11 +3,11 @@
 Here is information on watching changes on shared ISF developments.
 
 The most important is probably the ISFS project configuration repository,
-since we have shared locations in /net/isf/isfs/projects and
-/h/eol/isfs/isfs/projects which are modified by many people.
+since we have shared locations in `/net/isf/isfs/projects` and
+`/h/eol/isfs/isfs/projects` which are modified by many people.
 
-Visit the [github project](https://github.com/ncareol/public-field-projects/)
-to see the latest activity, or subscribe to fisheye emails.
+Visit the [github project](https://github.com/NCAR/isfs-field-projects/) to
+see the latest activity, or subscribe to fisheye emails.
 
 There are JIRA projects for ISS, ISFS, and ASPEN.  However, ACS uses github
 issues instead, so if you want to follow ACS development, you may want to
@@ -23,6 +23,6 @@ Below are links to other significant ISF resources:
 - [DSM Platform Guide](https://ncar.github.io/dsm-platform/):
 - [Hitchhiker's Guide to ISFS](https://docs.google.com/document/d/1sJYewSxjFaLsLYeUqtSbZ5NMQO8V2pFHTAas0OrEgBg/edit)
 - [Git repository for DSM platform support](https://github.com/NCAR/dsm-platform/)
-- [Git repository for NIDAS](https://github.com/ncareol/nidas)
-- [Git repository for ISFS project configurations](https://github.com/ncareol/public-field-projects/)
+- [Git repository for NIDAS](https://github.com/NCAR/nidas)
+- [Git repository for ISFS project configurations](https://github.com/NCAR/isfs-field-projects/)
 - [Top wiki page for ISFS sensors and other infrastructure](https://wiki.ucar.edu/display/SEW/ISFS)

@@ -13,13 +13,11 @@ communication, share what works, and consolidate tools when prudent.
 
 There are two major revision control tools in use in EOL: subversion and git.
 It makes sense to standardize on these two since the infrastructure is in
-place and there has been plenty of experience with them. There is an [EOL
-organization at github](https://github.com/ncareol/) for both private and
-public repositories. By now most new projects should use the [NCAR
-organization](https://github.com/NCAR) on github.  There is also a subversion
-server in EOL, but most software has migrated away from that to github.  See
-the [EOL wiki](Resources-and-References.md#eol-wiki) for more information on
-git, subversion, and migrating to git.
+place and there has been plenty of experience with them. Most new projects
+should use the [NCAR organization](https://github.com/NCAR) on github.  There
+is also a subversion server in EOL, but most software has migrated away from
+that to github.  See the [EOL wiki](Resources-and-References.md#eol-wiki) for
+more information on git, subversion, and migrating to git.
 
 ## Unit Testing
 

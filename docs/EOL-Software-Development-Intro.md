@@ -40,10 +40,9 @@ changes are published to the wiki.
 ## Github access
 
 We have two organizations on github: [NCAR](https://github.com/NCAR) and
-[ncareol](https://github.com/ncareol).  Some of our software is still in the
-ncareol org, either because it predates the NCAR org and just hasn't been
-moved, or because it requires features like git lfs which the NCAR org does
-not provide.
+[ncareol](https://github.com/ncareol).  Some of software is still in the
+ncareol org, probably because it predates the NCAR org and just hasn't been
+moved.
 
 You can add an existing github account username to the github organizations,
 or if you like you can create a different github account just for your work.
