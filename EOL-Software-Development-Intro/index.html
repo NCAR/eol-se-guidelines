@@ -11,10 +11,6 @@
       
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../Project-Management/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Introduction - EOL Software Development Guidelines</title>
+        <title>Intro to EOL Software Development - EOL Software Development Guidelines</title>
       
     
     
@@ -64,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduction" class="md-skip">
+        <a href="#intro-to-eol-software-development" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Intro to EOL Software Development
             
           </span>
         </div>
@@ -234,30 +230,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Purpose-and-Principles/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -266,44 +242,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
-    <span class="md-ellipsis">
-      Purpose
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Principles
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -535,18 +473,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#purpose" class="md-nav__link">
+  <a href="#first-things-first" class="md-nav__link">
     <span class="md-ellipsis">
-      Purpose
+      First things first
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#principles" class="md-nav__link">
+  <a href="#wiki-access" class="md-nav__link">
     <span class="md-ellipsis">
-      Principles
+      Wiki access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Github access
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commit-emails" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit emails
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eol-prog" class="md-nav__link">
+    <span class="md-ellipsis">
+      eol-prog
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#issue-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Issue tracking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wiki-field-logbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wiki field logbooks
     </span>
   </a>
   
@@ -570,51 +553,95 @@
   
 
 
-<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
-<h2 id="purpose">Purpose<a class="headerlink" href="#purpose" title="Permanent link">&para;</a></h2>
-<p><strong>These guidelines describe best practices for software engineering in EOL.</strong>
-The purpose of these guidelines is to improve the development experience for
-users, yield better software for EOL, encourage a common set of good software
-engineering practices within EOL, and nurture software development skills
-which will best serve EOL and its scientific community. As we try to improve
-all of our software developments, these guidelines can be a resource to
-improve development in similar ways towards similar goals.</p>
-<p><strong>These guidelines are not intended to be mandates.</strong> The guidelines encourage
-some practices more strongly than others, but none are absolute requirements.
-Most of the practices can be adopted individually and incrementally, for any
-scale of software development, and by anyone developing software, not just
-software engineers.</p>
-<p>In this document, key practices will be emphasized in bold, while further
-details and discussion may be referenced on a separate page. The bottom of
-this page provides quick references with links to specific sections and
-details.</p>
-<p>Many people have contributed to this document, in particular Gary Granger,
-John Allison, Linda Cully, and Sandra Thurn, with helpful input from many
-others in EOL. It is meant to be an evolving and organic document that all in
-EOL are welcome to edit. If you have questions about this document, email
-Gary.</p>
-<h2 id="principles">Principles<a class="headerlink" href="#principles" title="Permanent link">&para;</a></h2>
-<p>The EOL software engineering first principles are the motivation for improving
-our software development process and the measure of the effectiveness of our
-software engineering practices. From these principles follow the best
-practices we want to follow.</p>
-<p>EOL software engineering practices emphasize and facilitate utility,
-efficiency, flexibility, reliability, accountability, and cooperation.</p>
-<p>Software development in EOL must be flexible to adapt to evolving research,
-instruments, deployments, and data. Like the research instruments and research
-data themselves, software will often be prototypes or cutting edge, but
-quality and maintainability need not suffer. Development must adapt to
-advances in software engineering tools and techniques.</p>
-<p>Software developments must be efficient to make the most of limited software
-engineering resources to support EOL&rsquo;s mission. They must accommodate
-timelines dictated by available instrument hardware and field project
-deadlines.</p>
-<p>The goal of any EOL development is to provide a useful tool or product to the
-EOL user community. EOL software engineers must be accountable and available
-to that community. We must work closely with the community to understand
-needs, solve problems, and fulfill requirements.</p>
-<p>The culture among EOL software engineers is based on supporting science and
-solving technical problems in a spirit of cooperation across all disciplines.</p>
+<h1 id="intro-to-eol-software-development">Intro to EOL Software Development<a class="headerlink" href="#intro-to-eol-software-development" title="Permanent link">&para;</a></h1>
+<h2 id="first-things-first">First things first<a class="headerlink" href="#first-things-first" title="Permanent link">&para;</a></h2>
+<p>Welcome to EOL!</p>
+<p>Important first tasks:</p>
+<ul>
+<li>Tour the offices and labs and meet coworkers.</li>
+<li>Discuss schedules and contact preferences, and for interns primarily, how
+  often to meet, with whom, and how.</li>
+<li>Get your access badge.</li>
+<li>Find out your phone extension.</li>
+<li>Get access to resources you&rsquo;ll need:</li>
+<li><a href="https://wiki.ucar.edu/display/SEW/">EOL Software Engineering wiki</a></li>
+<li><a href="https://github.com/NCAR">NCAR org on github</a></li>
+<li><a href="https://github.com/ncareol">ncareol org on github</a></li>
+<li><a href="https://ncar.slack.com">slack</a></li>
+<li><a href="https://groups.google.com/a/ucar.edu/g/eol-prog/">eol-prog group</a></li>
+<li><a href="https://jira.ucar.edu/">JIRA</a></li>
+</ul>
+<h2 id="wiki-access">Wiki access<a class="headerlink" href="#wiki-access" title="Permanent link">&para;</a></h2>
+<p>At the moment, access to the EOL Software Engineering Wiki (SEW) is restricted,
+but new users cannot be added to the wiki until they have an account in Confluence.</p>
+<ul>
+<li>Visit the <a href="https://wiki.ucar.edu/">wiki main page</a>.</li>
+<li>Click Login in the upper right.</li>
+<li>Login with UCAR CIT credentials.</li>
+</ul>
+<p>After logging in once, send your username to someone with admin permissions in
+SEW.  Most SEs and SAs have permission to add users.</p>
+<p>Once you have permission to access the wiki, visit the <a href="https://wiki.ucar.edu/display/SEW/">SEW front
+page</a>.  Read the
+<a href="https://wiki.ucar.edu/display/SEW/Introduction">Introduction</a>.  Click the
+<code>Watch</code> link in the upper right to subscribe to email notifications when
+changes are published to the wiki.</p>
+<h2 id="github-access">Github access<a class="headerlink" href="#github-access" title="Permanent link">&para;</a></h2>
+<p>We have two organizations on github: <a href="https://github.com/NCAR">NCAR</a> and
+<a href="https://github.com/ncareol">ncareol</a>.  Some of software is still in the
+ncareol org, probably because it predates the NCAR org and just hasn&rsquo;t been
+moved.</p>
+<p>You can add an existing github account username to the github organizations,
+or if you like you can create a different github account just for your work.</p>
+<p>To be added to the NCAR org, see the instructions on the <a href="https://wiki.ucar.edu/display/SEW/Git">Git wiki
+page</a>.  Searching for <code>github</code> on the
+UCAR wiki also yields lots of references.</p>
+<p>To be added to the ncareol org, provide your github username to someone with
+admin permissions in that org.</p>
+<p>Once added to an organization, you will probably need to be given read and
+write access to relevant private repositories.  You can also be added to
+certain teams (groups) to get access to multiplate related repositories at
+once.</p>
+<h2 id="commit-emails">Commit emails<a class="headerlink" href="#commit-emails" title="Permanent link">&para;</a></h2>
+<p>It is very useful and almost expected that everyone subscribes to some kind of
+notification or email when commits are pushed to github for collaborative
+developments.  The
+<a href="https://wiki.ucar.edu/display/SEW/FishEyeSubscriptions">FishEyeSubscriptions</a>
+wiki page has instructions for subscribing to FishEye notifications.</p>
+<h2 id="eol-prog">eol-prog<a class="headerlink" href="#eol-prog" title="Permanent link">&para;</a></h2>
+<p>There is a google group called
+<a href="https://groups.google.com/a/ucar.edu/g/eol-prog">eol-prog</a>.  Join the group
+to be on the email list for occasional software-related announcements and
+discussions, and to be on the invite list for informal meetings and talks.
+The group is open to anyone, not limited by job title.</p>
+<p>It looks like only group owners can add members, which means asking one of the
+EOL system administrators, or finding a link which requests to be added.</p>
+<h2 id="issue-tracking">Issue tracking<a class="headerlink" href="#issue-tracking" title="Permanent link">&para;</a></h2>
+<p>Some projects use JIRA to track tasks and issues, since it pre-dates github
+issues and often project tasks may not be tied to a single source repository.
+See the <a href="https://wiki.ucar.edu/display/SEW/JIRA+Notes">JIRA Notes</a> wiki page
+for tips on using JIRA.  Other projects use github issues.</p>
+<p>JIRA also uses groups to assign different kinds of permission for different
+projects.  Ask another SE about getting permissions on a specific project.</p>
+<p>Any new projects should plan to use one or the other, most new projects will
+probably want to use github.</p>
+<h2 id="wiki-field-logbooks">Wiki field logbooks<a class="headerlink" href="#wiki-field-logbooks" title="Permanent link">&para;</a></h2>
+<p>Some platforms use the <a href="https://wiki.ucar.edu/">Confluence wiki</a> to host wiki
+spaces for the platform itself and for each field project.  The field project
+wiki space is a repository for field logs (plosted as dated blog entries) and
+project-specific information and events.</p>
+<p>You may need to ask to be given permission to access these other field project
+logbooks, especially if you need write access.  For ISF staff, there is a
+groupd called <code>sew-group-isf-staff</code> managed as part of the SEW wiki.  So
+someone with admin permissions in the SEW wiki can add you to that group, and
+that should allow access to most of the ISF wiki spaces.  Recent examples of
+ISF field logbooks are for <a href="https://wiki.ucar.edu/display/sos/">ISFS at SOS</a>,
+<a href="https://wiki.ucar.edu/x/1wTPHg">ISFS at M2HATS</a>, and <a href="https://wiki.ucar.edu/x/SATPHg">ISS at
+M2HATS</a>.</p>
+<p>You can subscribe to project field log wikis and receive notification emails
+when anything changes, same as for the SEW wiki.  Click the &ldquo;Watch&rdquo; menu in
+the upper right.  That is often a good way to stay informed of what is
+happening during a project.</p>
 
 
 
