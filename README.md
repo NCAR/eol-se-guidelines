@@ -72,5 +72,5 @@ branch, and push that branch to `github`.  Make sure to build the PDF when
 deploying the site, so it will be available for download.
 
 ```sh
-env ENABLE_PDF_EXPORT=1 mkdocs deploy
+env ENABLE_PDF_EXPORT=1 mkdocs gh-deploy
 ```
