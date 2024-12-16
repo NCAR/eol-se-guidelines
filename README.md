@@ -31,12 +31,29 @@ after the google RPM repository is installed.
 dnf install google-chrome
 ```
 
+If the PDF command below fails with an error like below:
+
+```sh
+  File "/opt/local/miniforge3/lib/python3.12/site-packages/mkdocs_with_pdf/generator.py", line 381, in _render_js
+    tag.text = self._mixed_script
+    ^^^^^^^^
+AttributeError: property 'text' of 'Tag' object has no setter
+```
+
+Then one workaround is to edit the `generator.py` file, replacing `tag.text` with `tag.string`:
+
+```python
+                    tag = soup.new_tag('script')
+                    tag.string = self._mixed_script
+                    body.append(tag)
+```
+
 ## Build
 
 Generate the documentation web site and serve it locally:
 
 ```sh
-mkdocs serve
+env ENABLE_PDF_EXPORT=1 mkdocs serve
 ```
 
 Build the web site and the PDF file.  The PDF file will be in
